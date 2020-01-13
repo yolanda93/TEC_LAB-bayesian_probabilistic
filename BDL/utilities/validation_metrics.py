@@ -30,7 +30,7 @@ def plot_sigma_error_predictions(x_val, y_val, y_hat, sigma_real, sigma_hat):
 
     ax1.plot(x_val, y_val, '.', color='purple')
     ax1.errorbar(x_val, y_hat, yerr=np.sqrt(sigma_real), color='red', fmt='.');
-    ax1.errorbar(x_val, y_hat, yerr=sigma_hat.sqrt(), color='green', fmt='.');
+    ax1.errorbar(x_val, y_hat, yerr=np.sqrt(sigma_hat), color='green', fmt='.');
 
     plt.title('Real sigma vs. Predicted sigma');
     plt.legend([r'Validation data', r'Real sigma', 'Predicted sigma'], loc='upper left');
@@ -83,7 +83,7 @@ def extreme_model_performane(x_val, y_val, y_hat, sigma_hat, std_factor, display
     print('RMSE y_hat: {}'.format(m.mean_absolute_error(y_val_lower_std, y_hat_lower)))
     print('MAE sigma_hat: {}'.format(m.mean_absolute_error(np.sqrt(sigma_val_lower), np.sqrt(sigma_hat_lower))))
 
-    print('-\n In bound - ' + str(y_val_in_std[0].count()) + ' Y pts in [+sigma ' + str(round(std_factor, 2)) +  ',' +  '-sigma ' + str(std_factor) + ']: \n')
+    print('-\n In bound - ' + str(y_val_in_std[0].count()) + ' Y pts in [+sigma ' + str(round(std_factor, 2)) +  ',' +  '-sigma ' + str(round(std_factor, 2)) + ']: \n')
     y_hat_in = np.where(xy_hat[0] in y_val_in_std[0], xy_hat, 0)
     sigma_val_in = (y_hat_in - y_val_in_std) ** 2  # get real sigma
     sigma_hat_in = np.where(xy_sigma_hat[0] in y_val_in_std[0], xy_hat, 0)
@@ -96,7 +96,7 @@ def extreme_model_performane(x_val, y_val, y_hat, sigma_hat, std_factor, display
         plot_sigma_clusters(x_val, y_hat, y_val_upper_std, y_val_lower_std, y_val_in_std)
 
 
-def overall_model_performance(x_val, y_val, y_hat_t, sigma_hat, std_factor=1, extreme_values_performance=False, display_plots=False):
+def overall_model_performance(x_val, y_val, y_hat_t, sigma_hat_t, std_factor=1, extreme_values_performance=False, display_plots=False):
     """
     Measure the overall performance of both predictions: y and sigma
     :param x_val: x validation dataset
@@ -105,7 +105,9 @@ def overall_model_performance(x_val, y_val, y_hat_t, sigma_hat, std_factor=1, ex
     :param sigma_pred: predicted sigma values
     :return:
     """
+    # ensure that we have numpy arrays not tensors
     y_hat = y_hat_t.numpy() if type(y_hat_t) is not np.ndarray else y_hat_t
+    sigma_hat = sigma_hat_t.numpy() if type(sigma_hat_t) is not np.ndarray else sigma_hat_t
 
     sigma_val = (y_hat - y_val)**2 # get real sigma
 
@@ -177,6 +179,6 @@ def tests_prior_beliefs(x_val, y_val, y_hat_t, sigma_hat_t):
     print('\x1b[0m' + "\n--------------------------------- Plot distributions and sigma clusters--------------------------------------------")
     print("---- Plot distributions for each variable \n")
     for name, feature in _feat_test.items():
-        plt.figure(); sns.kdeplot(feature, shade=True).set_title(str(name));  plt.figure(); plt.title(str(name)); stats.probplot(feature, dist='norm', fit=True, rvalue=True, plot=plt);
+        plt.figure(); sns.kdeplot(feature, shade=True).set_title(str(name)); plt.figure(); plt.title(str(name)); stats.probplot(feature, dist='norm', fit=True, rvalue=True, plot=plt);
 
     plot_sigma_clusters(x_val, y_hat, y_val_upper_std, y_val_lower_std, y_val_in_std)
