@@ -9,24 +9,28 @@ The goal of these series of notebooks is to provide a context of other technique
 
 ### Techniques
 
-* [Bootstrapping](#Bootstrapping) - Building confidence intervals with bootstrapping
+* [Bootstrapping](#Bootstrapping)
+* [Conformal Predictors](#ConformalPredictors)
+* [Quantile Regression](#QuantileRegression)
+* [Gradient Boosting](#GradientBoostingLoss)
+* [fbprophet](#Fbprophet)
 * [Mean Variance Estimation](#MVE)
 * [The Delta Method](#DeltaMethod)
 
 
 <h2 id="Bootstrapping">Bootstrapping </h2> 
 
-##### :star: [Experiment Notebook](./boostrapping_confidence_intervals.ipynb)
+#####  [Experiment Notebook](./boostrapping_confidence_intervals.ipynb)
 
-##### :star: [Technique definition](https://machinelearningmastery.com/calculate-bootstrap-confidence-intervals-machine-learning-results-python/)
+#####  [Technique definition](https://machinelearningmastery.com/calculate-bootstrap-confidence-intervals-machine-learning-results-python/)
 
-##### :star: Types of uncertainty that it cover (Epistemic vs. Aleatoric)
+##### Types of uncertainty that it cover (Epistemic vs. Aleatoric)
  
 - *Epistemic*: It helps to measure the effect of training a model where particular data have not been included. However, it assumes a gaussian distribution and it does not measure the effect of having a non-representative training set (e.g. non-gaussian observations)
  
 - *Aleatoric Homoskedastic*: It assumes the error component constant across the input space
 
-##### :star: Conclusions: Advantages & limitations
+##### Conclusions: Advantages & limitations
 
 Advantages
 
@@ -42,6 +46,22 @@ Limitations
 - It's not good for estimating the error of a single prediction (single point-of-estimation)
 
 - The confidence intervals of the prediction residuals obtained here are assumed to be normally distributed, have the same variance and be independent. 
+
+<h2 id="QuantileRegression">Quantile Regression </h2> 
+
+
+<h2 id="GradientBoostingLoss">Gradient Boosting Quantile Loss</h2> 
+
+
+<h2 id="MVE">Mean Variance Estimation </h2> 
+TODO
+
+<h2 id="DeltaMethod">The Delta Method </h2> 
+TODO
+
+<h2 id="Fbprophet">fbprophet </h2> 
+TODO
+
 
 ### References
 
