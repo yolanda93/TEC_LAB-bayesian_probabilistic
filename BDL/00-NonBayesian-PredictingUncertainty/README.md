@@ -11,6 +11,7 @@ The goal of these series of notebooks is to provide a context of other technique
 
 * [Bootstrapping](#Bootstrapping) - Building confidence intervals with bootstrapping
 * [Quantile Regression](#QuantileRegression)
+* [Gradient Boosting](#Gradient Boosting - Quantile Loss)
 * [Mean Variance Estimation](#MVE)
 * [The Delta Method](#DeltaMethod)
 
@@ -27,7 +28,7 @@ The goal of these series of notebooks is to provide a context of other technique
  
 - *Aleatoric Homoskedastic*: It assumes the error component constant across the input space
 
-##### :star: Conclusions: Advantages & limitations
+##### Conclusions: Advantages & limitations
 
 Advantages
 
