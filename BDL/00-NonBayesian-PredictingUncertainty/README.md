@@ -9,9 +9,9 @@ The goal of these series of notebooks is to provide a context of other technique
 
 ### Techniques
 
-* [Bootstrapping](#Bootstrapping) - Building confidence intervals with bootstrapping
+* [Bootstrapping](#Bootstrapping)
 * [Quantile Regression](#QuantileRegression)
-* [Gradient Boosting](#Gradient Boosting - Quantile Loss)
+* [Gradient Boosting](#GradientBoostingLoss)
 * [Mean Variance Estimation](#MVE)
 * [The Delta Method](#DeltaMethod)
 
@@ -44,6 +44,17 @@ Limitations
 - It's not good for estimating the error of a single prediction (single point-of-estimation)
 
 - The confidence intervals of the prediction residuals obtained here are assumed to be normally distributed, have the same variance and be independent. 
+
+<h2 id="QuantileRegression">Quantile Regression </h2> 
+
+
+<h2 id="GradientBoostingLoss">Gradient Boosting </h2> 
+
+
+<h2 id="MVE">Mean Variance Estimation </h2> 
+
+
+<h2 id="DeltaMethod">The Delta Method </h2> 
 
 ### References
 
