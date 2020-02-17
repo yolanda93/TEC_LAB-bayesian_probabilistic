@@ -10,17 +10,18 @@ The goal of these series of notebooks is to provide a context of other technique
 ### Techniques
 
 * [Bootstrapping](#Bootstrapping) - Building confidence intervals with bootstrapping
+* [Quantile Regression](#QuantileRegression)
 * [Mean Variance Estimation](#MVE)
 * [The Delta Method](#DeltaMethod)
 
 
 <h2 id="Bootstrapping">Bootstrapping </h2> 
 
-##### :star: [Experiment Notebook](./boostrapping_confidence_intervals.ipynb)
+#####  [Experiment Notebook](./boostrapping_confidence_intervals.ipynb)
 
-##### :star: [Technique definition](https://machinelearningmastery.com/calculate-bootstrap-confidence-intervals-machine-learning-results-python/)
+#####  [Technique definition](https://machinelearningmastery.com/calculate-bootstrap-confidence-intervals-machine-learning-results-python/)
 
-##### :star: Types of uncertainty that it cover (Epistemic vs. Aleatoric)
+##### Types of uncertainty that it cover (Epistemic vs. Aleatoric)
  
 - *Epistemic*: It helps to measure the effect of training a model where particular data have not been included. However, it assumes a gaussian distribution and it does not measure the effect of having a non-representative training set (e.g. non-gaussian observations)
  
