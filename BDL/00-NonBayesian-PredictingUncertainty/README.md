@@ -10,8 +10,10 @@ The goal of these series of notebooks is to provide a context of other technique
 ### Techniques
 
 * [Bootstrapping](#Bootstrapping)
+* [Conformal Predictors](#ConformalPredictors)
 * [Quantile Regression](#QuantileRegression)
 * [Gradient Boosting](#GradientBoostingLoss)
+* [fbprophet](#Fbprophet)
 * [Mean Variance Estimation](#MVE)
 * [The Delta Method](#DeltaMethod)
 
@@ -48,13 +50,18 @@ Limitations
 <h2 id="QuantileRegression">Quantile Regression </h2> 
 
 
-<h2 id="GradientBoostingLoss">Gradient Boosting </h2> 
+<h2 id="GradientBoostingLoss">Gradient Boosting Quantile Loss</h2> 
 
 
 <h2 id="MVE">Mean Variance Estimation </h2> 
-
+TODO
 
 <h2 id="DeltaMethod">The Delta Method </h2> 
+TODO
+
+<h2 id="Fbprophet">fbprophet </h2> 
+TODO
+
 
 ### References
 
