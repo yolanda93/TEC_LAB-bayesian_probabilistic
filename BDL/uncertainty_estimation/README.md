@@ -51,13 +51,26 @@ Table of contents
 
 
 ## Experiments
+
+
+### V0.0.1-nongaussian_noise
+* DATE: 28/11/2019
+* DESCRIPTION: add non gaussian noise to the original process
+* RESOURCES:
+  * [Notebook](.ipynb)
+  
+### V0.0.0-initial_validation
+* DATE: 28/11/2019
+* DESCRIPTION: 
+* RESOURCES:
+  * [Notebook](.ipynb)
+
+  
 ### V0.0.1-Protect_CGAN
 * DATE: 19/11/2019
 * DESCRIPTION: protect a complex model, a CGAN generator.
 * RESOURCES:
   * [Notebook](.ipynb)
-
-
 ---
 
 ## First Experiment: Synthetic data
