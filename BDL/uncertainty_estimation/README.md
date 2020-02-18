@@ -5,6 +5,46 @@
 Ejemplo:
 https://github.com/beeva/TEC_LAB-ai_watermarking/edit/master/README.md
 
+Table of contents
+=================
+
+-   [Introducción [DONE]](#introduccion)
+    -   [State-of-Art](#state-of-art)
+    -   [Uncertainty Estimation](#state-of-art)
+    -   [Scope](#scope)
+    -   [Punto de partida: técnicas tradicionales](#traditional-techniques)
+-   [Framework: Validación de las medidas de incertidumbre](#Framework)
+    -   [State-of-Art](#state-of-art)
+    -   [Experimentos](#experimentos)
+    -   [Conclusiones](#conclusiones)
+-   [Técnica: Exp.I - Estimacion de la varianza al vuelo [DONE]](#exp_I)
+    -   [Motivacion](#exp_I_motivacion)
+    -   [Validación exp.original](#exp_I_tecnica-intro)
+    -   [Experimentos y conclusiones](#exp_I_exp-conclusiones)
+    -   [conclusiones](#exp_I_final-conclusiones)
+-   [Redes de densidad mixta [DONE]](#mdn)
+    -   [Motivacion](#mdn_motivacion)
+    -   [Validación exp.original](#mdn_tecnica-intro)
+    -   [Experimentos y conclusiones](#mdn_exp-conclusiones)
+    -   [conclusiones](#mdn_final-conclusiones)
+-   [Semaforos](#semaforos)
+    -   [Motivacion](#semaforos_motivacion)
+    -   [Validación exp.original](#semaforos_tecnica-intro)
+    -   [Experimentos y conclusiones](#semaforos_exp-conclusiones)
+    -   [conclusiones](#semaforos_final-conclusiones)
+-   [MonteCarlo Dropout](#monte_carlo)
+    -   [Motivacion](#monte_carlo_motivacion)
+    -   [Validación exp.original](#monte_carlo_tecnica-intro)
+    -   [Experimentos y conclusiones](#monte_carlo_exp-conclusiones)
+    -   [conclusiones](#monte_carlo_final-conclusiones)    
+-   [Loss Function [DONE]](#loss)
+    -   [Motivacion](#loss_motivacion)
+    -   [Validación exp.original](#loss_tecnica-intro)
+    -   [Experimentos y conclusiones](#loss_exp-conclusiones)
+    -   [conclusiones](#loss_final-conclusiones)
+-   [Librerias de soporte](#librerias)
+-   [Transferencia](#transferencia)
+
 
 ## Documentation
 * [Applications](applications.md)
