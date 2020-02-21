@@ -1,0 +1,2 @@
+### Conclusiones - Implementación en Keras 
+Se ha intentado implementar el experimento 1. Sin embargo, no se ha encontrado solución a actualizar/modificar la salida (target) sigma en la función de pérdida. Creando una sesión en tensorflow sí es posible. Falta investigar cómo compartir y modificar el valor de la salida y compartir ese valor entre iteraciones. Esta variable no puede ser diferenciable. En Pytorch parece que se soluciona fácilmente con requires_grad=False
