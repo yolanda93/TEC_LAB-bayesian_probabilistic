@@ -136,7 +136,7 @@ Table of contents
 * DESCRIPTION: Explore other non bayesian and standard approches commonly applied in ML
     * EXPERIMENT GOAL: Understand its limitations. Why should be use a bayesian approach?
 * RESOURCES:
-  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V0.0.0-initial_validation)
+  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V1.0.0-nonbayesian_techniques)
   
 ### V0.0.0-initial_validation
 * DATE: 28/11/2019
@@ -145,7 +145,7 @@ Table of contents
 * DESCRIPTION: Validation of the original experiment - no modification added
     * EXPERIMENT GOAL: Validate the implementation of the original experiment 
 * RESOURCES:
-  * [Notebook](.ipynb)
+  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V0.0.0-initial_validation)
 ---
 
 ## First Experiment: Synthetic data
