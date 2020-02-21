@@ -87,7 +87,7 @@ Table of contents
   
 ### V0.0.5-prior_loss_distributions
 * DATE: 30/12/2019
-* EXPERIMENT-TECHNIQUE: On fly variance estimation - EXP.I 
+* EXPERIMENT-TECHNIQUE: Loss Function - On fly variance estimation - EXP.I 
 * DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
 * DESCRIPTION: Play with different non gaussian error distirbutions and adapt the loss functions accordingly
    * EXPERIMENT GOAL: Do we improve results if the prior is satisfied?
@@ -96,7 +96,7 @@ Table of contents
   
 ### V0.0.4-loss_function_frameworks
 * DATE: 27/12/2019
-* EXPERIMENT-TECHNIQUE: On fly variance estimation - EXP.I 
+* EXPERIMENT-TECHNIQUE: Loss Function - On fly variance estimation - EXP.I 
 * DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
 * DESCRIPTION: Implementation in different deep learning frameworks: pytorch, tensorflow
    * EXPERIMENT GOAL: Tests compatibility of the experiment-technique with different deep learning frameworks
@@ -105,7 +105,7 @@ Table of contents
   
 ### V0.0.3-loss_function_customization
 * DATE: 24/12/2019
-* EXPERIMENT-TECHNIQUE: On fly variance estimation - EXP.I 
+* EXPERIMENT-TECHNIQUE: Loss Function - On fly variance estimation - EXP.I 
 * DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
 * DESCRIPTION: Play with the loss functions using different custom losses
     * EXPERIMENT GOAL: Understand how is propagated both errors (y and sigma losses)
