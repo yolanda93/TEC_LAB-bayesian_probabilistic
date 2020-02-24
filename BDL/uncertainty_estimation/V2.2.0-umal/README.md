@@ -2,8 +2,8 @@
 El problema que se trata de resolver es el de la predicción de gastos e ingresos en la App del BBVA. Se intenta evitar notificar al usuario de un futuro posible gasto cuando el modelo no esté seguro (nivel de incertidumbre alto).
 
 Al parecer se proponen 2 mejoras:
-(Está no es importante para nosotros) A nivel de modelización se propone una red usando una LSTM.
-La modelización de incertidumbre modificando la función de pérdida de la red con un método similar al MLE
+- (Está no es importante para nosotros) A nivel de modelización se propone una red usando una LSTM.
+- La modelización de incertidumbre modificando la función de pérdida de la red con un método similar al MLE
 
 - **Conclusiones**:
 En este Paper se propone una modelización de la función pérdida para la estimación de los parámetros de la PDF, incluida la varianza, similar al método de MLE. Este método usan los mismos conceptos que las Redes de Densidad Mixta. (Mixture Density Networks)
