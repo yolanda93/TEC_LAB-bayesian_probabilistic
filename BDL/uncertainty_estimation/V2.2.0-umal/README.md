@@ -1,4 +1,4 @@
-- **Resumen**:
+- **Revisión del trabajo UMAL**:
 El problema que se trata de resolver es el de la predicción de gastos e ingresos en la App del BBVA. Se intenta evitar notificar al usuario de un futuro posible gasto cuando el modelo no esté seguro (nivel de incertidumbre alto).
 
 Al parecer se proponen 2 mejoras:
