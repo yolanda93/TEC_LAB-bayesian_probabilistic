@@ -13,6 +13,6 @@ En este Paper se propone una modelización de la función pérdida para la estim
 
 En el paper se utiliza la PDF de Laplace. No entiendo muy bien la elección de la función de distribución Laplace.
 
-**Proximos pasos**
+**Próximos pasos**
 ---
 Para poder comprender mejor esta elección se propone un experimento que use la función de pérdida propuesta y la función de pérdida que se obtendría usando una función de distribución gaussiana. Una vez obtenida la estimación de los parámetros, sigma y mu de la distribución normal, estaría bien comparar esta estimación con la que se obtiene del exp.I
