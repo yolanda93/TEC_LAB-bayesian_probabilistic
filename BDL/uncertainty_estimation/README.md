@@ -4,7 +4,7 @@
 
 ## Documentation
 * [Aprendizajes](doc/aprendizajes.md)
-
+* [Presentation](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc)
 ## Experiments
 
 ### V0.2.0-tensorflow
