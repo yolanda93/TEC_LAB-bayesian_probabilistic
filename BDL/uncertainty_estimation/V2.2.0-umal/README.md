@@ -13,11 +13,7 @@ En el paper se utiliza la PDF de Laplace. No entiendo muy bien la elección de l
 
 **Experimento**
 ---
-En este experimento se pretende comparar y validar el método propuesto en UMAL con los mismos datos sintéticos del exp.I.
-
-**Conclusiones**
----
-Dan resultados parecidos. Sin embargo, el método UMAL tarda más en converger aunque en un principio parece que se adapta ligeramente mejor.
+Es el notebook orginal de la técnica. Es una validación inicial de que podemos reproducir los resultados.
 
 **Próximos pasos**
 ---
