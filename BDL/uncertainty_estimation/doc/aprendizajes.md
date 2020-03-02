@@ -23,20 +23,19 @@ La línea de deep learning bayesiano se seleccionó con la intención de obtener
 
 El interés en este campo se enfocó tras conversaciones con universidades y otros expertos en IA sobre las áreas más candentes dentro de las técnicas bayesianas.
 
-Inicialmente se realizó un (estado del arte de las técnicas existentes)[https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit]. De este informe se destacaron tres posibles enfoques a estudiar:
+Inicialmente se realizó un [estado del arte de las técnicas existentes](https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit). De este informe se destacaron tres posibles enfoques a estudiar:
 * Aprendizaje al vuelo (a.k.a experimento uno)
-* Clasificación con BDL (Bayesian Deep Learning)
+* Clasificación con BDL (Bayesian Deep Learning) (a.k.a semáforos)
 * Montecarlo Dropout
 
 y se vió que los siguientes conceptos eran claves en este área:
-* Homocedasticidad: Todas las muestras tienen el mismo error de medición.
-* Heterocedasticidad: Las muestras tienen diferentes errores de medición (no todas son igual de fiables)
+* **Homocedasticidad**: Todas las muestras tienen el mismo error de medición.
+* **Heterocedasticidad**: Las muestras tienen diferentes errores de medición (no todas son igual de fiables)
 
-* Incertidumbre epistémica: Los datos no representan completamente el problema a modelar.
-* Incertidumbre aleatoria: Los datos tienen una variabilidad asociada intrínseca.
+* **Incertidumbre epistémica**: Los datos no representan completamente el problema a modelar.
+* **Incertidumbre aleatoria**: Los datos tienen una variabilidad asociada intrínseca.
 
 Para comenzar con el modelo más simple, se seleccionó el enfoque de aprendizaje al vuelo, donde el modelo va aprendiendo del error de sus propias predicciones durante el entrenamiento. No obstante, este método es una técnica aislada que se encontró, por lo que había duda sobre su validez o si los resulatdos se debían a como estaba diseñado el experimento.
-
 Tras una replicación inicial, se plantearon las siguientes hipótesis:
 * [¿Sigue funcionando si se introduce ruido no gausiano?](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.0.1-nongaussian_noise/predicting-uncertainty-addedNonGaussianNoise.ipynb) El resultado fue que el algoritmo mantenía su comportamiento.
 
@@ -62,6 +61,10 @@ Para intentar utilizar bibliotecas estándar con este método en lugar de códig
 
 En cualquier caso, los resultados continuaban siendo sobre el conjunto de valores que se habían seleccionado para el experimento originalmente, por lo que se decidió [probar con un dataset real de valores inmobiliarios](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.1.6-real_datasets/uncertainty_prediction_house_prices.ipynb) que contuviese valores heterocedásticos. Las [conclusiones de usar este dataset](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.1.6-real_datasets/conclusions.md) fueron que, si bien se suavizan las varianzas, el algoritmo se comporte como era de esperar y permite descartar aquellas predicciones no válidas.
 
+Dado este experimento surgió la duda de por qué este método se puede considerar bayesiano. Para que el método se pueda considerar bayesiano debe tener una probabilidad a priori y otra a posteriori. En este caso el priori estaba implícito **COMPLETAR**
+De este punto se aprendió la importancia de explicitar, o detectar el prior implícito, para poder elegir el método adecuado a aplicar.
+También se ha de tener en cuenta que la solución buscada introduce un sesgo sobre el tipo de distribución de la solución. Así, si se busca una media y una varianza implicitamente se está buscando una distribución gausiana, lo cual puede no ser coherente con el método o el problema.
+
 
 Visto el comportamiento del algoritmo surgieron dos problemas:
 * Tener otros métodos de referencia para comprobar el aporte de valor.
@@ -70,7 +73,7 @@ Visto el comportamiento del algoritmo surgieron dos problemas:
 Con respecto a tener una referencia, se recopilación una serie de [métodos no bayesianos de medir la incertidumbre](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V1.0.0-nonbayesian_techniques), así como sus ventajas y limitaciones, para poder compararlos.
 
 El problema de la definición de la incertidumbre se vio más complejo, ya que era dependiente del problema y el contexto, además de que no parecía haber un consenso sobre ello en la academia.
-Tras revisar como se maneja [este concepto en otros entornos]()**Falta enlace**,se llegó a la conclusión **FALTA CONCLUSION** 
+Tras revisar como se maneja [este concepto en otros entornos](https://docs.google.com/document/d/110_gQ9yhVaELgoZJfjLxlWeL_D8YyORFrRyxF1da4UM/edit),se llegó a varias [conclusiones](https://docs.google.com/document/d/110_gQ9yhVaELgoZJfjLxlWeL_D8YyORFrRyxF1da4UM/edit), siendo la principal que las técnicas más comúnmente utilizadas como referencia son RMSE (teniendo la limitación de que la distribución debe ser gausiana) y NLL (sin esa limitación). 
 
 
 ###Otro métodos de medición de la incertidumbre
@@ -80,7 +83,4 @@ Por un lado se realizaron [experimentos con redes de densidad mixta (MDN)](https
 
   
 Respecto a la clasificación con BDL, se revisó el [experimento que utilizaba Montecarlo dropout](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V4.3.0-traffic_lights), pero no se pudo profundizar suficiente para entender su comportamiento.
-
-**FALTA POR COLOCAR**
-Concepto de prior: si búscamos variables gausianas, estamos suponiendo que es gausiano
 
