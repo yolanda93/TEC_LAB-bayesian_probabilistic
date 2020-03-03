@@ -34,7 +34,7 @@ La técnica de deep learning bayesiano se seleccionó con la intención de obten
 <h3 id="scope">Estado del Arte y Objetivos</h2>
 
 <p align="center">
-  <img src="https://github.com/beeva/TEC_LAB-bayesian_probabilistic/edit/master/BDL/uncertainty_estimation/doc/bdl.png"/>
+  <img src="BDL/uncertainty_estimation/doc/bdl.png"/>
 </p>
 
 El interés en este campo se enfocó tras conversaciones con universidades y otros expertos en IA sobre las áreas más candentes dentro de las técnicas bayesianas
