@@ -14,6 +14,7 @@ Table of contents
     -   [Experimentos - Validación Interpretación de Incertidumbre - Loss](#experimentos_2)
     -   [Experimentos - Compatibilidad de Frameworks](#experimentos_3)
     -   [Experimentos - Validación datasets reales](#experimentos_4)
+    -   [Conclusiones](#conclusiones)
 -   [Redes de densidad mixta](#mdn)
     -   [Motivación](#mdn_motivacion)
     -   [Experimentos y conclusiones](#mdn_exp-conclusiones)
@@ -88,6 +89,9 @@ Para intentar utilizar bibliotecas estándar con este método en lugar de códig
     
 En cualquier caso, los resultados continuaban siendo sobre el conjunto de valores que se habían seleccionado para el experimento originalmente, por lo que se decidió [probar con un dataset real de valores inmobiliarios](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.1.6-real_datasets/uncertainty_prediction_house_prices.ipynb) que contuviese valores heterocedásticos. Las [conclusiones de usar este dataset](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.1.6-real_datasets/conclusions.md) fueron que, si bien se suavizan las varianzas, el algoritmo se comporte como era de esperar y permite descartar aquellas predicciones no válidas.
 
+
+<h3 id="conclusiones">Conclusiones Finales</h3>
+
 Dado este experimento surgió la duda de por qué este método se puede considerar bayesiano. Para que el método se pueda considerar bayesiano debe tener una probabilidad a priori y otra a posteriori. En este caso, se vío que el prior estaba implícito en el cálculo de la función de pérdida que asume que el error de las predicciones se distribuye según una distribucción gausiana. Los parámetros de esta distribución son la varianza y la media, entendida como las predicciones de y, que se actualizan o ajustan en cada iteracción de entrenamiento de la red.
 
 De este punto se aprendió la importancia de explicitar, o detectar el prior implícito, para poder elegir el método adecuado a aplicar.
@@ -105,6 +109,9 @@ El problema de la definición de la incertidumbre se vio más complejo, ya que e
 Tras revisar como se maneja [este concepto en otros entornos](https://docs.google.com/document/d/110_gQ9yhVaELgoZJfjLxlWeL_D8YyORFrRyxF1da4UM/edit),se llegó a varias [conclusiones](https://docs.google.com/document/d/110_gQ9yhVaELgoZJfjLxlWeL_D8YyORFrRyxF1da4UM/edit), siendo la principal que las técnicas más comúnmente utilizadas como referencia son RMSE (teniendo la limitación de que la distribución debe ser gausiana) y NLL (sin esa limitación). 
 
 <h2 id="mdn">Redes de densidad mixta </h2>
+
+
+<h3 id="mdn_motivacion"Motivación</h3>
 
 Además de estudiar estos métodos, se exploraron otros métodos para conocer sus aproximaciones al problema.
 Por un lado se realizaron [experimentos con redes de densidad mixta (MDN)](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V3.0.0-mixture_density_networks), [aplicándolas también al dataset inmobiliario](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.1.6-real_datasets/uncertainty_prediction_house_prices_mdn.ipynb).
