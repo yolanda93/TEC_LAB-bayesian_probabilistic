@@ -111,10 +111,9 @@ Tras revisar como se maneja [este concepto en otros entornos](https://docs.googl
 <h2 id="mdn">Redes de densidad mixta </h2>
 
 
-<h3 id="mdn_motivacion"Motivación</h3>
+<h3 id="mdn_motivacion"> Motivación</h3>
 
-Además de estudiar estos métodos, se exploraron otros métodos para conocer sus aproximaciones al problema.
-Por un lado se realizaron [experimentos con redes de densidad mixta (MDN)](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V3.0.0-mixture_density_networks), [aplicándolas también al dataset inmobiliario](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.1.6-real_datasets/uncertainty_prediction_house_prices_mdn.ipynb).
+Además de estudiar los métodos expuestos anteriormente, se exploraron las [redes de densidad mixta (MDN)](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V3.0.0-mixture_density_networks), [aplicándolas también al dataset inmobiliario](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.1.6-real_datasets/uncertainty_prediction_house_prices_mdn.ipynb).
 
 <h3 id="mdn_exp-conclusiones"Experimentos y conclusiones</h3>
    
@@ -124,6 +123,7 @@ Este método en contraposición con lo validado en el Exp.I de estimación de in
  - Pueden modelar ruido multimodal, es decir, que no sólo provenga de una sola distribución si no de la suma de varias distribucciones de la misma familia con distintos parámetros. Este prior, sin embargo, también esta implicito en el exp.I y no es fácilmente modificable.
  - Tienen más soporte, es decir, el método está más comunmente acetpado. 
 
+# Proximos pasos
   
 Respecto a la clasificación con BDL, se revisó el [experimento que utilizaba Montecarlo dropout](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V4.3.0-traffic_lights), pero no se pudo profundizar suficiente para entender su comportamiento.
 
