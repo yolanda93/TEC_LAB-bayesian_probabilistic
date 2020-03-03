@@ -115,7 +115,7 @@ Tras revisar como se maneja [este concepto en otros entornos](https://docs.googl
 
 Además de estudiar los métodos expuestos anteriormente, se exploraron las [redes de densidad mixta (MDN)](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V3.0.0-mixture_density_networks), [aplicándolas también al dataset inmobiliario](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.1.6-real_datasets/uncertainty_prediction_house_prices_mdn.ipynb).
 
-<h3 id="mdn_exp-conclusiones"Experimentos y conclusiones</h3>
+<h3 id="mdn_exp-conclusiones">Experimentos y conclusiones</h3>
    
 Este método en contraposición con lo validado en el Exp.I de estimación de incertidumbre al vuelo presentan las siguientes ventajas que se pueden resumir a mayor libertad en la definición del prior:
 
