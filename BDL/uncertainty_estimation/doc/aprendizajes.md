@@ -76,7 +76,7 @@ Dado que el modelo aprende la incertidumbre de la predicción y la predicción a
 * ¿Qué ocurre si sólo propagamos el error de la predicción mientras mantenemos al vuelo el error de la incertidumbre?
 [Estos experimentos](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.0.3-loss_function_customization/loss_error_experiments.ipynb) llevaron a una serie de [conclusiones](https://docs.google.com/document/d/1DkcUwaWw3lTW_1ylt3POmfGURaD08xCuaUBYcRnc_5U/edit#), de donde se puede destacar que el conocimiento validado es que algoritmo funciona bajo las siguientes condiciones:
 
-** Hipotesis secundarías**
+**Hipotesis secundarías**
 
 * Datos con distribuciones de entrada aproximables a una monomodal (la arquitectura de red optimiza a la media)
 * Sólo se ha probado en problemas de predicción
