@@ -3,15 +3,13 @@
 Table of contents
 =================
 
--   [Introducción [DONE]](#introduccion)
+-   [Introducción](#introduccion)
     -   [State-of-Art](#state-of-art)
-    -   [Uncertainty Estimation](#state-of-art)
     -   [Scope](#scope)
-    -   [Punto de partida: técnicas tradicionales](#traditional-techniques)
+    -   [Terminología](#conceptos_clave)
 -   [Framework: Validación de las medidas de incertidumbre](#Framework)
     -   [State-of-Art](#state-of-art)
     -   [Experimentos](#experimentos)
-    -   [Conclusiones](#conclusiones)
 -   [Técnica: Exp.I - Estimacion de la varianza al vuelo [DONE]](#exp_I)
     -   [Experimentos - Validación de Medida de Incertidumbre](#experimentos_1)
     -   [Experimentos - Validación Interpretación de Incertidumbre - Loss](#experimentos_2)
@@ -22,18 +20,6 @@ Table of contents
     -   [Validación exp.original](#mdn_tecnica-intro)
     -   [Experimentos y conclusiones](#mdn_exp-conclusiones)
     -   [Conclusiones](#mdn_final-conclusiones)
--   [Semáforos](#semaforos)
-    -   [Motivación](#semaforos_motivacion)
-    -   [Validación exp.original](#semaforos_tecnica-intro)
-    -   [Experimentos y conclusiones](#semaforos_exp-conclusiones)
-    -   [conclusiones](#semaforos_final-conclusiones)
--   [MonteCarlo Dropout](#monte_carlo)
-    -   [Motivación](#monte_carlo_motivacion)
-    -   [Validación exp.original](#monte_carlo_tecnica-intro)
-    -   [Experimentos y conclusiones](#monte_carlo_exp-conclusiones)
-    -   [Conclusiones](#monte_carlo_final-conclusiones)    
--   [Librerías de soporte](#librerias)
--   [Transferencia](#transferencia)
 ---
 
 # Aprendizajes
@@ -47,6 +33,7 @@ La técnica de deep learning bayesiano se seleccionó con la intención de obten
 
 * **Robustez**. Filtramos predicciones con un nivel de incertidumbre alto o baja confianza, mejorando la respuesta del modelo. Estos son los casos en los que no se tenga mucha confianza en las predicciones (e.g. se sospecha que el modelo está sobre-ajustado, sistemas con comportamientos variables, falta de datos o desconocimiento del problema a modelar).
 
+<h3 id="scope">Scope</h2>
 
 [IMAGEN BDL]
 
@@ -57,7 +44,9 @@ Inicialmente se realizó un [estado del arte de las técnicas existentes](https:
 * Clasificación con BDL (Bayesian Deep Learning) (a.k.a semáforos)
 * Montecarlo Dropout
 
-y se vió que los siguientes conceptos eran claves en este área:
+<h3 id="conceptos_clave">Terminología</h2>
+
+Dentro de estos restos se vió que los siguientes conceptos eran claves en este área:
 * **Homocedasticidad**: Todas las muestras tienen el mismo error de medición.
 * **Heterocedasticidad**: Las muestras tienen diferentes errores de medición (no todas son igual de fiables)
 
