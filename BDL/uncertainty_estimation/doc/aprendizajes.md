@@ -58,7 +58,7 @@ Dentro de estos restos se vió que los siguientes conceptos eran claves en este 
 
 Para comenzar con el modelo más simple, se seleccionó el enfoque de aprendizaje al vuelo, donde el modelo va aprendiendo del error de sus propias predicciones durante el entrenamiento. No obstante, este método es una técnica aislada que se encontró, por lo que había duda sobre su validez o si los resulatdos se debían a como estaba diseñado el experimento.
 
-<h3 id="experimentos_1">Experimentos - Validación de Medida de Incertidumbre</h3>
+<h3 id="experimentos_1">Experimentos - Validación de la Medida de Incertidumbre</h3>
 
 Tras una replicación inicial, se plantearon las siguientes hipótesis:
 * [¿Sigue funcionando si se introduce ruido no gausiano?](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.0.1-nongaussian_noise/predicting-uncertainty-addedNonGaussianNoise.ipynb) El resultado fue que el algoritmo mantenía su comportamiento.
@@ -68,13 +68,16 @@ Tras una replicación inicial, se plantearon las siguientes hipótesis:
 
 * [Añadir la varianza durante el entrenamiento ¿hace que el modelo prediga peor?](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.0.3-loss_function_customization/predicting-uncertainty-withoutvar.ipynb) El resultado fue que la diferencia en el error era despreciable.
 
-<h3 id="experimentos_2">Experimentos - Validación Interpretación de Incertidumbre - Loss </h3>
+<h3 id="experimentos_2">Experimentos - Validación Interpretación de Incertidumbre </h3>
 
 Dado que el modelo aprende la incertidumbre de la predicción y la predicción a la vez, se plantearon varias hipótesis:
 * ¿Se comporta igual si se entrenan por separado las dos variables que si se tratan de forma conjunta?
 * ¿Cual es el efecto de cada error al actualizar los pesos de la red?
 * ¿Qué ocurre si sólo propagamos el error de la predicción mientras mantenemos al vuelo el error de la incertidumbre?
 [Estos experimentos](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.0.3-loss_function_customization/loss_error_experiments.ipynb) llevaron a una serie de [conclusiones](https://docs.google.com/document/d/1DkcUwaWw3lTW_1ylt3POmfGURaD08xCuaUBYcRnc_5U/edit#), de donde se puede destacar que el conocimiento validado es que algoritmo funciona bajo las siguientes condiciones:
+
+** Hipotesis secundarías**
+
 * Datos con distribuciones de entrada aproximables a una monomodal (la arquitectura de red optimiza a la media)
 * Sólo se ha probado en problemas de predicción
 * La función de incertidumbre debe poder ser usada como función de pérdida en el entrenamiento.
@@ -96,7 +99,6 @@ Dado este experimento surgió la duda de por qué este método se puede consider
 
 De este punto se aprendió la importancia de explicitar, o detectar el prior implícito, para poder elegir el método adecuado a aplicar.
 También se ha de tener en cuenta que la solución buscada introduce un sesgo sobre el tipo de distribución de la solución. Así, si se busca una media y una varianza implicitamente se está buscando una distribución gausiana, lo cual puede no ser coherente con el método o el problema.
-
 
 Visto el comportamiento del algoritmo surgieron dos problemas:
 * Tener otros métodos de referencia para comprobar el aporte de valor.
