@@ -123,7 +123,7 @@ Este método en contraposición con lo validado en el Exp.I de estimación de in
 
  - Permite modelar facilmente que el ruido provenga de distintas familias de distribucciones 
  - Pueden modelar ruido multimodal, es decir, que no sólo provenga de una sola distribución si no de la suma de varias distribucciones de la misma familia con distintos parámetros. Este prior, sin embargo, también esta implicito en el exp.I y no es fácilmente modificable.
- - Tienen más soporte, es decir, el método está más comunmente acetpado. 
+ - Tienen más soporte, es decir, el método está más comunmente aceptado. 
 
 # Proximos pasos
   
