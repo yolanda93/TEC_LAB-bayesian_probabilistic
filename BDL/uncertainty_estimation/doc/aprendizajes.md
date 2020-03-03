@@ -1,6 +1,6 @@
 # Estimación de la incertidumbre - Aprendizajes
 
-Table of contents
+Tabla de Contenidos
 =================
 
 -   [Introducción](#introduccion)
