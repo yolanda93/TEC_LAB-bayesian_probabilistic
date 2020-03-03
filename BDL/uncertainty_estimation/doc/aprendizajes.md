@@ -1,20 +1,5 @@
 # Estimación de la incertidumbre - Aprendizajes
 
-## Tabla de contenidos
-
-#### State-of-Art 
-https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit
-
-#### Sprint [27 de Nov - 11 de Dec] 2019  
-https://docs.google.com/document/d/1bp_Rl6-gARMsEufxQt622elKwv38dIKmtIs2tWVcrOc/edit#heading=h.et9co8t7x85v
-
-#### Sprint 4Q7S - 2019 - Validación de métodos de estimación con incertidumbre
-https://docs.google.com/document/d/1DkcUwaWw3lTW_1ylt3POmfGURaD08xCuaUBYcRnc_5U/edit
-
-#### Sprint 1Q2S - 2020 - Estimación de la Incertidumbre - Validación - Scoring
-https://docs.google.com/document/d/110_gQ9yhVaELgoZJfjLxlWeL_D8YyORFrRyxF1da4UM/edit
-
-
 Table of contents
 =================
 
@@ -57,7 +42,10 @@ Table of contents
 
 ---
 
-## Aprendizajes
+# Aprendizajes
+
+
+<h2 id="introduccion">Introduction </h2>
 
 La técnica de deep learning bayesiano se seleccionó con la intención de obtener conocimiento de técnicas de inteligencia artificial que, además de realizar su cometido, ofreciesen una medida de lo bueno que era su resultado. Por tanto, esta técnica se engloba dentro de los siguientes retos de alto nivel:
 
@@ -65,9 +53,10 @@ La técnica de deep learning bayesiano se seleccionó con la intención de obten
 
 * **Robustez**. Filtramos predicciones con un nivel de incertidumbre alto o baja confianza, mejorando la respuesta del modelo. Estos son los casos en los que no se tenga mucha confianza en las predicciones (e.g. se sospecha que el modelo está sobre-ajustado, sistemas con comportamientos variables, falta de datos o desconocimiento del problema a modelar).
 
+
 [IMAGEN BDL]
 
-El interés en este campo se enfocó tras conversaciones con universidades y otros expertos en IA sobre las áreas más candentes dentro de las técnicas bayesianas.
+El interés en este campo se enfocó tras conversaciones con universidades y otros expertos en IA sobre las áreas más candentes dentro de las técnicas bayesianas
 
 Inicialmente se realizó un [estado del arte de las técnicas existentes](https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit). De este informe se destacaron tres posibles enfoques a estudiar:
 * Aprendizaje al vuelo (a.k.a experimento uno)
@@ -81,6 +70,11 @@ y se vió que los siguientes conceptos eran claves en este área:
 * **Incertidumbre epistémica**: Los datos no representan completamente el problema a modelar.
 * **Incertidumbre aleatoria**: Los datos tienen una variabilidad asociada intrínseca.
 
+**Documento de referencia**:
+https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit
+
+<h2 id="exp_I">Técnica: Exp.I - Estimacion de la varianza al vuelo</h2>
+
 Para comenzar con el modelo más simple, se seleccionó el enfoque de aprendizaje al vuelo, donde el modelo va aprendiendo del error de sus propias predicciones durante el entrenamiento. No obstante, este método es una técnica aislada que se encontró, por lo que había duda sobre su validez o si los resulatdos se debían a como estaba diseñado el experimento.
 Tras una replicación inicial, se plantearon las siguientes hipótesis:
 * [¿Sigue funcionando si se introduce ruido no gausiano?](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.0.1-nongaussian_noise/predicting-uncertainty-addedNonGaussianNoise.ipynb) El resultado fue que el algoritmo mantenía su comportamiento.
@@ -90,6 +84,8 @@ Tras una replicación inicial, se plantearon las siguientes hipótesis:
 * [Si se añaden muestras lejos de los datos existentes ¿Se reduce la incertidumbre en la zona con datos como es de esperar?](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.0.2-data_faraway_original/predicting-uncertainty-AddedDataFarAwayFromOriginal.ipynb) En este caso, la varianza no aumentaba entre los datos, por lo que el comportamiento no era el esperado.
 
 * [Añadir la varianza durante el entrenamiento ¿hace que el modelo prediga peor?](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.0.3-loss_function_customization/predicting-uncertainty-withoutvar.ipynb) El resultado fue que la diferencia en el error era despreciable.
+
+<h2 id="loss">Loss Function</h2>
 
 Dado que el modelo aprende la incertidumbre de la predicción y la predicción a la vez, se plantearon varias hipótesis:
 * ¿Se comporta igual si se entrenan por separado las dos variables que si se tratan de forma conjunta?
@@ -101,6 +97,7 @@ Dado que el modelo aprende la incertidumbre de la predicción y la predicción a
 * La función de incertidumbre debe poder ser usada como función de pérdida en el entrenamiento.
 * Este método se basa en que existe una covarianza entre la distribución de las predicciones y el error de las predicciones. Aprende cómo varía el error a medida que varía la predicción.
 * Este método está pensado para usarse sobre una red ya entrenada y con buena precisión en los valores de predicción. La distribución del error de las predicciones en entrenamiento tiene que ser muy parecida a la distribución del error en validación. De este modo, el error de las predicciones con respecto a los datos de entrenamiento ofrece información sobre la incertidumbre de las predicciones.
+
 
 
 Para intentar utilizar bibliotecas estándar con este método en lugar de código realizado por nosotros se intentó [reimplementar utilizando Keras](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.0.4-loss_function_frameworks/keras_implementation.ipynb). Las [conclusiones](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.0.4-loss_function_frameworks/conclusions.md) de este experimento son que no hay una forma sencilla de implementarlo, ya que las bibliotecas tradicionales no permiten modificar el resultado de la función de pérdida al vuelo. No obstante, sí es posible realziarlo con pytorch.
@@ -123,6 +120,12 @@ Con respecto a tener una referencia, se recopilación una serie de [métodos no 
 El problema de la definición de la incertidumbre se vio más complejo, ya que era dependiente del problema y el contexto, además de que no parecía haber un consenso sobre ello en la academia.
 Tras revisar como se maneja [este concepto en otros entornos](https://docs.google.com/document/d/110_gQ9yhVaELgoZJfjLxlWeL_D8YyORFrRyxF1da4UM/edit),se llegó a varias [conclusiones](https://docs.google.com/document/d/110_gQ9yhVaELgoZJfjLxlWeL_D8YyORFrRyxF1da4UM/edit), siendo la principal que las técnicas más comúnmente utilizadas como referencia son RMSE (teniendo la limitación de que la distribución debe ser gausiana) y NLL (sin esa limitación). 
 
+**Documentos de referencia**:
+
+ - Sprint [27 de Nov - 11 de Dec] 2019  
+https://docs.google.com/document/d/1bp_Rl6-gARMsEufxQt622elKwv38dIKmtIs2tWVcrOc/edit#heading=h.et9co8t7x85v
+
+<h2 id="mdn">Redes de densidad mixta </h2>
 
 ###Otro métodos de medición de la incertidumbre - modelización de distintas familias de distribucciones
 
@@ -138,3 +141,20 @@ Este método en contraposición con lo validado en el Exp.I de estimación de in
   
 Respecto a la clasificación con BDL, se revisó el [experimento que utilizaba Montecarlo dropout](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V4.3.0-traffic_lights), pero no se pudo profundizar suficiente para entender su comportamiento.
 
+
+**Documento de referencia**:
+- Sprint 4Q7S - 2019 - Validación de métodos de estimación con incertidumbre
+https://docs.google.com/document/d/1DkcUwaWw3lTW_1ylt3POmfGURaD08xCuaUBYcRnc_5U/edit
+
+# Documentos de referencia
+
+https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit
+Sprint [27 de Nov - 11 de Dec] 2019
+
+https://docs.google.com/document/d/1bp_Rl6-gARMsEufxQt622elKwv38dIKmtIs2tWVcrOc/edit#heading=h.et9co8t7x85v
+Sprint 4Q7S - 2019 - Validación de métodos de estimación con incertidumbre
+
+https://docs.google.com/document/d/1DkcUwaWw3lTW_1ylt3POmfGURaD08xCuaUBYcRnc_5U/edit
+Sprint 1Q2S - 2020 - Estimación de la Incertidumbre - Validación - Scoring
+
+https://docs.google.com/document/d/110_gQ9yhVaELgoZJfjLxlWeL_D8YyORFrRyxF1da4UM/edit
