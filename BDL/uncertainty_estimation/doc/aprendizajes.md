@@ -4,22 +4,19 @@ Table of contents
 =================
 
 -   [Introducción](#introduccion)
-    -   [State-of-Art](#state-of-art)
-    -   [Scope](#scope)
+    -   [Estado del arte y objetivos](#scope)
     -   [Terminología](#conceptos_clave)
 -   [Framework: Validación de las medidas de incertidumbre](#Framework)
     -   [State-of-Art](#state-of-art)
     -   [Experimentos](#experimentos)
--   [Técnica: Exp.I - Estimacion de la varianza al vuelo [DONE]](#exp_I)
+-   [Técnica: Exp.I - Estimacion de la varianza al vuelo](#exp_I)
     -   [Experimentos - Validación de Medida de Incertidumbre](#experimentos_1)
     -   [Experimentos - Validación Interpretación de Incertidumbre - Loss](#experimentos_2)
     -   [Experimentos - Compatibilidad de Frameworks](#experimentos_3)
     -   [Experimentos - Validación datasets reales](#experimentos_4)
--   [Redes de densidad mixta [DONE]](#mdn)
+-   [Redes de densidad mixta](#mdn)
     -   [Motivación](#mdn_motivacion)
-    -   [Validación exp.original](#mdn_tecnica-intro)
     -   [Experimentos y conclusiones](#mdn_exp-conclusiones)
-    -   [Conclusiones](#mdn_final-conclusiones)
 ---
 
 # Aprendizajes
@@ -33,7 +30,7 @@ La técnica de deep learning bayesiano se seleccionó con la intención de obten
 
 * **Robustez**. Filtramos predicciones con un nivel de incertidumbre alto o baja confianza, mejorando la respuesta del modelo. Estos son los casos en los que no se tenga mucha confianza en las predicciones (e.g. se sospecha que el modelo está sobre-ajustado, sistemas con comportamientos variables, falta de datos o desconocimiento del problema a modelar).
 
-<h3 id="scope">Scope</h2>
+<h3 id="scope">Estado del Arte y Objetivos</h2>
 
 [IMAGEN BDL]
 
@@ -112,6 +109,8 @@ Tras revisar como se maneja [este concepto en otros entornos](https://docs.googl
 Además de estudiar estos métodos, se exploraron otros métodos para conocer sus aproximaciones al problema.
 Por un lado se realizaron [experimentos con redes de densidad mixta (MDN)](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V3.0.0-mixture_density_networks), [aplicándolas también al dataset inmobiliario](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.1.6-real_datasets/uncertainty_prediction_house_prices_mdn.ipynb).
 
+<h3 id="mdn_exp-conclusiones"Experimentos y conclusiones</h3>
+   
 Este método en contraposición con lo validado en el Exp.I de estimación de incertidumbre al vuelo presentan las siguientes ventajas que se pueden resumir a mayor libertad en la definición del prior:
 
  - Permite modelar facilmente que el ruido provenga de distintas familias de distribucciones 
