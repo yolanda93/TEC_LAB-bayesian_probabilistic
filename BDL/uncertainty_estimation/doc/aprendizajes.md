@@ -51,8 +51,6 @@ Dentro de estos restos se vió que los siguientes conceptos eran claves en este 
 * **Incertidumbre epistémica**: Los datos no representan completamente el problema a modelar.
 * **Incertidumbre aleatoria**: Los datos tienen una variabilidad asociada intrínseca.
 
-**Documento de referencia**:
-https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit
 
 <h2 id="exp_I">Técnica: Exp.I - Estimacion de la varianza al vuelo</h2>
 
@@ -128,6 +126,9 @@ Este método en contraposición con lo validado en el Exp.I de estimación de in
 Respecto a la clasificación con BDL, se revisó el [experimento que utilizaba Montecarlo dropout](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V4.3.0-traffic_lights), pero no se pudo profundizar suficiente para entender su comportamiento.
 
 # Documentos de referencia
+
+- **Estado del Arte**:
+https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit
 
 - **Sprint [27 de Nov - 11 de Dec] 2019**
 https://docs.google.com/document/d/1bp_Rl6-gARMsEufxQt622elKwv38dIKmtIs2tWVcrOc/edit#heading=h.et9co8t7x85v
