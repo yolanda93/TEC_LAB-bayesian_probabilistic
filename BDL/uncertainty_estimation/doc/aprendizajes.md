@@ -15,6 +15,48 @@ https://docs.google.com/document/d/1DkcUwaWw3lTW_1ylt3POmfGURaD08xCuaUBYcRnc_5U/
 https://docs.google.com/document/d/110_gQ9yhVaELgoZJfjLxlWeL_D8YyORFrRyxF1da4UM/edit
 
 
+Table of contents
+=================
+
+-   [Introducción [DONE]](#introduccion)
+    -   [State-of-Art](#state-of-art)
+    -   [Uncertainty Estimation](#state-of-art)
+    -   [Scope](#scope)
+    -   [Punto de partida: técnicas tradicionales](#traditional-techniques)
+-   [Framework: Validación de las medidas de incertidumbre](#Framework)
+    -   [State-of-Art](#state-of-art)
+    -   [Experimentos](#experimentos)
+    -   [Conclusiones](#conclusiones)
+-   [Técnica: Exp.I - Estimacion de la varianza al vuelo [DONE]](#exp_I)
+    -   [Motivación](#exp_I_motivacion)
+    -   [Validación exp.original](#exp_I_tecnica-intro)
+    -   [Experimentos y conclusiones](#exp_I_exp-conclusiones)
+    -   [Conclusiones](#exp_I_final-conclusiones)
+-   [Redes de densidad mixta [DONE]](#mdn)
+    -   [Motivación](#mdn_motivacion)
+    -   [Validación exp.original](#mdn_tecnica-intro)
+    -   [Experimentos y conclusiones](#mdn_exp-conclusiones)
+    -   [Conclusiones](#mdn_final-conclusiones)
+-   [Semáforos](#semaforos)
+    -   [Motivación](#semaforos_motivacion)
+    -   [Validación exp.original](#semaforos_tecnica-intro)
+    -   [Experimentos y conclusiones](#semaforos_exp-conclusiones)
+    -   [conclusiones](#semaforos_final-conclusiones)
+-   [MonteCarlo Dropout](#monte_carlo)
+    -   [Motivación](#monte_carlo_motivacion)
+    -   [Validación exp.original](#monte_carlo_tecnica-intro)
+    -   [Experimentos y conclusiones](#monte_carlo_exp-conclusiones)
+    -   [Conclusiones](#monte_carlo_final-conclusiones)    
+-   [Loss Function [DONE]](#loss)
+    -   [Motivación](#loss_motivacion)
+    -   [Validación exp.original](#loss_tecnica-intro)
+    -   [Experimentos y conclusiones](#loss_exp-conclusiones)
+    -   [Conclusiones](#loss_final-conclusiones)
+-   [Librerías de soporte](#librerias)
+-   [Transferencia](#transferencia)
+
+---
+
 ## Aprendizajes
 
 La técnica de deep learning bayesiano se seleccionó con la intención de obtener conocimiento de técnicas de inteligencia artificial que, además de realizar su cometido, ofreciesen una medida de lo bueno que era su resultado. Por tanto, esta técnica se engloba dentro de los siguientes retos de alto nivel:
