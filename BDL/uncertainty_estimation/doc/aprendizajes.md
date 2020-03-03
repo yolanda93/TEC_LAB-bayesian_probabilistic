@@ -45,7 +45,7 @@ Table of contents
 # Aprendizajes
 
 
-<h2 id="introduccion">Introduction </h2>
+<h2 id="introduccion">Introducción </h2>
 
 La técnica de deep learning bayesiano se seleccionó con la intención de obtener conocimiento de técnicas de inteligencia artificial que, además de realizar su cometido, ofreciesen una medida de lo bueno que era su resultado. Por tanto, esta técnica se engloba dentro de los siguientes retos de alto nivel:
 
