@@ -11,7 +11,7 @@ Tabla de Contenidos
     -   [Experimentos](#experimentos)
 -   [Técnica: Exp.I - Estimacion de la varianza al vuelo](#exp_I)
     -   [Experimentos Iniciales - Validación de estimación de incertidumbre](#experimentos_1)
-    -   [Experimentos - Validación Interpretación de Incertidumbre - Loss](#experimentos_2)
+    -   [Experimentos - Validación Interpretación de Incertidumbre](#experimentos_2)
     -   [Experimentos - Compatibilidad de Frameworks](#experimentos_3)
     -   [Experimentos - Validación datasets reales](#experimentos_4)
     -   [Conclusiones](#conclusiones)
@@ -78,10 +78,17 @@ Estos experimentos sirvieron para hacer una validación inicial de que el valor 
 
 Dado que el modelo aprende la incertidumbre de la predicción y la predicción a la vez, se plantearon las hipótesis relacionadas con la implementación y modelización de la técnica:
 
-* ¿Se comporta igual si se entrenan por separado las dos variables que si se tratan de forma conjunta?
-* ¿Cual es el efecto de cada error al actualizar los pesos de la red?
-* ¿Qué ocurre si sólo propagamos el error de la predicción mientras mantenemos al vuelo el error de la incertidumbre?
+* H1: ¿Se comporta igual si se entrenan por separado las dos variables que si se tratan de forma conjunta? (Exp.2. Single Loss Error)
+* H2: ¿Cual es el efecto de cada error al actualizar los pesos de la red?
+* H3: ¿Qué ocurre si sólo propagamos el error de la predicción mientras mantenemos al vuelo el error de la incertidumbre?
+* H4: En la implementación de esta técnica se utilizan 1 tensor que agrega 2 variables objetivo (y, sigma) (2 errores distintos a propagar). ¿Es este el método común o la mejor manera de aproximar el problema?
+
 [Estos experimentos](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.0.3-loss_function_customization/loss_error_experiments.ipynb) llevaron a una serie de [conclusiones](https://docs.google.com/document/d/1DkcUwaWw3lTW_1ylt3POmfGURaD08xCuaUBYcRnc_5U/edit#), de donde se puede destacar que el conocimiento validado es que algoritmo funciona bajo las siguientes condiciones:
+
+* H1: Es posible, incluso recomendable, entrenar la red para ajustando la variable 'y' y posteriormente ajustar la varianza con esta red ya pre-entrenada.
+* H2: Se han realizado experimentos sumando un factor al error de cada componente (y y sigma). Sólo se necesita propagar una pequeña proporción de sigma. Un factor de 0.5 en sigma mantiene aproximadamente los mismos resultados de predicción.
+* H3: Las predicciones de sigma no varían con los datos de entrada. Por tanto, no se aprende un error heteroscedastico.
+* H4: Revisando distintas implementaciones por compatibilidad se recomienda tener 2 tensores en el que se haga la media de los errores. Sin embargo, se ha comprobado que la función de Keras hace esta agregación internamente al calcular el MSE.
 
 * Datos con distribuciones de entrada aproximables a una monomodal (la arquitectura de red optimiza a la media)
 * Se ha probado en problemas de predicción. Para clasificación sería necesario cambiar la función de pérdida.
