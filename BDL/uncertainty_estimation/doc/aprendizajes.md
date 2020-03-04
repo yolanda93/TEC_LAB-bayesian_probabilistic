@@ -19,6 +19,7 @@ Tabla de Contenidos
     -   [Motivación](#mdn_motivacion)
     -   [Experimentos y conclusiones](#mdn_exp-conclusiones)
 -   [Proximos pasos](#prox)
+-   [Documentos de referencia](#doc_ref)
 ---
 
 # Aprendizajes
@@ -158,8 +159,7 @@ Dentro de otras aplicaciones interesantes que podría ofrecer esta técnica se h
 - Active Learning
 - Continual Learning
 
-
-# Documentos de referencia
+<h2 id="doc_ref">Documentos de referencia </h2>
 
 - **Estado del Arte**:
 https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit
