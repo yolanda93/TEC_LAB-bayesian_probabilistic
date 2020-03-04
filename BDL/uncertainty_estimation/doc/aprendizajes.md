@@ -11,8 +11,8 @@ Tabla de Contenidos
     -   [Experimentos](#experimentos)
 -   [Técnica: Exp.I - Estimacion de la varianza al vuelo](#exp_I)
     -   [Experimentos Iniciales - Validación de estimación de incertidumbre](#experimentos_1)
-    -   [Experimentos - Validación Interpretación de Incertidumbre](#experimentos_2)
-    -   [Experimentos - Compatibilidad de Frameworks](#experimentos_3)
+    -   [Experimentos - Validación Interpretación de incertidumbre](#experimentos_2)
+    -   [Experimentos - Compatibilidad de frameworks](#experimentos_3)
     -   [Experimentos - Validación datasets reales](#experimentos_4)
     -   [Conclusiones](#conclusiones)
 -   [Redes de densidad mixta](#mdn)
@@ -83,12 +83,14 @@ Dado que el modelo aprende la incertidumbre de la predicción y la predicción a
 * H3: ¿Qué ocurre si sólo propagamos el error de la predicción mientras mantenemos al vuelo el error de la incertidumbre?
 * H4: En la implementación de esta técnica se utilizan 1 tensor que agrega 2 variables objetivo (y, sigma) (2 errores distintos a propagar). ¿Es este el método común o la mejor manera de aproximar el problema?
 
-[Estos experimentos](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.0.3-loss_function_customization/loss_error_experiments.ipynb) llevaron a una serie de [conclusiones](https://docs.google.com/document/d/1DkcUwaWw3lTW_1ylt3POmfGURaD08xCuaUBYcRnc_5U/edit#), de donde se puede destacar que el conocimiento validado es que algoritmo funciona bajo las siguientes condiciones:
+[Estos experimentos](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.0.3-loss_function_customization/loss_error_experiments.ipynb) llevaron a una serie de [conclusiones](https://docs.google.com/document/d/1DkcUwaWw3lTW_1ylt3POmfGURaD08xCuaUBYcRnc_5U/edit#) que se pueden resumir en las siguientes:
 
 * H1: Es posible, incluso recomendable, entrenar la red para ajustando la variable 'y' y posteriormente ajustar la varianza con esta red ya pre-entrenada.
 * H2: Se han realizado experimentos sumando un factor al error de cada componente (y y sigma). Sólo se necesita propagar una pequeña proporción de sigma. Un factor de 0.5 en sigma mantiene aproximadamente los mismos resultados de predicción.
 * H3: Las predicciones de sigma no varían con los datos de entrada. Por tanto, no se aprende un error heteroscedastico.
 * H4: Revisando distintas implementaciones por compatibilidad se recomienda tener 2 tensores en el que se haga la media de los errores. Sin embargo, se ha comprobado que la función de Keras hace esta agregación internamente al calcular el MSE.
+
+Finalmente tras estos experimentos se extrayeron las siguientes conclusiones y/o limitaciones de la técnica:
 
 * Datos con distribuciones de entrada aproximables a una monomodal (la arquitectura de red optimiza a la media)
 * Se ha probado en problemas de predicción. Para clasificación sería necesario cambiar la función de pérdida.
@@ -116,9 +118,9 @@ De este punto se aprendió la importancia de explicitar, o detectar el prior imp
 
 También se ha de tener en cuenta que la solución buscada introduce un sesgo sobre el tipo de distribución de la solución. Así, si se busca una media y una varianza implicitamente se está buscando una distribución gausiana, lo cual puede no ser coherente con el método o el problema.
 
-Visto el comportamiento del algoritmo surgieron dos problemas:
-* Tener otros métodos de referencia para comprobar el aporte de valor.
-* Obtener una definición de incertidumbre en este contexto.
+Visto el comportamiento del algoritmo se identificaron los siguientes problemas:
+* Tener otros métodos de referencia para comprobar el aporte de valor
+* Obtener una definición de incertidumbre en este contexto
 * Otros métodos de medicción de la incertidumbre que permitieran modelar distintas familias de distribucciones
 
 Con respecto a tener una referencia, se recopilación una serie de [métodos no bayesianos de medir la incertidumbre](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V1.0.0-nonbayesian_techniques), así como sus ventajas y limitaciones, para poder compararlos.
@@ -127,7 +129,6 @@ El problema de la definición de la incertidumbre se vio más complejo, ya que e
 Tras revisar como se maneja [este concepto en otros entornos](https://docs.google.com/document/d/110_gQ9yhVaELgoZJfjLxlWeL_D8YyORFrRyxF1da4UM/edit),se llegó a varias [conclusiones](https://docs.google.com/document/d/110_gQ9yhVaELgoZJfjLxlWeL_D8YyORFrRyxF1da4UM/edit), siendo la principal que las técnicas más comúnmente utilizadas como referencia son RMSE (teniendo la limitación de que la distribución debe ser gausiana) y NLL (sin esa limitación). 
 
 <h2 id="mdn">Redes de densidad mixta </h2>
-
 
 <h3 id="mdn_motivacion"> Motivación</h3>
 
