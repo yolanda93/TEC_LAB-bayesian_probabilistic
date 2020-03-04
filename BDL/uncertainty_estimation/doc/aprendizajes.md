@@ -132,7 +132,7 @@ Tras revisar como se maneja [este concepto en otros entornos](https://docs.googl
 
 <h3 id="mdn_motivacion"> Motivación</h3>
 
-Además de estudiar los métodos expuestos anteriormente, se exploraron las [redes de densidad mixta (MDN)](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V3.0.0-mixture_density_networks), [aplicándolas también al dataset inmobiliario](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.1.6-real_datasets/uncertainty_prediction_house_prices_mdn.ipynb). Se decidió estudiar está técnica además de por las limitaciones expuestas anteriormente por el trabajo realizado por Axel Brando de BBVA Data y expuesto en la conferencia anual de IA Factory.
+Además de estudiar los métodos expuestos anteriormente, se exploraron las [redes de densidad mixta (MDN)](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V3.0.0-mixture_density_networks), [aplicándolas también al dataset inmobiliario](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.1.6-real_datasets/uncertainty_prediction_house_prices_mdn.ipynb). Se decidió estudiar está técnica, además de por las limitaciones expuestas anteriormente, por el trabajo realizado por Axel Brando de BBVA Data y expuesto en la conferencia anual de IA Factory.
 
 <h3 id="mdn_exp-conclusiones">Experimentos y conclusiones</h3>
    
