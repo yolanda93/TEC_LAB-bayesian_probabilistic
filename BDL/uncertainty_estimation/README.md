@@ -7,6 +7,12 @@
 * [Presentation](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc)
 ## Experiments
 
+### V0.0.6-bayesian_interpreptation
+* DATE: ---
+* DESCRIPTION: The goal of this notebook is twofold: first, it is explained the original experiment design since a bayesian perspective. Secondly, it is evaluated the conformity of the assumptions taken
+* RESOURCES:
+  * [Notebook](V0.0.6-bayesian_interpreptation/exp1_bayesian_interpretation.ipynb)
+
 ### V0.2.0-tensorflow
 * DATE: ---
 * DESCRIPTION: replication of the technique in the Tensorflow 2.0 framework.
