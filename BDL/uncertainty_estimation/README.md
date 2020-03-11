@@ -9,7 +9,7 @@
 
 ### V0.0.6-bayesian_interpreptation
 * DATE: ---
-* DESCRIPTION: The goal of this notebook is twofold: first, it is explained the original experiment design since a bayesian perspective. Secondly, it is evaluated the conformity of the assumptions taken
+* DESCRIPTION: The goal of this notebook is twofold: first, it is explained the original experiment design since a bayesian perspective. Secondly, it is proposed the evaluation the conformity of the assumptions taken
 * RESOURCES:
   * [Notebook](V0.0.6-bayesian_interpreptation/exp1_bayesian_interpretation.ipynb)
 
