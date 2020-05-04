@@ -1,11 +1,4 @@
-# Uncertainty Estimation
-
-
-
-## Documentation
-* [Aprendizajes](doc/aprendizajes.md)
-* [Presentation](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc)
-## Experiments
+# Experimentos
 
 ### V0.0.5-bayesian_interpretation
 * DATE: ---
