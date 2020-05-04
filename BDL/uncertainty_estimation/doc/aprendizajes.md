@@ -27,7 +27,7 @@ Tabla de Contenidos
 
 <h2 id="introduccion">Introducción </h2>
 
-La técnica de deep learning bayesiano se seleccionó con la intención de obtener conocimiento de técnicas de inteligencia artificial que, además de realizar su cometido, ofreciesen una medida de fiabilidad de lo bueno que era su resultado. Este reto es de especial importancia de acuerdo a las directrices publicadas por comisión europea en 2018 de [Inteligencia Artificial Confiable](https://github.com/beeva/TEC_LAB-Trustworthy_AI) que responde a la necesidad de la industria en construir IA con una visión 'human-centric'. 
+La técnica de *deep learning bayesiano* se seleccionó con la intención de obtener conocimiento de técnicas de inteligencia artificial que, además de realizar su cometido, ofreciesen una medida de fiabilidad de lo bueno que era su resultado. Este reto es de especial importancia de acuerdo a las directrices publicadas por comisión europea en 2018 de [Inteligencia Artificial Confiable](https://github.com/beeva/TEC_LAB-Trustworthy_AI) que responde a la necesidad de la industria en construir IA con una visión 'human-centric'. 
 
 En particular, se ha visto que esta técnica ofrece las siguientes ventajas:
 
@@ -116,12 +116,13 @@ En cualquier caso, los resultados continuaban siendo sobre el conjunto de valore
 *Interpretación Bayesiana*
 
 Dado este experimento surgió la duda de por qué este método se puede considerar bayesiano. Para que el método se pueda considerar bayesiano debe tener una probabilidad a priori y otra a posteriori. En este caso, se vío que el prior estaba implícito en el cálculo de la función de pérdida que asume que el error de las predicciones se distribuye según una distribucción gausiana. Los parámetros de esta distribución son la varianza y la media, entendida como las predicciones de y, que se actualizan o ajustan en cada iteracción de entrenamiento de la red.
+(https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V0.0.5-bayesian_interpretation)
 
 De este punto se aprendió la importancia de explicitar, o detectar el prior implícito, para poder elegir el método adecuado a aplicar.
 
 *Limitaciones de la técnica*
 
-También se ha de tener en cuenta que la solución buscada introduce un sesgo sobre el tipo de distribución de la solución. Así, si se busca una media y una varianza implicitamente se está buscando una distribución gausiana, lo cual puede no ser coherente con el método o el problema.
+También se ha de tener en cuenta que la solución buscada introduce un sesgo sobre el tipo de distribución de la solución. Así, si se busca una media y una varianza implicitamente se está buscando una distribución gausiana, lo cual puede no ser coherente con el método o el problema
 
 Visto el comportamiento del algoritmo se identificaron los siguientes problemas:
 * Tener otros métodos de referencia para comprobar el aporte de valor
