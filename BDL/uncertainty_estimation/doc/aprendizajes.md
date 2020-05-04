@@ -4,7 +4,9 @@ Tabla de Contenidos
 =================
 
 -   [Introducción](#introduccion)
-    -   [Estado del arte y objetivos](#scope)
+    -   [Introducción general a la técnica](#intro_bdl)
+    -   [Contexto en la industria](#contexto)
+    -   [Estado del arte y pasos iniciales](#scope)
     -   [Terminología](#conceptos_clave)
 -   [Framework: Validación de las medidas de incertidumbre](#Framework)
     -   [State-of-Art](#state-of-art)
@@ -23,25 +25,44 @@ Tabla de Contenidos
 ---
 
 # Aprendizajes
+<h2 id="introduccion">Introducción</h2>
 
 
-<h2 id="introduccion">Introducción </h2>
+<h3 id="contexto">Contexto en la industria</h3>
 
-La técnica de *deep learning bayesiano* se seleccionó con la intención de obtener conocimiento de técnicas de inteligencia artificial que, además de realizar su cometido, ofreciesen una medida de fiabilidad de lo bueno que era su resultado. Esta solución es de especial importancia de acuerdo a las directrices publicadas por comisión europea en 2018 de [Inteligencia Artificial Confiable](https://github.com/beeva/TEC_LAB-Trustworthy_AI) que responde a la necesidad de la industria en construir IA con una visión 'human-centric'. 
+La técnica de *deep learning bayesiano* se seleccionó con la intención de obtener conocimiento de técnicas de inteligencia artificial que, además de realizar su cometido, ofreciesen una medida de fiabilidad de lo bueno que era su resultado. Esta solución es de especial importancia de acuerdo a las directrices publicadas por comisión europea en 2018 de [Inteligencia Artificial Confiable](https://github.com/beeva/TEC_LAB-Trustworthy_AI) que responde a la necesidad de la industria en construir IA con una visión 'human-centric'
 
 En particular, se ha visto que esta técnica ofrece las siguientes ventajas:
 
 * **Explicabilidad**: Ofrece una medida de incertidumbre y/o confianza que permita entender las variaciones en el comportamiento del modelo o cuantificar/acotar el riesgo de las predicciones
 
-    -   **Precisión vs. Explicabilidad**: [Dentro de este reto](https://github.com/beeva/TEC_LAB-Trustworthy_AI/blob/master/pages/retos/precision-explicabilidad.md), es importante destacar, que en particular los modelos de deep learning, tiene la desventaja de ser modelos de caja-negra, es decir, las inferencias suelen ser más precisas pero a la vez también son más dificiles de explicar
+    -   **Precisión vs. Explicabilidad**: [Dentro de este reto](https://github.com/beeva/TEC_LAB-Trustworthy_AI/blob/master/pages/retos/precision-explicabilidad.md), es importante destacar, que en particular los modelos de deep learning, tiene la desventaja de ser modelos de caja-negra, es decir, las inferencias suelen ser más precisas pero a la vez también son más dificiles de explicar. Está técnica nos permite mejorar la explicabilidad de los modelos Deep Learning sin penalizar su rendimiento.
 
 * **Robustez**: Mejorar la respuesta del modelo ante situaciones adversas. Esta técnica nos podría filtrar predicciones con un nivel de incertidumbre alto o baja confianza. Estos son los casos en los que no se tenga mucha confianza en las predicciones (e.g. se sospecha que el modelo está sobre-ajustado, sistemas con comportamientos variables, falta de datos o desconocimiento del problema a modelar).
+
+<h3 id="intro_bdl">Introducción general a la técnica</h3>
+
+#### ¿Por qué es importante?
+
+La técnica de *Deep Learning Bayesiano* permite estimar la variación del error de cada una de las predicciones
+
+Esto es importante por los siguientes aspectos:
+
+- **Cuantificar el rendimiento del modelo sobre observaciones no vistas**. Normalmente cuando se quiere cuantificar el rendimiento (o variación del error) en las inferencias de los modelos se utilizan técnicas de sampleo (bootstrapping, cross-validation, etc) sobre los datos disponibles utilizando métricas cómo  precisión, recall, etc. Sin embargo, esta metodología de evaluación sólo utiliza el conjunto de datos disponibles extrapolando esta medida a los datos reales (no disponibles) cuya distribucción puede variar significativamente. Estas posibles variaciones del rendimiento del modelo sobre los datos no disponibles es lo que permite estimar esta técnica.
+    
+- **Estimación de la incertidumbre por cada inferencia**. Adicionalmente estas técnicas convencionales calculan una distribucción del error de las predicciones sobre el conjunto de datos no por cada una de las inferencias, construyendo lo que se conoce como intervalos de confianza. Es decir con esto somos capaces de obtener la probabilidad de obtener una precisión mayor o igual a un Z-score o umbral de intervalo pero no la probabilidad de cada acierto de una estimación concreta. 
+    
+#### ¿Cómo funciona?
+
+La técnica de *Deep Learning Bayesiano* remplaza los pesos deterministicos de una red con distribucciones sobre estos parámetros. Es decir, en vez de optimizar los pesos de la red directamente, se optimiza sobre la distribucción de los posibles valores que estos parámetros pueden tomar (marginalización)
+
+La marginalización o optimización de la distribución de los pesos de la red, nos permite estimar a su vez la distribución de posibles valores en cada inferencia realizada. 
 
 <p align="center">
   <img src="assets/bdl.png" width="300" height="300"/>
 </p>
 
-<h3 id="scope">Estado del Arte y Objetivos</h2>
+<h3 id="scope">Estado del Arte y pasos iniciales</h2>
 
 El interés en este campo se inició tras conversaciones con universidades y otros expertos en IA sobre las áreas más candentes dentro de las técnicas bayesianas
 
