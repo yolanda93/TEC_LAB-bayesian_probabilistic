@@ -29,9 +29,16 @@ Tabla de Contenidos
 
 La técnica de deep learning bayesiano se seleccionó con la intención de obtener conocimiento de técnicas de inteligencia artificial que, además de realizar su cometido, ofreciesen una medida de lo bueno que era su resultado. Por tanto, esta técnica se engloba dentro de los siguientes retos de alto nivel:
 
-* **Interpretabilidad**: Ofrecer una medida de incertidumbre y/o confianza que permita entender las variaciones en el comportamiento del modelo o cuantificar/acotar el riesgo de las predicciones
+* **Explicabilidad**: Ofrecer una medida de incertidumbre y/o confianza que permita entender las variaciones en el comportamiento del modelo o cuantificar/acotar el riesgo de las predicciones
 
-* **Robustez**: Mejora de la respuesta del modelo ante situaciones adversas. Filtramos predicciones con un nivel de incertidumbre alto o baja confianza. Estos son los casos en los que no se tenga mucha confianza en las predicciones (e.g. se sospecha que el modelo está sobre-ajustado, sistemas con comportamientos variables, falta de datos o desconocimiento del problema a modelar).
+    -   **Precisión vs. Explicabilidad**: [Dentro de este reto](https://github.com/beeva/TEC_LAB-Trustworthy_AI/blob/master/pages/retos/precision-explicabilidad.md), es importante destacar, que en particular los modelos de deep learning, tiene la desventaja de ser modelos de caja-negra, es decir, las inferencias suelen ser más precisas pero a la vez también son más dificiles de explicar
+
+
+* **Robustez**: Mejorar la respuesta del modelo ante situaciones adversas. Esta técnica nos podría filtrar predicciones con un nivel de incertidumbre alto o baja confianza. Estos son los casos en los que no se tenga mucha confianza en las predicciones (e.g. se sospecha que el modelo está sobre-ajustado, sistemas con comportamientos variables, falta de datos o desconocimiento del problema a modelar).
+
+Estos retos son de especial importancia de acuerdo a las directrices publicadas por comisión europea en 2018 de Inteligencia Artificial Confiable. En el siguiente enlace se puede encontrar información más detallada de estos retos y el estado del arte en la industría:
+
+[Acceso a la documentación del reto Trustworthy AI](https://github.com/beeva/TEC_LAB-Trustworthy_AI)
 
 <p align="center">
   <img src="assets/bdl.png" width="300" height="300"/>
