@@ -4,8 +4,8 @@ Tabla de Contenidos
 =================
 
 -   [Introducción](#introduccion)
-    -   [Introducción general a la técnica](#intro_bdl)
     -   [Contexto en la industria](#contexto)
+    -   [Introducción general a la técnica](#intro_bdl)
     -   [Estado del arte y pasos iniciales](#scope)
     -   [Terminología](#conceptos_clave)
 -   [Framework: Validación de las medidas de incertidumbre](#Framework)
@@ -34,11 +34,13 @@ La técnica de *deep learning bayesiano* se seleccionó con la intención de obt
 
 En particular, se ha visto que esta técnica ofrece las siguientes ventajas:
 
-* **Explicabilidad**: Ofrece una medida de incertidumbre y/o confianza que permita entender las variaciones en el comportamiento del modelo o cuantificar/acotar el riesgo de las predicciones
+* [**Explicabilidad**](https://github.com/beeva/TEC_LAB-Trustworthy_AI/blob/master/pages/areas/transparencia.md): Ofrece una medida de incertidumbre y/o confianza que permita entender las variaciones en el comportamiento del modelo o cuantificar/acotar el riesgo de las predicciones
 
     -   **Precisión vs. Explicabilidad**: [Dentro de este reto](https://github.com/beeva/TEC_LAB-Trustworthy_AI/blob/master/pages/retos/precision-explicabilidad.md), es importante destacar, que en particular los modelos de deep learning, tiene la desventaja de ser modelos de caja-negra, es decir, las inferencias suelen ser más precisas pero a la vez también son más dificiles de explicar. Está técnica nos permite mejorar la explicabilidad de los modelos Deep Learning sin penalizar su rendimiento.
 
-* **Robustez**: Mejorar la respuesta del modelo ante situaciones adversas. Esta técnica nos podría filtrar predicciones con un nivel de incertidumbre alto o baja confianza. Estos son los casos en los que no se tenga mucha confianza en las predicciones (e.g. se sospecha que el modelo está sobre-ajustado, sistemas con comportamientos variables, falta de datos o desconocimiento del problema a modelar).
+* [**Robustez**](https://github.com/beeva/TEC_LAB-Trustworthy_AI/blob/master/pages/areas/robustez.md): Mejorar la respuesta del modelo ante situaciones adversas. Esta técnica nos podría *filtrar predicciones con un nivel de incertidumbre alto o baja confianza*. Estos son los casos en los que no se tenga mucha confianza en las predicciones (e.g. se sospecha que el modelo está sobre-ajustado, sistemas con comportamientos variables, falta de datos o desconocimiento del problema a modelar).
+
+* [**Ética y responsabilidad**](https://github.com/beeva/TEC_LAB-Trustworthy_AI/blob/master/pages/areas/sesgo.md): Al no ser posible cuantificar la incertdumbre o el grado de certeza de las inferencias de los modelos, se podrían tomar decisiones automatizadas erroneas sin ser incluso capaces de cuantificar los daños en el caso de que no se comportará de la forma esperada. De esta manera, esta técnica, nos permitiría detectar estos casos y no realizar una toma de decisiones automatizada trasladando esta responsabilidad al humano. 
 
 <h3 id="intro_bdl">Introducción general a la técnica</h3>
 
