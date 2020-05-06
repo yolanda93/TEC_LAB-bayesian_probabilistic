@@ -47,11 +47,11 @@ En particular, se ha visto que esta técnica ofrece las siguientes ventajas:
 #### ¿Cómo funciona?
 
 #### Introducción 
-El *Deep Learning Bayesiano* es una técnica que introduce un enfoque bayesiano para estimar la incertidumbre de las inferencias de modelos de Deep Learning.
+El *Deep Learning Bayesiano* es una técnica que da un enfoque bayesiano, respecto al enfoque convencional basado en estadística frequentista, para estimar la incertidumbre de las inferencias de modelos de Deep Learning
 
-La estadística bayesiana a diferencia de la estadística frequentista (o técnicas convencionales) permite estimar la 'probabilidad de que una hipótesis sea cierta' (incertidumbre de la hipótesis), es decir, interpreta un modelo como el conjunto de asunciones o hipótesis que realiza y la probabilidad de que esas asunciones se acerquen a la realidad. Sin embargo, en el caso de la estadística frequentista se utiliza un enfoque determinista en el que se evalua la concordancia de las hipótesis en terminos absolutos usando las evidencias disponibles y de acuerdo a unos ciertos umbrales de aceptación de tal hipótesis (p-values, CI, etc)
+La estadística bayesiana a diferencia de la estadística frequentista (o técnicas convencionales) permite estimar la 'probabilidad de que una hipótesis sea cierta' (incertidumbre de la hipótesis), es decir, interpreta un modelo como el conjunto de asunciones o hipótesis que realiza y la probabilidad de que esas asunciones se acerquen a la realidad. Sin embargo, en el caso de la estadística frequentista se utiliza un enfoque determinista en el que se evalua la concordancia de las hipótesis en terminos absolutos usando las evidencias disponibles y de acuerdo a unos ciertos umbrales de aceptación de tal hipótesis (p-values, CI, etc) sin expresar la incertidumbre al respecto
 
-La evaluación y actualización de las hipótesis de acuerdo a las nuevas evidencias se realiza aplicando lo que se conoce como el teorema de bayes:
+Los fundamentos de la estadística bayesiana, realiza la evaluación y actualización de las hipótesis de acuerdo a las nuevas evidencias se realiza aplicando lo que se conoce como el teorema de bayes:
 
 <img src="https://render.githubusercontent.com/render/math?math=P(H|D) = \frac{ P(D|H)P(H)}{P(D)}">
 
