@@ -44,16 +44,6 @@ En particular, se ha visto que esta técnica ofrece las siguientes ventajas:
 
 <h3 id="intro_bdl">Introducción general a la técnica</h3>
 
-#### ¿Por qué es importante?
-
-La técnica de *Deep Learning Bayesiano* permite estimar la variación del error de cada una de las predicciones
-
-Esto es importante por los siguientes aspectos:
-
-- **Cuantificar en tiempo real el rendimiento del modelo**. Normalmente cuando se quiere cuantificar el rendimiento (o variación del error) en las inferencias de los modelos se utilizan técnicas de sampleo (bootstrapping, cross-validation, etc) sobre los datos disponibles utilizando métricas cómo  precisión, recall, etc. Sin embargo, esta metodología de evaluación sólo utiliza el conjunto de datos disponibles extrapolando esta medida a los datos reales (no disponibles) cuya distribucción puede variar significativamente. Estas posibles variaciones del rendimiento del modelo sobre los datos no disponibles es lo que permite estimar esta técnica. (ver [Terminologia](#conceptos_clave))
-    
-- **Estimación de la incertidumbre de cada inferencia**. Adicionalmente las técnicas convencionales calculan una distribucción del error de las predicciones sobre el conjunto de datos no por cada una de las inferencias, construyendo lo que se conoce como intervalos de confianza. Es decir con esto somos capaces de obtener la probabilidad de obtener una precisión mayor o igual a un CI o umbral de intervalo pero no la probabilidad de 'acierto' de una estimación concreta. 
-    
 #### ¿Cómo funciona?
 
 #### Introducción 
@@ -77,6 +67,16 @@ La marginalización u optimización de la distribución de los pesos de la red, 
   <img src="assets/bdl.png" width="300" height="300"/>
 </p>
 
+#### ¿Por qué es importante?
+
+La técnica de *Deep Learning Bayesiano* permite estimar la variación del error de cada una de las predicciones
+
+Esto es importante por los siguientes aspectos:
+
+- **Cuantificar en tiempo real el rendimiento del modelo**. Normalmente cuando se quiere cuantificar el rendimiento (o variación del error) en las inferencias de los modelos se utilizan técnicas de sampleo (bootstrapping, cross-validation, etc) sobre los datos disponibles utilizando métricas cómo  precisión, recall, etc. Sin embargo, esta metodología de evaluación sólo utiliza el conjunto de datos disponibles extrapolando esta medida a los datos reales (no disponibles) cuya distribucción puede variar significativamente. Estas posibles variaciones del rendimiento del modelo sobre los datos no disponibles es lo que permite estimar esta técnica. (ver [Terminologia](#conceptos_clave))
+    
+- **Estimación de la incertidumbre de cada inferencia**. Adicionalmente las técnicas convencionales calculan una distribucción del error de las predicciones sobre el conjunto de datos no por cada una de las inferencias, construyendo lo que se conoce como intervalos de confianza. Es decir con esto somos capaces de obtener la probabilidad de obtener una precisión mayor o igual a un CI o umbral de intervalo pero no la probabilidad de 'acierto' de una estimación concreta. 
+    
 
 <h3 id="scope">Estado del Arte y pasos iniciales</h2>
 
