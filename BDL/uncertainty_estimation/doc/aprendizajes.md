@@ -56,6 +56,17 @@ Esto es importante por los siguientes aspectos:
     
 #### ¿Cómo funciona?
 
+#### Introducción a técnicas bayesianas
+El *Deep Learning Bayesiano* es una técnica que introduce un enfoque bayesiano para estimar la incertidumbre de las inferencias de modelos de Deep Learning.
+
+En concreto, es importante destacar que la estadística bayesiana a diferencia de la estadística frequentista (o técnicas convencionales) permite estimar la 'probabilidad de que una hipótesis sea cierta', es decir, interpreta un modelo como el conjunto de asunciones o hipótesis que realiza y la probabilidad de que esas asunciones se acerquen a la realidad. En el caso de la estadística frequentista se utiliza un enfoque determinista en el que se evalua la concordancia de las hipótesis en terminos absolutos usando las evidencias disponibles y de acuerdo a unos ciertos umbrales de aceptación de tal hipótesis (p-values, CI, etc)
+
+La evaluación y actualización de las hipótesis de acuerdo a las nuevas evidencias se realiza aplicando lo que se conoce como el teorema de bayes:
+
+<img src="https://render.githubusercontent.com/render/math?math= P(H|D) = \frac{ P(D|H)P(H)}{P(D)}">
+
+#### Bayesian Deep Learning
+
 La técnica de *Deep Learning Bayesiano* remplaza los pesos deterministicos de una red con distribucciones sobre estos parámetros. Es decir, en vez de optimizar los pesos de la red directamente, se optimiza sobre la distribucción de los posibles valores que estos parámetros pueden tomar (marginalización)
 
 La marginalización o optimización de la distribución de los pesos de la red, nos permite estimar a su vez la distribución de posibles valores en cada inferencia realizada. 
@@ -63,6 +74,7 @@ La marginalización o optimización de la distribución de los pesos de la red, 
 <p align="center">
   <img src="assets/bdl.png" width="300" height="300"/>
 </p>
+
 
 <h3 id="scope">Estado del Arte y pasos iniciales</h2>
 
