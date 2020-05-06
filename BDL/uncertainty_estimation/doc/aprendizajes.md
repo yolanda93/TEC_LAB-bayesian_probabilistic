@@ -51,9 +51,10 @@ El *Deep Learning Bayesiano* es una técnica que da un enfoque bayesiano, respec
 
 La estadística bayesiana a diferencia de la estadística frequentista (o técnicas convencionales) permite estimar la 'probabilidad de que una hipótesis sea cierta' (incertidumbre de la hipótesis), es decir, interpreta un modelo como el conjunto de asunciones o hipótesis que realiza y la probabilidad de que esas asunciones se acerquen a la realidad. Sin embargo, en el caso de la estadística frequentista se utiliza un enfoque determinista en el que se evalua la concordancia de las hipótesis en terminos absolutos usando las evidencias disponibles y de acuerdo a unos ciertos umbrales de aceptación de tal hipótesis (p-values, CI, etc) sin expresar la incertidumbre al respecto
 
-Los fundamentos de la estadística bayesiana, realiza la evaluación y actualización de las hipótesis de acuerdo a las nuevas evidencias se realiza aplicando lo que se conoce como el teorema de bayes:
+La formulación matemática de este enfoque utiliza [el teorema de bayes](https://es.wikipedia.org/wiki/Teorema_de_Bayes), descrito mediante la siguiente fórmula:
 
 <img src="https://render.githubusercontent.com/render/math?math=P(H|D) = \frac{ P(D|H)P(H)}{P(D)}">
+
 
 #### Bayesian Deep Learning
 
