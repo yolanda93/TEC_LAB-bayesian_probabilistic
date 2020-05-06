@@ -74,8 +74,12 @@ La técnica de *Deep Learning Bayesiano* permite estimar la variación del error
 
 Esto es importante por los siguientes aspectos:
 
-- **Cuantificar en tiempo real el rendimiento del modelo**. Normalmente cuando se quiere cuantificar el rendimiento (o variación del error) en las inferencias de los modelos se utilizan técnicas de sampleo (bootstrapping, cross-validation, etc) sobre los datos disponibles utilizando métricas cómo  precisión, recall, etc. Sin embargo, esta metodología de evaluación sólo utiliza el conjunto de datos disponibles extrapolando esta medida a los datos reales (no disponibles) cuya distribucción puede variar significativamente. Estas posibles variaciones del rendimiento del modelo sobre los datos no disponibles es lo que permite estimar esta técnica. (ver [Terminologia](#conceptos_clave))
-    
+- **Estimar en tiempo real el rendimiento del modelo**. Normalmente cuando se quiere cuantificar el rendimiento (o variación del error) en las inferencias de los modelos se utilizan técnicas de sampleo (bootstrapping, cross-validation, etc) sobre los datos disponibles utilizando métricas cómo  precisión, recall, etc. Sin embargo, esta metodología de evaluación sólo utiliza el conjunto de datos disponibles extrapolando esta medida a los datos reales (no disponibles) cuya distribucción puede variar significativamente. Estas posibles variaciones del rendimiento del modelo sobre los datos no disponibles es lo que permite estimar esta técnica. (ver [Terminologia](#conceptos_clave))
+
+- **Obtener una medida de incertidumbre fiable e interpretable**. Este caso se da con la probabilidad resultado de la operación softmax en clasificación.
+
+    - En un problema de clasificación cuando una imagen no corresponde a ninguna de las características de las imagenes con etiquetas del dataset de entrenamiento el resultado de clasificación binaria sería (50/50), sin embargo la probabilidad obtenida tras la operación softmax devuelve cualquier cosa entre (0/100)-(100/0). Por ejemplo, pongamos una imagen de un pájaro, respecto a el conjunto de entrenamiento que contiene imágenes de gatos y perros. El resultado esperado sería obtener la máxima incertidumbre 50% probabilidad de ser perro y 50% de ser gato, sin embargo podría dar perfectamente un alto grado de confianza sobre gato 80% y 20% en perro. 
+
 - **Estimación de la incertidumbre de cada inferencia**. Adicionalmente las técnicas convencionales calculan una distribucción del error de las predicciones sobre el conjunto de datos no por cada una de las inferencias, construyendo lo que se conoce como intervalos de confianza. Es decir con esto somos capaces de obtener la probabilidad de obtener una precisión mayor o igual a un CI o umbral de intervalo pero no la probabilidad de 'acierto' de una estimación concreta. 
     
 
