@@ -6,8 +6,8 @@ Tabla de Contenidos
 -   [Introducción](#introduccion)
     -   [Contexto en la industria](#contexto)
     -   [Introducción general a la técnica](#intro_bdl)
-    -   [Estado del arte y pasos iniciales](#scope)
     -   [Terminología](#conceptos_clave)
+    -   [Estado del arte y pasos iniciales](#scope)
 -   [Framework: Validación de las medidas de incertidumbre](#Framework)
     -   [State-of-Art](#state-of-art)
     -   [Experimentos](#experimentos)
@@ -15,7 +15,8 @@ Tabla de Contenidos
     -   [Experimentos - Validación inicial de estimación de incertidumbre](#experimentos_1)
     -   [Experimentos - Validación de la interpretación de incertidumbre](#experimentos_2)
     -   [Experimentos - Compatibilidad de frameworks](#experimentos_3)
-    -   [Experimentos - Validación datasets reales](#experimentos_4)
+    -   [Experimentos - Validación ruido no gausiano](#experimentos_4)
+    -   [Experimentos - Validación datasets reales](#experimentos_5)
     -   [Conclusiones](#conclusiones)
 -   [Redes de densidad mixta](#mdn)
     -   [Motivación](#mdn_motivacion)
@@ -82,16 +83,6 @@ Esto es importante por los siguientes aspectos:
 
 - **Estimación de la incertidumbre de cada inferencia**. Adicionalmente las técnicas convencionales calculan una distribucción del error de las predicciones sobre el conjunto de datos no por cada una de las inferencias, construyendo lo que se conoce como intervalos de confianza. Es decir con esto somos capaces de obtener la probabilidad de obtener una precisión mayor o igual a un CI o umbral de intervalo pero no la probabilidad de 'acierto' de una estimación concreta. 
     
-
-<h3 id="scope">Estado del Arte y pasos iniciales</h2>
-
-El interés en este campo se inició tras conversaciones con universidades y otros expertos en IA sobre las áreas más candentes dentro de las técnicas bayesianas
-
-Inicialmente se realizó un [estado del arte de las técnicas existentes](https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit). De este informe se destacaron tres posibles experimentos por los que empezar:
-* Aprendizaje al vuelo (a.k.a experimento uno)
-* Clasificación con BDL (Bayesian Deep Learning) (a.k.a semáforos)
-* MonteCarlo Dropout
-
 <h3 id="conceptos_clave">Terminología</h2>
 
 Dentro de este reto se estudiaron los siguientes conceptos clave:
@@ -101,6 +92,15 @@ Dentro de este reto se estudiaron los siguientes conceptos clave:
 
 * **Incertidumbre epistémica**: Los datos no representan completamente el problema a modelar. También está relacionado con la correcta calibración del modelo. *Esto es importante en datasets pequeños y dispersos y en aplicaciones críticas*
 * **Incertidumbre aleatoria**: Los datos tienen una variabilidad asociada intrínseca que no se ajusta al error esperado. *Importante en aplicaciones en tiempo real con mucho ruído., e.g. stock market*
+
+<h3 id="scope">Estado del Arte y pasos iniciales</h2>
+
+El interés en este campo se inició tras conversaciones con universidades y otros expertos en IA sobre las áreas más candentes dentro de las técnicas bayesianas
+
+Inicialmente se realizó un [estado del arte de las técnicas existentes](https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit). De este informe se destacaron tres posibles experimentos por los que empezar:
+* Aprendizaje al vuelo (a.k.a experimento uno)
+* Clasificación con BDL (Bayesian Deep Learning) (a.k.a semáforos)
+* MonteCarlo Dropout
 
 <h2 id="exp_I">Técnica: Exp.I - Estimacion de la varianza al vuelo</h2>
 
@@ -119,7 +119,7 @@ Tras una replicación inicial, se plantearon las siguientes hipótesis:
 
 **Conclusiones finales**
 
-Estos experimentos sirvieron para hacer una validación inicial de que el valor de la estimación de la varianza o incertidumbre era correcto en aquellos casos (extremos) donde se espera que el nivel de incertidumbre sea alto.
+Estos experimentos sirvieron para hacer una validación inicial de que el valor de la estimación de la varianza o incertidumbre era correcto en aquellos casos (extremos) donde se espera que el nivel de incertidumbre sea alto. **Estos experimentos por tanto nos permitieron aceptar está técnica para modelar la incertidumbre epistémica**
 
 <h3 id="experimentos_2">Experimentos - Validación de la interpretación de incertidumbre </h3>
 
@@ -149,7 +149,18 @@ Finalmente tras estos experimentos se extrayeron las siguientes conclusiones y/o
 
 Para intentar utilizar bibliotecas estándar con este método en lugar de código realizado por nosotros se intentó [reimplementar utilizando Keras](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.0.4-loss_function_frameworks/keras_implementation.ipynb). Las [conclusiones](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.0.4-loss_function_frameworks/conclusions.md) de este experimento son que no hay una forma sencilla de implementarlo, ya que las bibliotecas tradicionales no permiten modificar el resultado de la función de pérdida al vuelo. No obstante, sí es posible realziarlo con pytorch.
 
-<h3 id="experimentos_4">Experimentos - Validación datasets reales</h3>
+<h3 id="experimentos_4">Experimentos - Validación ruido no gausiano</h3>
+
+Estos experimentos se realizaron con el objetivo era validar la siguiente hipótesis:
+
+- Modelización de incertidumbre aleatórica generada con ruido no gausiano
+
+Conclusiones:
+
+- El método tiene carencias a la hora de modelizar ruido aleatórico no gausiano del tipo heterocedastico
+- El tipo de distribucción aprendida para la estimación de la incertidumbre tiene a una aprox.normal
+
+<h3 id="experimentos_5">Experimentos - Validación datasets reales</h3>
     
 En cualquier caso, los resultados continuaban siendo sobre el conjunto de valores que se habían seleccionado para el experimento originalmente, por lo que se decidió [probar con un dataset real de valores inmobiliarios](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.1.6-real_datasets/uncertainty_prediction_house_prices.ipynb) que contuviese valores heterocedásticos. Las [conclusiones de usar este dataset](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/BDL/uncertainty_estimation/V0.1.6-real_datasets/conclusions.md) fueron que, si bien se suavizan las varianzas, el algoritmo se comporte como era de esperar y permite descartar aquellas predicciones no válidas.
 
@@ -167,6 +178,7 @@ De este punto se aprendió la importancia de explicitar, o detectar el prior imp
 También se ha de tener en cuenta que la solución buscada introduce un sesgo sobre el tipo de distribución de la solución. Así, si se busca una media y una varianza implicitamente se está buscando una distribución gausiana, lo cual puede no ser coherente con el método o el problema
 
 Visto el comportamiento del algoritmo se identificaron los siguientes problemas:
+* Limitaciones en la modelización de incertidumbre aleatórica hereocedastica
 * Tener otros métodos de referencia para comprobar el aporte de valor
 * Obtener una definición de incertidumbre en este contexto
 * Otros métodos de medicción de la incertidumbre que permitieran modelar distintas familias de distribucciones
