@@ -1,3 +1,5 @@
+![](/uncertainty_estimation/doc/assets/neural_network_tutorial_2.jpg)
+
 # Estimación de la Incertidumbre - Bayesian Probabilistic
 
 ## Documentacion complementaria
