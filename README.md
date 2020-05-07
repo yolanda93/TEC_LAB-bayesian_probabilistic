@@ -3,7 +3,9 @@
 
 ## Documentacion complementaria
 * [Experimentos](/BDL/uncertainty_estimation)
-* [Presentation](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc)
+* [Presentacion](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc)
+
+[![](/assets/ppt-ejecutiva.jpg)](https://docs.google.com/presentation/d/1n1yhIW3Pls19BMPMjLljvWAjWgEYxAhdrEdjDFoImnA/edit?usp=sharing)
 
 ## Aprendizajes 
 
