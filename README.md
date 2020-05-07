@@ -1,4 +1,3 @@
-![](/BDL/uncertainty_estimation/doc/assets/neural_network_tutorial_2.jpg)
 
 # Estimación de la Incertidumbre - Bayesian Probabilistic
 
@@ -56,8 +55,10 @@ La técnica de *Deep Learning Bayesiano* utiliza el enfoque bayesiano para rempl
 La marginalización u optimización de la distribución de los pesos de la red, nos permite estimar a su vez la distribución de posibles valores en cada inferencia realizada. 
 
 <p align="center">
-  <img src="assets/bdl.png" width="300" height="300"/>
+  <img src="/BDL/uncertainty_estimation/doc/assets/bdl.png" width="300" height="300"/>
 </p>
+
+
 
 <h4 id="why_tecnica">¿Por qué es importante?</h4>
 
