@@ -21,7 +21,6 @@ Tabla de Contenidos
 
 # Aprendizajes de experimentos
 
-<h2 id="exp_I">Técnicas No Bayesianas</h2>
 
 <h2 id="exp_I">Técnica: Exp.I - Estimacion de la varianza al vuelo</h2>
 
