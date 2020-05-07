@@ -8,8 +8,8 @@
 
 -   [Contexto en la industria](#contexto)
 -   [Introducción general a la técnica](#intro_bdl)
-    -[¿Cómo funciona?](#how_tecnica)
-    -[¿Por qué es importante?](#why_tecnica)
+    -  [¿Cómo funciona?](#how_tecnica)
+    -  [¿Por qué es importante?](#why_tecnica)
 -   [Terminología](#conceptos_clave)
 -   [Estado del arte y pasos iniciales](#scope)
 -   [Aprendizajes de Experimentos](/BDL/uncertainty_estimation/doc/aprendizajes.md)
