@@ -11,6 +11,7 @@ Tabla de Contenidos
 -   [Framework: Validación de las medidas de incertidumbre](#Framework)
     -   [State-of-Art](#state-of-art)
     -   [Experimentos](#experimentos)
+-   [Técnicas No Bayesianas](#non_bay)
 -   [Técnica: Exp.I - Estimacion de la varianza al vuelo](#exp_I)
     -   [Experimentos - Validación inicial de estimación de incertidumbre](#experimentos_1)
     -   [Experimentos - Validación de la interpretación de incertidumbre](#experimentos_2)
@@ -101,6 +102,8 @@ Inicialmente se realizó un [estado del arte de las técnicas existentes](https:
 * Aprendizaje al vuelo (a.k.a experimento uno)
 * Clasificación con BDL (Bayesian Deep Learning) (a.k.a semáforos)
 * MonteCarlo Dropout
+
+<h2 id="exp_I">Técnicas No Bayesianas</h2>
 
 <h2 id="exp_I">Técnica: Exp.I - Estimacion de la varianza al vuelo</h2>
 
