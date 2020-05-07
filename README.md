@@ -8,10 +8,11 @@
 
 -   [Contexto en la industria](#contexto)
 -   [Introducción general a la técnica](#intro_bdl)
+    -[¿Cómo funciona?](#how_tecnica)
+    -[¿Por qué es importante?](#why_tecnica)
 -   [Terminología](#conceptos_clave)
 -   [Estado del arte y pasos iniciales](#scope)
 -   [Aprendizajes de Experimentos](/BDL/uncertainty_estimation/doc/aprendizajes.md)
--   [Conclusiones](#conclusiones)
 -   [Proximos pasos](#prox)
 -   [Documentos de referencia](#doc_ref)
 
@@ -32,7 +33,7 @@ En particular, se ha visto que esta técnica ofrece las siguientes ventajas:
 
 <h3 id="intro_bdl">Introducción general a la técnica</h3>
 
-#### ¿Cómo funciona?
+<h4 id="how_tecnica">¿Cómo funciona?</h4>
 
 #### Introducción 
 El *Deep Learning Bayesiano* es una técnica que da un enfoque bayesiano, respecto al enfoque convencional basado en estadística frequentista, para estimar la incertidumbre de las inferencias de modelos de Deep Learning
@@ -56,7 +57,7 @@ La marginalización u optimización de la distribución de los pesos de la red, 
   <img src="assets/bdl.png" width="300" height="300"/>
 </p>
 
-#### ¿Por qué es importante?
+<h4 id="why_tecnica">¿Por qué es importante?</h4>
 
 La técnica de *Deep Learning Bayesiano* permite estimar la variación del error de cada una de las predicciones
 
