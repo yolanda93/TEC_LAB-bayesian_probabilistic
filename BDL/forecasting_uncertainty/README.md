@@ -12,3 +12,20 @@ Está necesidad se ha detectado tras realizar un research en la industria y en B
 
 La manera de resolver este problema o necesidad tomará como referencia el trabajo realizado por Axel Brando que utiliza la técnica [UMAL](https://arxiv.org/abs/1910.12288)
 
+Tras una sesión introductoria con Axel a la técnica UMAL, decidimos realizar un estudio de las siguientes técnicas:
+* *Regresión Cuantílica* cómo método para la estimación de la incertidumbre aleatórica
+* *LSTM* como baseline de referencia para realizar inferencias en problemas de forecasting con suficientes datos
+
+Asunciones:
+* Al tener suficientes datos se considera que un modelo de Deep Learning tipo LSTM se puede tomar como baseline
+* Al contar con suficientes datos la incertidumbre por aproximación (underfitting) e incertidumbre epistémica se consideran despreciables y nos centramos en la aleatórica
+
+### M5 Forecasting Uncertainty de Kaggle
+
+El reto propuesto de esta competición, propuesta por la cadena de supermercados Wallmart, trata de predecir las ventas de productos en varias localización para dos periodos de tiempo de 28 dias. Las tiendas se encunentran en los estados de California, Texas, y Wisconsin
+
+
+
+
+
+
