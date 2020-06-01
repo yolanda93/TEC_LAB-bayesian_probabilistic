@@ -4,6 +4,7 @@
 ## Documentacion complementaria
 * [Experimentos](/BDL/uncertainty_estimation)
 * [Presentacion](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc)
+* [Aplicación en el problema de Forecasting](/BDL/forecasting_uncertainty)
 
 ## Aprendizajes 
 
@@ -14,6 +15,7 @@
 -   [Terminología](#conceptos_clave)
 -   [Estado del arte y pasos iniciales](#scope)
 -   [Aprendizajes de Experimentos](/BDL/uncertainty_estimation/doc/aprendizajes.md)
+-   [Aplicación en el problema de Forecasting](/BDL/forecasting_uncertainty/README.md)
 -   [Proximos pasos](#prox)
 -   [Documentos de referencia](#doc_ref)
 
