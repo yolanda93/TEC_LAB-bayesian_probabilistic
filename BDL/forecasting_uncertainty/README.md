@@ -22,9 +22,11 @@ Tras una sesión introductoria con Axel a la técnica UMAL, decidimos realizar u
   * Se puede tomar un modelo de Deep Learning tipo LSTM como baseline
   * Al contar con suficientes datos la incertidumbre por aproximación (underfitting) e incertidumbre epistémica se consideran despreciables y nos centramos en la aleatórica
 
-### M5 Forecasting Uncertainty de Kaggle
+### Forecasting de ventas de productos
 
-El reto propuesto de esta competición, propuesta por la cadena de supermercados Wallmart, trata de predecir las ventas de productos en varias localización para un periodo de tiempo de 28 dias. Las tiendas se encunentran en los estados de California, Texas, y Wisconsin
+La problemática en la que nos vamos a centrar es la propuesta por la cadena de supermercados Wallmart en la competición [M5 Forecasting Uncertainty de Kaggle](https://www.kaggle.com/c/m5-forecasting-uncertainty). 
+
+El reto propuesto en esta competición trata de predecir las ventas de productos en varias localización para un periodo de tiempo de 28 dias. Las tiendas se encunentran en los estados de California, Texas, y Wisconsin.
 
 
 
