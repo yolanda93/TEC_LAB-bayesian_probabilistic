@@ -1,7 +1,4 @@
 
-# Estimación de la Incertidumbre 
-
-
 ## Índice de Contenidos 
 
 -   [Contexto en la industria](#contexto)
