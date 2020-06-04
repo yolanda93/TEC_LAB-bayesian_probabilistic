@@ -6,7 +6,7 @@
 * [Presentacion](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc)
 * [Aplicación en el problema de Forecasting](/BDL/forecasting_uncertainty)
 
-## Indice de Contenidos 
+## Índice de Contenidos 
 
 -   [Contexto en la industria](#contexto)
 -   [Introducción general a la técnica](#intro_bdl)
