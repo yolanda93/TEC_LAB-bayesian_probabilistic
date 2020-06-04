@@ -4,16 +4,21 @@ El problema de forecasting realiza inferencias a futuro utilizando datos del pas
 
 Está necesidad se ha detectado tras realizar un research en la industria y en BBVA Next Technologies. En concreto, se tiene como referencia la competición [M5 Forecasting Uncertainty de Kaggle](https://www.kaggle.com/c/m5-forecasting-uncertainty) en la que se pretende aplicar las técnicas estudiadas en este contexto.
 
-Los **objetivos** a alcanzar en el contexto de este trabajo son:
+Los **objetivos** y **entregables** a alcanzar en el contexto de este trabajo son:
+
+**PoC: Predicción de incertidumbre en ventas de producto**
 
 1. **Aplicación y validación** de técnicas de estimación de la incertidumbre en una problemática real
+
+**Técnicas de estimación de la incertidumbre en forecasting**
+
 2. Validación de la **solución técnica UMAL** para resolver este tipo de problemática
 3. Obtener conocimiento sobre **técnicas adyacentes** con aplicación en **Forecasting** (e.g. LSTM)
 
-## Índice de contenidos
+## Entregables
 
-- Soluciones Técnicas
-- Descripción del problema
+- [PoC: Predicción de incertidumbre en ventas de producto](/poc_forecasting_uncertainty/techniques)
+- [Soluciones técnicas de estimación de la incertidumbre](/poc_forecasting_uncertainty/m5_forecasting_uncertainty)
 
 ## Contexto del trabajo
 
