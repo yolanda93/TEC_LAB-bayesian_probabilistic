@@ -1,4 +1,4 @@
-### Estimación de la incertidumbre en Forecasting - M5 Forecasting Uncertainty
+## Estimación de la incertidumbre en Forecasting - M5 Forecasting Uncertainty
 
 El problema de forecasting realiza inferencias a futuro utilizando datos del pasado. Se podría considerar un caso particular de regresión en el que las variables independientes son dependientes del tiempo. Se ha detectado especial aplicabilidad de las técnicas probabilísitcas debido a la **gran incertidumbre presente al realizar inferencias a futuro**.  
 
