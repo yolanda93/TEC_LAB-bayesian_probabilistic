@@ -2,7 +2,7 @@
 
 We are working with 42,840 hierarchical time series. The data were obtained in the **3 US states** of California (CA), Texas (TX), and Wisconsin (WI). **Hierarchical** here means that data can be aggregated on different levels: item level, department level, product category level, and state level. The sales information reaches back **from Jan 2011 to June 2016**. In addition to the sales numbers, we are also given corresponding data on **prices, promotions, and holidays**. Note, that we have been warned that **most of the time series contain zero values**
 
-### Files
+### Dataset files
 
 #### Training data
 - *sales_train_validation.csv* - Contains the historical daily unit sales data per product and store [d_1 - d_1913].
