@@ -5,7 +5,7 @@ We are working with 42,840 hierarchical time series. The data were obtained in t
 ### Files
 
 #### Training data
-- **sales_train_validation.csv** - TRAIN_DATA Contains the historical daily unit sales data per product and store [d_1 - d_1913].
+- **sales_train_validation.csv** - Contains the historical daily unit sales data per product and store [d_1 - d_1913].
     - Date range: [2011-01-29 - 2016-05-22] 
     - Fields: IDs, department, category, store, and state 
 - **sell_prices.csv** - Contains information about the price of the products sold per store and date. It is a weekly average
