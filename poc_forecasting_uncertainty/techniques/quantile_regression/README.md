@@ -14,7 +14,7 @@ En está página se explica la regresión cuantílica como solución técnica pa
 - [Otras aplicaciones de la regresión cuantílica](#intervalo.vs.confianza)
 
 <a name="introduccion"></a>
-## Regresión Cuantílica
+## Introducción
 
 La **regresión cuantílica** a diferencia de la regresión lineal convencional permite realizar regresión sobre cualquier parte de la distribución utilizando lo que se denomina como **cuantiles**
 
