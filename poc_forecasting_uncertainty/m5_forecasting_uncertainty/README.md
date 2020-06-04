@@ -1,17 +1,15 @@
-## Aproximación inicial de la línea
+### Forecasting de ventas de productos - M5 Forecasting Uncertainty de Kaggle 
 
-Para resolver esta problemática se ha decidido tomar como referencia el trabajo realizado por Axel Brando de la técnica [UMAL](https://arxiv.org/abs/1910.12288)
+La competición M5 Forecasting Uncertainty de Kaggle es un reto propuesto por la cadena de supermercados Wallmart que trata de predecir las ventas de productos en varias localización para un periodo de tiempo de 28 dias. Las tiendas se encunentran en los estados de California, Texas, y Wisconsin.
 
-Tras una sesión introductoria con Axel a la técnica UMAL, decidimos realizar un estudio de las siguientes técnicas:
-* *Regresión Cuantílica* cómo método para la estimación de la incertidumbre aleatórica
-* *LSTM* como baseline de referencia para realizar inferencias en problemas de forecasting con suficientes datos
+### Aproximación del problema
 
-## Consideraciones previas de esta aproximación
+La aplicación de las soluciones técnicas propuestas en este escenario se realizarán siguiendo la ejecución normal de un proyecto de ciencia de datos con los siguientes entregables:
 
-* Asumimos un escenario con sufientes datos, por tanto:
-  * Se puede tomar un modelo de Deep Learning tipo LSTM como baseline
-  * Al contar con suficientes datos la incertidumbre por aproximación (underfitting) e incertidumbre epistémica se consideran despreciables y nos centramos en la aleatórica
-
+1. [Exploratorio de datos](/poc_forecasting_uncertainty/m5_forecasting_uncertainty/dataset_exploration/) *Formulación de Hipótesis y Exploratorio de datos* 
+2. [Transformación y limpieza de datos](/poc_forecasting_uncertainty/m5_forecasting_uncertainty/dataset_tranformation/) *Procesamiento y transformación de datos*
+3. [Modelado de la solución](/poc_forecasting_uncertainty/m5_forecasting_uncertainty/ml_solutions/) *Aplicación de soluciones técnicas*
+4. [MVP](/poc_forecasting_uncertainty/m5_forecasting_uncertainty/mvp_final_solution/) *Despliegue y documentatión de la solución final*
 
 
 
