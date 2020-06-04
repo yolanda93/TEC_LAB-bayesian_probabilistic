@@ -1,11 +1,29 @@
 ## Regresión Cuantílica
+En está página se explica la regresión cuantílica como solución técnica para medir la incertidumbre de las predicciones en problemas de forecasting
+
+
+### Indice de contenidos
+- [Regresión Cuantílica](#introduccion)
+  - [Cuantiles](#cuantiles)
+- [Regresión cuantílica en la medición de la incertidumbre](#cuantil-incertidumbre)
+  - [¿Por que utilizar intervalos de predicción o cuantiles en Forecasting?](#forecast-incertidumbre)
+- [Intervalos de predicción vs. intervalos de confianza](#intervalo.vs.confianza)
+- [Cálculo de la regresión cuantílica](#intervalo.vs.confianza)
+  - [Técnicas de regresión cuantílica](#intervalo.vs.confianza)
+  - [Función de pérdida](#intervalo.vs.confianza)
+- [Otras aplicaciones de la regresión cuantílica](#intervalo.vs.confianza)
+
+<a name="introduccion"></a>
+## Regresión Cuantílica
 
 La **regresión cuantílica** a diferencia de la regresión lineal convencional permite realizar regresión sobre cualquier parte de la distribución utilizando lo que se denomina como **cuantiles**
 
+<a name="cuantiles"></a>
 #### Cuantiles
 
 El cuantil de orden τ (0<τ<1) de una distribución es el valor de la variable X que marca un corte de modo que **una proporción τ de valores de la población es menor o igual** que dicho valor. Por ejemplo, el cuantil de orden 0,36 deja un 36% de valores por debajo y el cuantil de orden 0,50 se corresponde con la mediana de la distribución
 
+<a name="cuantil-incertidumbre"></a>
 ### Regresión cuantílica en la medición de la incertidumbre
 
 En el siguiente gráfico vemos la aplicación de **regresión cuantílica en el dataset de precios de vivienda de boston**. En el ejemplo se busca el mejor ajuste para predecir el precio de la vivienda en función del número de habitaciones. Cómo se puede observar en el gráfico la varianza entre ambas variables **no es constante u homocedastica**, por lo que es necesario proporcionar una medida de fiabilidad sobre esa posible variación o margen de error de las predicciones.
@@ -17,6 +35,7 @@ En este caso conseguimos esa medida de fiabilidad mediante **el ajuste de 5 regr
 
 En este gráfico se puede observar también la pendiente de la recta de cada cuantil es distinta, lo que significa que el predictor X influye de forma distinta a cada cuantil de la variable respuesta
 
+<a name="forecast-incertidumbre"></a>
 #### ¿Por que utilizar intervalos de predicción o cuantiles en Forecasting?
 
 En problemas de forecasting se suele hacer forecasting sobre distintos horizontes de tiempo. Esto tiene una implicación en la incertidumbre y varianza de las predicciones.
@@ -30,6 +49,7 @@ La constante c depende de la cobertura de probabilidades. Estos valores se puede
 
 Un característica importante de los intervalor de predicción es que incrementan con el horizonte. Cuánto más lejano sea el horizonte de tiempo al que hacemos forecasting, mayor será la incertidumbre asociada con esta predicción y más amplio será el intervalo de predicción.
 
+<a name="intervalo.vs.confianza"></a>
 #### Intervalos de predicción vs. intervalos de confianza
 
 - **Intervalos de confianza**: Proporcionan una estimación de fiabilidad o intervalo de error sobre la media (o alguno otro parámetro) de la distribución de la población
