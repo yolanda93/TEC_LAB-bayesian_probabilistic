@@ -1,4 +1,6 @@
-# Experimentos
+# Experimentos Labs
+
+En esta carpeta se encuentran los **experimentos de laboratorio** realizados para profundizar en distintas soluciones técnicas asociadas al reto de la estimación de la incertidumbre. Estos experimentos se han realizado con **el objetivo de validar hipótesis** y no pretenden servir como ejemplo para la generación de un producto o puesta en producción de los mismos en un proyecto real. 
 
 ### V0.0.5-bayesian_interpretation
 * DATE: ---
