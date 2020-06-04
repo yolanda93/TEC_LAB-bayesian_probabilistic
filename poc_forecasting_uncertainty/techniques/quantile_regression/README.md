@@ -8,6 +8,10 @@ El cuantil de orden τ (0<τ<1) de una distribución es el valor de la variable 
 
 ### Regresión cuantílica en la medición de la incertidumbre
 
+
+ <p align="center"><img src="/docs/assets/quantile_regression/quantile_regression_example.PNG" height="350" alt=“Ejemplo de regresión cuantílica” /></p>
+<p align="center"><em>Ejemplo de regresión cuantílica</em><sup> [1]</sup></p>
+
 #### Intervalos de predicción vs. intervalos de confianza
 
 - **Intervalos de confianza**: Proporcionan una estimación de fiabilidad o intervalo de error sobre la media (o alguno otro parámetro) de la distribución de la población
