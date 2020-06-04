@@ -8,7 +8,7 @@ Está necesidad se ha detectado tras realizar un research en la industria y en B
 
 ### Forecasting de ventas de productos - M5 Forecasting Uncertainty de Kaggle 
 
-La problemática en la que nos vamos a centrar es la propuesta por la cadena de supermercados Wallmart en la competición [M5 Forecasting Uncertainty de Kaggle](https://www.kaggle.com/c/m5-forecasting-uncertainty). 
+La problemática en la que nos vamos a centrar es la propuesta por la cadena de supermercados Wallmart en la competición M5 Forecasting Uncertainty de Kaggle.
 
 El reto propuesto en esta competición trata de predecir las ventas de productos en varias localización para un periodo de tiempo de 28 dias. Las tiendas se encunentran en los estados de California, Texas, y Wisconsin.
 
