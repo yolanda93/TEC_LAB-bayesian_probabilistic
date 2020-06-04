@@ -9,8 +9,8 @@ Esto es importante para poder *cuantificar el margen de error cometido en las pr
 
 ## Entregables
 
-* [Experimentos Labs](/BDL/uncertainty_estimation) *Experimentos realizados con datos de juguete para profundizar en las técnicas*
-* [PoC: Forecasting de ventas de producto](/BDL/forecasting_uncertainty) *Aplicación en una problemática real*
-* [Libro de Aprendizajes](/BDL/forecasting_uncertainty) *Documentación sobre el conocimiento adquirido*
+* [Experimentos Labs](/labs_experiments) *Experimentos realizados con datos de juguete para profundizar en las técnicas*
+* [PoC: Forecasting de ventas de producto](/poc_forecasting_uncertainty) *Aplicación en una problemática real*
+* [Libro de Aprendizajes](/docs/README.md) *Documentación sobre el conocimiento adquirido*
 * [Presentacion Ejecutiva del Reto](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc) 
 
