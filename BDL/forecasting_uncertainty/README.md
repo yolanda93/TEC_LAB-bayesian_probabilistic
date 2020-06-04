@@ -1,16 +1,25 @@
-# Forecasting Uncertainty
+### Estimación de la incertidumbre en problemas de Forecasting - M5 Forecasting Uncertainty
 
-## Contexto
+El problema de forecasting realiza inferencias a futuro utilizando datos del pasado. Se podría considerar un caso particular de regresión en el que las variables independientes son dependientes del tiempo. Se ha detectado especial aplicabilidad de las técnicas probabilísitcas debido a la **gran incertidumbre presente al realizar inferencias a futuro**.  
 
-### ¿Por qué estimación de la incertidumbre en problemas de Forecasting?
+Está necesidad se ha detectado tras realizar un research en la industria y en BBVA Next Technologies. En concreto, se tiene como referencia la competición [M5 Forecasting Uncertainty de Kaggle](https://www.kaggle.com/c/m5-forecasting-uncertainty) en la que se pretende aplicar las técnicas estudiadas en este contexto.
 
-El problema de forecasting realiza inferencias a futuro utilizando datos del pasado. Se podría considerar un caso particular de regresión en el que las variables independientes son dependientes del tiempo. Se ha detectado especial aplicabilidad de las técnicas probabilísitcas debido a la gran incertidumbre presente al realizar inferencias a futuro.  
+Los **objetivos** a alcanzar en el contexto de este trabajo son:
 
-Está necesidad se ha detectado tras realizar un research en la industria y en BBVA Next Technologies. En  concreto se tiene como referencia la competición [M5 Forecasting Uncertainty de Kaggle](https://www.kaggle.com/c/m5-forecasting-uncertainty) en la que se pretende aplicar las técnicas estudiadas en este contexto.
+1. **Aplicación y validación** de técnicas de estimación de la incertidumbre en una problemática real
+2. Validación de la **solución técnica UMAL** para resolver este tipo de problemática
+3. Obtener conocimiento sobre **técnicas adyacentes** con aplicación en **Forecasting** (e.g. LSTM)
+
+## Índice de contenidos
+
+- Soluciones Técnicas
+- Descripción del problema
+
+## Contexto del trabajo
 
 ### Aproximación de la línea
 
-La manera de resolver este problema o necesidad tomará como referencia el trabajo realizado por Axel Brando que utiliza la técnica [UMAL](https://arxiv.org/abs/1910.12288)
+Para resolver este problema se utilizará como referencia el trabajo realizado por Axel Brando que utiliza la técnica [UMAL](https://arxiv.org/abs/1910.12288)
 
 Tras una sesión introductoria con Axel a la técnica UMAL, decidimos realizar un estudio de las siguientes técnicas:
 * *Regresión Cuantílica* cómo método para la estimación de la incertidumbre aleatórica
