@@ -16,11 +16,11 @@ El reto propuesto en esta competición trata de predecir las ventas de productos
 
 Los **objetivos** y **entregables** a alcanzar en el contexto de este trabajo son:
 
-- [PoC: Predicción de incertidumbre en ventas de producto](/poc_forecasting_uncertainty/techniques)
+[PoC: Predicción de incertidumbre en ventas de producto](/poc_forecasting_uncertainty/techniques)
 
 1. **Aplicación y validación** de técnicas de estimación de la incertidumbre en una problemática real
 
-- [Soluciones técnicas de estimación de la incertidumbre en forecasting](/poc_forecasting_uncertainty/m5_forecasting_uncertainty)
+[Soluciones técnicas de estimación de la incertidumbre en forecasting](/poc_forecasting_uncertainty/m5_forecasting_uncertainty)
 
 2. Validación de la **solución técnica UMAL** para resolver este tipo de problemática
 3. Obtener conocimiento sobre **técnicas adyacentes** con aplicación en **Forecasting** (e.g. LSTM, regresión cuantílica)
