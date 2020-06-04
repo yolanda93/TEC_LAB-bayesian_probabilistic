@@ -4,7 +4,7 @@ La **regresión cuantílica** a diferencia de la regresión lineal convencional 
 
 ### Cuantiles
 
-El cuantil de orden τ (0<τ<1) de una distribución es el valor de la variable X que marca un corte de modo que una proporción τ de valores de la población es menor o igual que dicho valor. Por ejemplo, el cuantil de orden 0,36 deja un 36% de valores por debajo y el cuantil de orden 0,50 se corresponde con la mediana de la distribución
+El cuantil de orden τ (0<τ<1) de una distribución es el valor de la variable X que marca un corte de modo que **una proporción τ de valores de la población es menor o igual** que dicho valor. Por ejemplo, el cuantil de orden 0,36 deja un 36% de valores por debajo y el cuantil de orden 0,50 se corresponde con la mediana de la distribución
 
 ### Regresión cuantílica en la medición de la incertidumbre
 
