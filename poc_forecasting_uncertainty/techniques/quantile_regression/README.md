@@ -3,7 +3,7 @@ En está página se explica la regresión cuantílica como solución técnica pa
 
 
 ### Indice de contenidos
-- [Regresión Cuantílica](#introduccion)
+- [Introducción a la técnica](#introduccion)
   - [Cuantiles](#cuantiles)
 - [Regresión cuantílica en la medición de la incertidumbre](#cuantil-incertidumbre)
   - [¿Por que utilizar intervalos de predicción o cuantiles en Forecasting?](#forecast-incertidumbre)
