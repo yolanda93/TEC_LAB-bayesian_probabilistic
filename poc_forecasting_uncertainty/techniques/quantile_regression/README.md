@@ -33,7 +33,7 @@ En este caso conseguimos esa medida de fiabilidad mediante **el ajuste de 5 regr
  <p align="center"><img src="/docs/assets/quantile_regression/quantile_regression_example.PNG" height="350" alt=“Ejemplo de regresión cuantílica” /></p>
 <p align="center"><em>Ejemplo de regresión cuantílica</em><sup>[1]</sup></p>
 
-En este gráfico se puede observar también la pendiente de la recta de cada cuantil es distinta, lo que significa que el predictor X influye de forma distinta a cada cuantil de la variable respuesta
+En este gráfico se puede observar también la pendiente de la recta de cada cuantil es distinta, lo que significa que el predictor X influye de forma distinta a cada cuantil de la variable respuesta. Es importante destacar también que la regresión cuantílica ofrece un **estimador (basado en la mediana) más robusto** que se ve menos afectado por los outliers que OLS(Ordinary Least Square) que utiliza la media
 
 <a name="forecast-incertidumbre"></a>
 #### ¿Por que utilizar intervalos de predicción o cuantiles en Forecasting?
