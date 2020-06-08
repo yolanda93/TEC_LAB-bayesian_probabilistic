@@ -1,7 +1,16 @@
-### Dataset description
+
+### Indice de contenidos
+- [Dataset](#dataset_description)
+  - [Ficheros del dataset](#dataset_files)
+- [Exploracion inicial](#initial_exploration)
+
+
+<a name="dataset_description"></a>
+## Dataset description
 
 We are working with 42,840 hierarchical time series. The data were obtained in the **3 US states** of California (CA), Texas (TX), and Wisconsin (WI). **Hierarchical** here means that data can be aggregated on different levels: item level, department level, product category level, and state level. The sales information reaches back **from Jan 2011 to June 2016**. In addition to the sales numbers, we are also given corresponding data on **prices, promotions, and holidays**. Note, that we have been warned that **most of the time series contain zero values**
 
+<a name="dataset_files"></a>
 ### Dataset files
 
 #### Training data
@@ -19,7 +28,12 @@ We are working with 42,840 hierarchical time series. The data were obtained in t
 #### Submission file
 - *submission.csv* - Demonstrates the correct format for submission to the competition. The prediction of 28 forecast days (F1-F28)
 
+<a name="initial_exploration"></a>
+### Exploracion inicial
 
+- **El día de Navidad** es el único día en el que todas las tiendas están cerradas. Las ventas de los productos es 0.
+- **Dias SNAP**
+- El dataset presenta estacionalidad anual, mensual y semanal. La estacionalidad semanal es parecida para los 3 estados en la mensual hay variaciones.
 
 
 
