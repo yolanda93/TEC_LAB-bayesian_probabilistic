@@ -4,7 +4,6 @@ En está página se explica la regresión cuantílica como solución técnica pa
 
 ### Indice de contenidos
 - [Introducción a la técnica](#introduccion)
-  - [Cuantiles](#cuantiles)
 - [Regresión cuantílica en la medición de la incertidumbre](#cuantil-incertidumbre)
   - [¿Por que utilizar intervalos de predicción o cuantiles en Forecasting?](#forecast-incertidumbre)
 - [Otras aplicaciones de la regresión cuantílica](#aplicaciones)
@@ -16,29 +15,26 @@ En está página se explica la regresión cuantílica como solución técnica pa
 <a name="introduccion"></a>
 ## Introducción
 
-La **regresión cuantílica** a diferencia de la regresión lineal convencional tiene como objetivo estimar la mediana condicional u otros **cuantiles** de la variable de respuesta
-
-<a name="cuantiles"></a>
-#### Cuantiles
-
-El cuantil de orden τ (0<τ<1) de una distribución es el valor de la variable X que marca un corte de modo que **una proporción τ de valores de la población es menor o igual** que dicho valor. Por ejemplo, el cuantil de orden 0,36 deja un 36% de valores por debajo y el cuantil de orden 0,50 se corresponde con la mediana de la distribución
+La **regresión cuantílica** tiene como objetivo aproximar la mediana condicional u otros **cuantiles** (proporción τ de la distribución) de la variable de respuesta
 
 <a name="cuantil-incertidumbre"></a>
 ### Regresión cuantílica en la medición de la incertidumbre
 
-En el siguiente gráfico vemos la aplicación de **regresión cuantílica en el dataset de precios de vivienda de boston**. En el ejemplo se busca el mejor ajuste para estimar el precio de la vivienda en función del número de habitaciones. Cómo se puede observar en el gráfico la varianza entre ambas variables **no es constante u homocedastica**, por lo que es necesario proporcionar una medida de fiabilidad sobre esa posible variación o margen de error de las predicciones.
+En el siguiente gráfico vemos la aplicación de **regresión cuantílica en el dataset de precios de vivienda de boston**. En este ejemplo se busca encontrar una relación entre el precio de la vivienda y el número de habitaciones para responder preguntas cómo **¿Cuánto cuesta una vivienda de 5 habitaciones?**
 
-En este caso conseguimos esa medida de fiabilidad mediante **el ajuste de 5 regresiones cuantiles que se corresponden con los percentiles o cuantiles** de 10, 30, 50, 70 y 90. Lo que nos proporciona un intervalo de predicción o error sobre cada predicción, en el que el cuantil 50 se corresponde con la mediana que deja justo a cada lado el 50% de las observaciones, llegando hasta los límites o cuantiles extremos en los que el intervalo [10,90] recoge el 80% de las observaciones.
+En el caso de la regresión lineal la estimación del precio se haría mediante **la media aproximada de las observaciones** de los precios de las viviendas. Sin embargo, en el caso de **regresión cuantílica podríamos responder con la mediana** que se ve menos afectada por valores atípicos (por ejemplo casas lujosas) o incluso el cuantil superior 90 y 10 que nos podría dar una estimación de **cuánto podría costar este tipo de vivienda en el mejor y en el peor de los casos**. En este caso estaríamos aproximando el valor de la vivienda sobre las partes superiores e inferiores de la distribución, lo que nos daría nuestra **estimación de la incertidumbre o intervalo de error de la predicción del precio**
 
  <p align="center"><img src="/docs/assets/quantile_regression/quantile_regression_example.PNG" height="350" alt=“Ejemplo de regresión cuantílica” /></p>
 <p align="center"><em>Ejemplo de regresión cuantílica</em><sup>[1]</sup></p>
 
-En este gráfico se puede observar también la pendiente de la recta de cada cuantil es distinta, lo que significa que el predictor X influye de forma distinta a cada cuantil de la variable respuesta. Es importante destacar también que la regresión cuantílica ofrece un **estimador (basado en la mediana) más robusto** que se ve menos afectado por los outliers que OLS(Ordinary Least Square) que utiliza la media
+En este ejemplo concretamente se realiza **un ajuste de 5 regresiones cuantiles que se corresponden con los percentiles o cuantiles** de 10, 30, 50, 70 y 90. El que el cuantil 50 se corresponde con la mediana que deja justo a cada lado el 50% de las observaciones, llegando hasta los límites o cuantiles extremos en los que el intervalo [10,90] recoge el 80% de las observaciones
+
+Cómo se puede observar en el gráfico además la varianza del precio de la vivienda **no es constante u homocedastica**, por lo que es necesario proporcionar una medida de fiabilidad sobre esa posible variación o margen de error de las predicciones. Utilizar un **estimador más robusto basado en la mediana** se ve menos afectado por los outliers que OLS (mínimos cuadrados de la regresión lineal) que aproxima la media.
 
 <a name="forecast-incertidumbre"></a>
 #### ¿Por que utilizar intervalos de predicción o cuantiles en Forecasting?
 
-En problemas de forecasting se suele hacer forecasting sobre distintos horizontes de tiempo. Esto tiene una implicación en la incertidumbre y varianza de las predicciones.
+En problemas de forecasting se suele hacer forecasting sobre distintos horizontes de tiempo. Esto tiene una **implicación en la incertidumbre y varianza de las predicciones**
 
 El cálculo de esta varianza o intervalo de predicciónen el forecasting en el h-instante (h:horizonte) de la variable respuesta y con una desviación estándar σₕ, puede ser calculada como:
 
@@ -59,12 +55,12 @@ La **función de pérdida de la regresión cuantílica** minimiza una suma con *
 
 En concreto, se observa que los errores más positivos (sobre-predicciones) son penalizados más en los cuantiles superiores (se tienen más en cuenta) y los errores más negativos (infra-predicciones) se penalizan más en los cuantiles inferiores. En el caso del cuantil 50 o mediana, se penaliza por igual
 
-* Notebook de referencia: [quantile_regression_loss_function.ipynb](./quantile_regression_loss_function.ipynb)
+*Notebook de referencia: [quantile_regression_loss_function.ipynb](./quantile_regression_loss_function.ipynb)*
 
 <a name="tecnicas"></a>
 #### Técnicas de regresión cuantílica
 
-La regresión cuantílica se puede aplicar casi con cualquier regresor **cambiando la función de pérdida**. Entre los métodos más populares están la regresión cuantílica lineal, los métodos basados en árboles y deep quantile regression. En el siguiente notebook se puede encontrar la implementación de cada uno de ellos y el comportamiento o rendimiento sobre la problemática del dataset de precios de viviendas de boston de scikit-learn.
+La regresión cuantílica se puede aplicar casi con cualquier regresor **cambiando la función de pérdida**. Entre los métodos más populares están la regresión cuantílica lineal, los métodos basados en árboles y deep quantile regression. En el siguiente notebook se puede encontrar la implementación de cada uno de ellos y el comportamiento o rendimiento sobre la problemática del dataset de precios de viviendas de boston de scikit-learn
 
 Métodos implementados:
 
@@ -74,15 +70,26 @@ Métodos implementados:
 * Gradient Boosting regression
 * Deep quantile regression
 
-
-* Notebook de referencia: [quantile_regression_techniques.ipynb](./quantile_regression_techniques.ipynb)
+*Notebook de referencia: [quantile_regression_techniques.ipynb](./quantile_regression_techniques.ipynb)*
 
 <a name="aplicaciones"></a>
 ### Otras aplicaciones de la regresión cuantílica
 
-El poder realizar regresión sobre cualquier parte de la distribución permite conocer la influencia de los predictores desde el mínimo al máximo rango de la variable respuesta
+La regresión cuantílica tiene los siguientes usos y ventajas:
 
-https://www.semanticscholar.org/paper/La-desigualdad-salarial-de-g%C3%A9nero-medida-por-el-del-Freitas/610f046522d329e917f1b090b89fdf0da604d7dc
+* Proyectos sujetos **a gran incertidumbre** (e.g. falta de datos, gran volatilidad, mucho ruido, predicciones a futuro)
+* El poder realizar regresión sobre cualquier parte de la distribución permite conocer la influencia de los predictores desde el mínimo al máximo rango de la variable respuesta.
+
+`
+En el ejemplo anterior esto equivaldría a poder responder en el peor y el mejor de los casos cúal sería el precio de la vivienda, conocer estos valores te puede ayudar a hacer una mejor previsión de los ahorros en el caso en el que haya mucha volatilidad en el precio o no sólo te interese otra carácteristica a parte del número de habitaciones que sospechas que puede afectar a los datos.
+`
+
+* Cuando las condiciones de la regresion lineal no se cumplen (homocedasticidad, normalidad, etc)
+
+*Ventajas*
+
+* **No hace asunciones de la distribución** de los residuos
+* Ofrece una medida más robusta (estimamos la mediana condicionada) cuando la **distribución de los datos está sesgada**
 
 
 #### Referencias
@@ -90,3 +97,5 @@ https://www.semanticscholar.org/paper/La-desigualdad-salarial-de-g%C3%A9nero-med
 https://medium.com/analytics-vidhya/quantile-regression-and-prediction-intervals-e4a6a33634b4
 
 [2]  https://otexts.com/fpp2/prediction-intervals.html
+
+[3] https://www.semanticscholar.org/paper/La-desigualdad-salarial-de-g%C3%A9nero-medida-por-el-del-Freitas/610f046522d329e917f1b090b89fdf0da604d7dc
