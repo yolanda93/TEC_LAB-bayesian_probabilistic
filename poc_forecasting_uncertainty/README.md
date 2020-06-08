@@ -28,7 +28,9 @@ Los **objetivos** a alcanzar en el contexto de este trabajo son:
 
 #### Hipótesis Iniciales 
 
-**1 - Las técnicas bayesianas del tipo BDL o UMAL nos dan el mejor estimador de incertidumbre para problemas de este tipo**
-      - Se probaran técnica UMAL y luego técnicas más sencillas de BDL (MonteCarlo Dropout, etc) 
-**2 - El mejor estimador de la incertidumbre también nos dará la mejor predicción**
-      - La competición se desarrolla en 2 partes, cada una con un método de validación diferente. 
+- **1 - Las técnicas bayesianas del tipo BDL o UMAL nos dan el mejor estimador de incertidumbre para problemas de este tipo**
+
+   - Se probaran técnica UMAL y luego técnicas más sencillas de BDL (MonteCarlo Dropout, etc) 
+
+- **2 - El mejor estimador de la incertidumbre también nos dará la mejor predicción**
+   - La competición se desarrolla en 2 partes, cada una con un método de validación diferente. 
