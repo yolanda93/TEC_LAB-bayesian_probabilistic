@@ -81,7 +81,10 @@ La regresión cuantílica tiene los siguientes usos y ventajas:
 * El poder realizar regresión sobre cualquier parte de la distribución permite conocer la influencia de los predictores desde el mínimo al máximo rango de la variable respuesta.
 
 ```
-En el ejemplo anterior esto equivaldría a poder responder en el peor y el mejor de los casos cúal sería el precio de la vivienda, conocer estos valores te puede ayudar a hacer una mejor previsión de los ahorros en el caso en el que haya mucha volatilidad en el precio o no sólo te interese otra carácteristica a parte del número de habitaciones que sospechas que puede afectar a los datos.
+En el ejemplo anterior esto equivaldría a poder responder en el peor y el mejor de los casos cúal sería 
+el precio de la vivienda, conocer estos valores te puede ayudar a hacer una mejor previsión de los ahorros
+en el caso en el que haya mucha volatilidad en el precio o no sólo te interese otra carácteristica a parte 
+del número de habitaciones que sospechas que puede afectar a los datos.
 ```
 
 * Cuando las condiciones de la regresion lineal no se cumplen (homocedasticidad, normalidad, colinearidad, etc)
