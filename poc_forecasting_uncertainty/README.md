@@ -32,7 +32,7 @@ Los **objetivos** a alcanzar en el contexto de este trabajo son:
 
    - Se probara la técnica UMAL y luego técnicas más sencillas de BDL (MonteCarlo Dropout, etc) 
 
-- **H2 - El mejor estimador de la incertidumbre también nos dará la mejor predicción**
+- [**H2 - El mejor estimador de la incertidumbre también nos dará la mejor predicción**](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/labs_experiments)
   
    - La competición se desarrolla en 2 partes, cada una con un método de validación diferente
 
