@@ -22,6 +22,7 @@ Está necesidad se ha detectado tras realizar un research en la industria y en B
 Los **objetivos** a alcanzar en el contexto de este trabajo son:
 
 1. **Aplicación y validación** de técnicas de estimación de la incertidumbre en una problemática real
+   - **Validar el conocimiento extraído en Experiments Labs**
 2. Validación de la **solución técnica UMAL** para resolver este tipo de problemática
 3. Obtener conocimiento sobre **técnicas adyacentes** con aplicación en **Forecasting** (e.g. LSTM, regresión cuantílica)
 
