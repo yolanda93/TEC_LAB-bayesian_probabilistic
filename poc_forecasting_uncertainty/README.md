@@ -28,9 +28,26 @@ Los **objetivos** a alcanzar en el contexto de este trabajo son:
 
 #### Hipótesis Iniciales 
 
-- **1 - Las técnicas bayesianas del tipo BDL o UMAL nos dan el mejor estimador de incertidumbre para problemas de este tipo**
+- **H1 - Las técnicas bayesianas del tipo BDL o UMAL nos dan el mejor estimador de incertidumbre en este reto**
 
-   - Se probaran técnica UMAL y luego técnicas más sencillas de BDL (MonteCarlo Dropout, etc) 
+   - Se probara la técnica UMAL y luego técnicas más sencillas de BDL (MonteCarlo Dropout, etc) 
 
-- **2 - El mejor estimador de la incertidumbre también nos dará la mejor predicción**
-   - La competición se desarrolla en 2 partes, cada una con un método de validación diferente. 
+- **H2 - El mejor estimador de la incertidumbre también nos dará la mejor predicción**
+  
+   - La competición se desarrolla en 2 partes, cada una con un método de validación diferente
+
+
+
+#### Definición del ámbito del problema
+
+
+- Evaluación de la incertidumbre
+   - Se utiliza la función Pinball Loss adaptada a forecasting
+   - Se piden los quantiles de la mediana 50%, 67%, 95%, y 99%
+   - Todos los niveles jerarquicos (12) son igualmente ponderados
+   - Quantiles son igualmente ponderados en la evaluación
+   - Duda: we expect from the best performing forecasting methods to derive lower forecasting errors for the series that are more valuable for the company
+ 
+ - El dataset incluye demanda esporádica o nulos (afectados por festivos, días SNAP, etc)
+ - Inclusión de datasets externos (e.g. desastres naturales de incendios en Texas)
+      
