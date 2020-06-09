@@ -36,14 +36,14 @@ Cómo se puede observar en el gráfico además la varianza del precio de la vivi
 
 En problemas de forecasting se suele hacer forecasting sobre distintos horizontes de tiempo. Esto tiene una **implicación en la incertidumbre y varianza de las predicciones**
 
-El cálculo de esta varianza o intervalo de predicciónen el forecasting en el h-instante (h:horizonte) de la variable respuesta y con una desviación estándar σₕ, puede ser calculada como:
+El cálculo de esta varianza o intervalo de predicción en forecasting en el h-instante (h:horizonte) de la variable respuesta y con una desviación estándar σₕ, puede ser calculada como:
 
  <p align="center"><img src="/docs/assets/quantile_regression/forecast_variance.png" height="50" alt=“Ejemplo de regresión cuantílica” /></p>
 <p align="center"><em>Estimación de la varianza de forecasting en el instante u horizonte h</em><sup>[2]</sup></p>
 
 La constante c depende de la cobertura de probabilidades. Estos valores se pueden encontrar [aqui](https://otexts.com/fpp2/prediction-intervals.html)
 
-Un característica importante de los intervalor de predicción es que incrementan con el horizonte. Cuánto más lejano sea el horizonte de tiempo al que hacemos forecasting, mayor será la incertidumbre asociada con esta predicción y más amplio será el intervalo de predicción.
+Un característica importante de los intervalo de predicción es que incrementan con el horizonte. Cuánto más lejano sea el horizonte de tiempo al que hacemos forecasting, mayor será la incertidumbre asociada con esta predicción y más amplio será el intervalo de predicción
 
 <a name="implementacion"></a>
 ### Implementación de la regresión cuantílica
@@ -80,9 +80,9 @@ La regresión cuantílica tiene los siguientes usos y ventajas:
 * Proyectos sujetos **a gran incertidumbre** (e.g. falta de datos, gran volatilidad, mucho ruido, predicciones a futuro)
 * El poder realizar regresión sobre cualquier parte de la distribución permite conocer la influencia de los predictores desde el mínimo al máximo rango de la variable respuesta.
 
-`
+```
 En el ejemplo anterior esto equivaldría a poder responder en el peor y el mejor de los casos cúal sería el precio de la vivienda, conocer estos valores te puede ayudar a hacer una mejor previsión de los ahorros en el caso en el que haya mucha volatilidad en el precio o no sólo te interese otra carácteristica a parte del número de habitaciones que sospechas que puede afectar a los datos.
-`
+```
 
 * Cuando las condiciones de la regresion lineal no se cumplen (homocedasticidad, normalidad, colinearidad, etc)
 
