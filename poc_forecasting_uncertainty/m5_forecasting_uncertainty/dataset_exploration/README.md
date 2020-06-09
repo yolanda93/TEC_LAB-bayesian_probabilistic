@@ -29,7 +29,9 @@ We are working with 42,840 hierarchical time series. The data were obtained in t
 - *submission.csv* - Demonstrates the correct format for submission to the competition. The prediction of 28 forecast days (F1-F28)
 
 <a name="initial_exploration"></a>
-### Exploracion inicial
+### Tarea: Exploracion inicial
+
+1. [Exploración de los datos por distintos niveles (12 niveles)](https://www.kaggle.com/headsortails/back-to-predict-the-future-interactive-m5-eda#header)
 
 - **El día de Navidad** es el único día en el que todas las tiendas están cerradas. Las ventas de los productos es 0.
 - **Dias SNAP**
