@@ -15,7 +15,7 @@ En está página se explica la regresión cuantílica como solución técnica pa
 <a name="introduccion"></a>
 ## Introducción
 
-La **regresión cuantílica** tiene como objetivo aproximar la mediana condicional u otros **cuantiles** (proporción τ de la distribución) de la variable de respuesta
+La **regresión cuantílica** tiene como objetivo aproximar la mediana condicional u otros **cuantiles** (proporción τ de la distribución) de la variable de respuesta [2]
 
 <a name="cuantil-incertidumbre"></a>
 ### Regresión cuantílica en la medición de la incertidumbre
@@ -97,7 +97,7 @@ del número de habitaciones que sospechas que puede afectar a los datos.
 
 *Ejemplos de aplicaciones*
 
-* **Estudio de la desigualdad salarial de género**. Se estudian cuales son los factores que más afectan a la brecha salarial de género o sí los salarios más bajos se corresponden realmente con salarios de mujeres u hombres
+* **Estudio de la desigualdad salarial de género**. Se estudian cuales son los factores que más afectan a la brecha salarial de género o sí los salarios más bajos se corresponden realmente con salarios de mujeres u hombres [3]
 
 * **Estudio de tratamientos médicos** Queremos estudiar un tratamiento y queremos observar cómo se comporta en enfermedades raras y resulta muy costoso repetir el experimento o recoger más datos de ese sector poblacional 
 
