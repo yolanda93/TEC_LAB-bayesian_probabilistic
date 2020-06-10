@@ -77,8 +77,10 @@ Métodos implementados:
 
 La regresión cuantílica tiene los siguientes usos y ventajas:
 
+*Aplicación y ventajas*
+
 * Proyectos sujetos **a gran incertidumbre** (e.g. falta de datos, gran volatilidad, mucho ruido, predicciones a futuro)
-* El poder realizar regresión sobre cualquier parte de la distribución permite conocer la influencia de los predictores desde el mínimo al máximo rango de la variable respuesta.
+* El poder realizar regresión sobre cualquier parte de la distribución permite **conocer la influencia de los predictores desde el mínimo al máximo rango de la variable respuesta**
 
 ```
 En el ejemplo anterior esto equivaldría a poder responder en el peor y el mejor de los casos cúal sería 
@@ -87,14 +89,13 @@ en el caso en el que haya mucha volatilidad en el precio o no sólo te interese 
 del número de habitaciones que sospechas que puede afectar a los datos.
 ```
 
-* Cuando las condiciones de la regresion lineal no se cumplen (homocedasticidad, normalidad, colinearidad, etc)
-
-*Ventajas*
-
+* Cuando las **condiciones de la regresion lineal no se cumplen** (homocedasticidad, normalidad, colinearidad, etc)
 * **No hace asunciones de la distribución** de los residuos
-* Ofrece una medida más robusta (estimamos la mediana condicionada) cuando la **distribución de los datos está sesgada**
+* Ofrece una medida más robusta (estimamos la mediana condicionada) cuando la **distribución de los datos está sesgada** 
+* Nos interesa realizar un **estudio de outliers** o sesgar la respuesta del modelo para minimizar el riesgo o por restricciones de negocio
 
-Ejemplos de aplicaciones:
+
+*Ejemplos de aplicaciones*
 
 * **Estudio de la desigualdad salarial de género**. Se estudian cuales son los factores que más afectan a la brecha salarial de género o sí los salarios más bajos se corresponden realmente con salarios de mujeres u hombres
 
