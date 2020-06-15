@@ -4,9 +4,10 @@ En esta carpeta se encuentra la documentación con **los aprendizajes extraídos
 ## Índice de Contenidos 
 
 -   [Contexto del reto en la industria](#contexto)
--   [Introducción a técnica bayesianas](#intro_bdl)
+-   [Introducción a técnicas bayesianas cómo solución al reto](#intro_bdl)
     -  [¿Cómo funcionan?](#how_tecnica)
     -  [¿Por qué son importantes en el contexto de este reto?](#why_tecnica)
+-   [Profundización en la problemáticas del reto]
 -   [Conceptos clave en la estimación de la incertidumbre](#conceptos_clave)
 -   [Estado del arte y pasos iniciales](#scope)
 -   [Aprendizajes de Experimentos](/BDL/uncertainty_estimation/doc/aprendizajes.md)
@@ -17,7 +18,7 @@ En esta carpeta se encuentra la documentación con **los aprendizajes extraídos
 
 <h3 id="contexto">Contexto del reto en la industria</h3>
 
-La técnica de *deep learning bayesiano* se seleccionó con la intención de obtener conocimiento de técnicas de inteligencia artificial que, además de realizar su cometido, ofreciesen una medida de fiabilidad de lo bueno que era su resultado. Esta solución es de especial importancia de acuerdo a las directrices publicadas por comisión europea en 2018 de [Inteligencia Artificial Confiable](https://github.com/beeva/TEC_LAB-Trustworthy_AI) que responde a la necesidad de la industria en construir IA con una visión 'human-centric'
+**El reto de estimación de la incertidumbre** se seleccionó con la intención de obtener conocimiento de técnicas de inteligencia artificial que, además de realizar su cometido, ofreciesen una medida de fiabilidad de lo bueno que era su resultado. Esta solución es de especial importancia de acuerdo a las directrices publicadas por comisión europea en 2018 de [Inteligencia Artificial Confiable](https://github.com/beeva/TEC_LAB-Trustworthy_AI) que responde a la necesidad de la industria en construir IA con una visión 'human-centric'
 
 En particular, se ha visto que esta técnica ofrece las siguientes ventajas:
 
