@@ -2,7 +2,7 @@
 
 **El reto de estimación de la incertidumbre** se seleccionó con la intención de obtener conocimiento de técnicas de inteligencia artificial que, además de realizar su cometido, ofreciesen una medida de fiabilidad de lo bueno que era su resultado. Esta solución es de especial importancia de acuerdo a las directrices publicadas por comisión europea en 2018 de [Inteligencia Artificial Confiable](https://github.com/beeva/TEC_LAB-Trustworthy_AI) que responde a la necesidad de la industria en construir IA con una visión 'human-centric'
 
-En particular, se ha visto que esta técnica ofrece las siguientes ventajas:
+En particular, se ha visto que esta técnica **ofrece las siguientes ventajas en el desarrollo de un marco de inteligencia artificial confiable**:
 
 * [**Interpretabilidad**](https://github.com/beeva/TEC_LAB-Trustworthy_AI/blob/master/pages/areas/transparencia.md): Ofrece una medida de incertidumbre y/o confianza que permita entender las variaciones en el comportamiento del modelo o cuantificar/acotar el riesgo de las predicciones
 
