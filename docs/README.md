@@ -1,10 +1,12 @@
+En esta carpeta se encuentra la documentación con **los aprendizajes extraídos de la soluciones técnicas estudiadas** en el contexto del reto de estimación de la incertidumbre
+
 
 ## Índice de Contenidos 
 
--   [Contexto en la industria](#contexto)
--   [Introducción general a la técnica](#intro_bdl)
-    -  [¿Cómo funciona?](#how_tecnica)
-    -  [¿Por qué es importante?](#why_tecnica)
+-   [Contexto del reto en la industria](#contexto)
+-   [Introducción a técnica bayesianas](#intro_bdl)
+    -  [¿Cómo funcionan?](#how_tecnica)
+    -  [¿Por qué son importantes en el contexto del reto?](#why_tecnica)
 -   [Terminología](#conceptos_clave)
 -   [Estado del arte y pasos iniciales](#scope)
 -   [Aprendizajes de Experimentos](/BDL/uncertainty_estimation/doc/aprendizajes.md)
@@ -13,7 +15,7 @@
 -   [Documentos de referencia](#doc_ref)
 
 
-<h3 id="contexto">Contexto en la industria</h3>
+<h3 id="contexto">Contexto del reto en la industria</h3>
 
 La técnica de *deep learning bayesiano* se seleccionó con la intención de obtener conocimiento de técnicas de inteligencia artificial que, además de realizar su cometido, ofreciesen una medida de fiabilidad de lo bueno que era su resultado. Esta solución es de especial importancia de acuerdo a las directrices publicadas por comisión europea en 2018 de [Inteligencia Artificial Confiable](https://github.com/beeva/TEC_LAB-Trustworthy_AI) que responde a la necesidad de la industria en construir IA con una visión 'human-centric'
 
@@ -55,7 +57,7 @@ La marginalización u optimización de la distribución de los pesos de la red, 
 
 
 
-<h4 id="why_tecnica">¿Por qué es importante?</h4>
+<h4 id="why_tecnica">¿Por qué son importantes en el contexto del reto?</h4>
 
 La técnica de *Deep Learning Bayesiano* permite estimar la variación del error de cada una de las predicciones
 
