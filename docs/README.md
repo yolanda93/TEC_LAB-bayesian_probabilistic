@@ -5,12 +5,10 @@ En esta carpeta se encuentra la documentación con **los aprendizajes extraídos
 
 -   [Contexto del reto en la industria](#contexto)
 -   [Introducción a técnicas bayesianas cómo solución al reto](#intro_bdl)
-    -  [¿Cómo funcionan?](#how_tecnica)
-    -  [¿Por qué son importantes en el contexto de este reto?](#why_tecnica)
 -   [Profundización en las problemáticas de estimación de la incertidumbre](#conceptos_clave)
 -   [Aprendizajes de experimentos de laboratorio](/BDL/uncertainty_estimation/doc/aprendizajes.md)
 -   [Aplicación en la problemática de Forecasting](/BDL/forecasting_uncertainty/README.md)
--   [Proximos pasos](#prox)
+-   [Proximos pasos](#prox_pasos)
 -   [Documentos de referencia](#doc_ref)
 
 
