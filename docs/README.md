@@ -7,11 +7,9 @@ En esta carpeta se encuentra la documentación con **los aprendizajes extraídos
 -   [Introducción a técnicas bayesianas cómo solución al reto](#intro_bdl)
     -  [¿Cómo funcionan?](#how_tecnica)
     -  [¿Por qué son importantes en el contexto de este reto?](#why_tecnica)
--   [Profundización en la problemáticas del reto]
--   [Conceptos clave en la estimación de la incertidumbre](#conceptos_clave)
--   [Estado del arte y pasos iniciales](#scope)
--   [Aprendizajes de Experimentos](/BDL/uncertainty_estimation/doc/aprendizajes.md)
--   [Aplicación en el problema de Forecasting](/BDL/forecasting_uncertainty/README.md)
+-   [Profundización en las problemáticas de estimación de la incertidumbre](#conceptos_clave)
+-   [Aprendizajes de experimentos de laboratorio](/BDL/uncertainty_estimation/doc/aprendizajes.md)
+-   [Aplicación en la problemática de Forecasting](/BDL/forecasting_uncertainty/README.md)
 -   [Proximos pasos](#prox)
 -   [Documentos de referencia](#doc_ref)
 
@@ -81,15 +79,6 @@ Dentro de este reto se estudiaron los siguientes conceptos clave:
 
 * **Incertidumbre epistémica**: Los datos no representan completamente el problema a modelar. También está relacionado con la correcta calibración del modelo. *Esto es importante en datasets pequeños y dispersos y en aplicaciones críticas*
 * **Incertidumbre aleatoria**: Los datos tienen una variabilidad asociada intrínseca que no se ajusta al error esperado. *Importante en aplicaciones en tiempo real con mucho ruído., e.g. stock market*
-
-<h3 id="scope">Estado del Arte y pasos iniciales</h2>
-
-El interés en este campo se inició tras conversaciones con universidades y otros expertos en IA sobre las áreas más candentes dentro de las técnicas bayesianas
-
-Inicialmente se realizó un [estado del arte de las técnicas existentes](https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit). De este informe se destacaron tres posibles experimentos por los que empezar:
-* Aprendizaje al vuelo (a.k.a experimento uno)
-* Clasificación con BDL (Bayesian Deep Learning) (a.k.a semáforos)
-* MonteCarlo Dropout
 
 <h2 id="prox">Proximos pasos </h2>
 
