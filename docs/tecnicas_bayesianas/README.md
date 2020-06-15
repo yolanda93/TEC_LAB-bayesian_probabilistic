@@ -1,4 +1,4 @@
-<h3 id="intro_bdl">Introducción general a la técnica</h3>
+<h3 id="intro_bdl">Introducción a técnicas bayesianas cómo solución al reto</h3>
 
 <h4 id="how_tecnica">¿Cómo funciona?</h4>
 
