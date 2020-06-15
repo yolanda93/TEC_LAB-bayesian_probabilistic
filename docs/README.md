@@ -6,8 +6,8 @@ En esta carpeta se encuentra la documentación con **los aprendizajes extraídos
 -   [Contexto del reto en la industria](#contexto)
 -   [Introducción a técnica bayesianas](#intro_bdl)
     -  [¿Cómo funcionan?](#how_tecnica)
-    -  [¿Por qué son importantes en el contexto del reto?](#why_tecnica)
--   [Terminología](#conceptos_clave)
+    -  [¿Por qué son importantes en el contexto de este reto?](#why_tecnica)
+-   [Conceptos clave en la estimación de la incertidumbre](#conceptos_clave)
 -   [Estado del arte y pasos iniciales](#scope)
 -   [Aprendizajes de Experimentos](/BDL/uncertainty_estimation/doc/aprendizajes.md)
 -   [Aplicación en el problema de Forecasting](/BDL/forecasting_uncertainty/README.md)
@@ -71,7 +71,7 @@ Esto es importante por los siguientes aspectos:
 
 - **Estimación de la incertidumbre de cada inferencia**. Adicionalmente las técnicas convencionales calculan una distribucción del error de las predicciones sobre el conjunto de datos no por cada una de las inferencias, construyendo lo que se conoce como intervalos de confianza. Es decir con esto somos capaces de obtener la probabilidad de obtener una precisión mayor o igual a un CI o umbral de intervalo pero no la probabilidad de 'acierto' de una estimación concreta. 
     
-<h3 id="conceptos_clave">Terminología</h2>
+<h3 id="conceptos_clave">Conceptos clave en la estimación de la incertidumbre</h2>
 
 Dentro de este reto se estudiaron los siguientes conceptos clave:
 
