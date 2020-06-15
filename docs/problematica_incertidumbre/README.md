@@ -18,7 +18,7 @@ Teniendo en cuenta esta problemática, en el caso de desconocer esta incertidumb
 3- **Presencia de incertidumbre aleatorica**: Este es el tipo de incertidumbre más díficil de modelar, ya que no es posible reducirla aunque conozcas la distribución de la variable respuesta o manera de modelizar el problema. Es un error irreducible que se da en casi cualquier problemática real cuando los datos tienen una variabilidad asociada intrínseca que no se ajusta al error esperado. *Importante en aplicaciones en tiempo real con mucho ruído., e.g. stock market*
 
 
-<h3 id="tipo_incertidumbre">Variabilidad de la incertidumbre a modelar</h3> 
+<h3 id="var_incertidumbre">Variabilidad de la incertidumbre a modelar</h3> 
 
 Este caso trataría el caso en el que la incertidumbre a modelar (conocida o no) presente una gran variabilidad que haga que la distribución de la variable respuesta no se pueda aproximar con una distribución normal. Es decir, nos encontremos con distribucciones con colas largas, presencia de outliers o anomalías, distintas modas, volatilidad o variabilidad temporal, etc.
 
