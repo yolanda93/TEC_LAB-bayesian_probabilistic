@@ -18,7 +18,7 @@ def generate_synth_tseries(t0: int, series_lenght: int, num_ts: int, period: int
         data = source + noise
         index = pd.DatetimeIndex(start=t0, freq=freq, periods=series_lenght)
         time_series.append(pd.Series(data=data, index=index))
-        time_series_df = pd.DataFrame(time_series)
+    time_series_df = pd.DataFrame(time_series)
     return time_series_df
 
 
