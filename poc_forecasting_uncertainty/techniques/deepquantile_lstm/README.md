@@ -3,13 +3,13 @@ Deep Quantile LSTM
 **Implementación**
 ------
 
-*Solución Naive -  Ajuste independiente de N cuantiles*: Estimación de N cuantiles ajustando un modelo independiente para cada quantile
+**Solución Naive -  Ajuste independiente de N cuantiles**: Estimación de N cuantiles ajustando un modelo independiente para cada quantile
 
 Desventajas:
  * Implica ajustar N funciones diferentes 
  * Violación de el principio básico de que los cuantiles no se pueden cruzar
 
-- *Solución Multi-Output - Predicción Conjunta de N cuantiles*: Estimamos de forma conjunta la media condicionada y N cuantiles en un sólo modelo
+**Solución Multi-Output - Predicción Conjunta de N cuantiles**: Estimamos de forma conjunta la media condicionada y N cuantiles en un sólo modelo
 
 Ventajas:
  * Nos permite resolver el problema de cuantiles cruzados
