@@ -15,7 +15,7 @@ En está página se explica la regresión cuantílica como solución técnica pa
 <a name="introduccion"></a>
 ## Introducción
 
-La **regresión cuantílica** tiene como objetivo aproximar la mediana condicional u otros **cuantiles** (proporción τ de la distribución) de la variable de respuesta
+La **regresión cuantílica** tiene como objetivo aproximar la mediana condicional u otros **cuantiles** (proporción τ de la distribución) de la variable de respuesta [2]
 
 <a name="cuantil-incertidumbre"></a>
 ### Regresión cuantílica en la medición de la incertidumbre
@@ -36,14 +36,14 @@ Cómo se puede observar en el gráfico además la varianza del precio de la vivi
 
 En problemas de forecasting se suele hacer forecasting sobre distintos horizontes de tiempo. Esto tiene una **implicación en la incertidumbre y varianza de las predicciones**
 
-El cálculo de esta varianza o intervalo de predicciónen el forecasting en el h-instante (h:horizonte) de la variable respuesta y con una desviación estándar σₕ, puede ser calculada como:
+El cálculo de esta varianza o intervalo de predicción en forecasting en el h-instante (h:horizonte) de la variable respuesta y con una desviación estándar σₕ, puede ser calculada como:
 
  <p align="center"><img src="/docs/assets/quantile_regression/forecast_variance.png" height="50" alt=“Ejemplo de regresión cuantílica” /></p>
 <p align="center"><em>Estimación de la varianza de forecasting en el instante u horizonte h</em><sup>[2]</sup></p>
 
 La constante c depende de la cobertura de probabilidades. Estos valores se pueden encontrar [aqui](https://otexts.com/fpp2/prediction-intervals.html)
 
-Un característica importante de los intervalor de predicción es que incrementan con el horizonte. Cuánto más lejano sea el horizonte de tiempo al que hacemos forecasting, mayor será la incertidumbre asociada con esta predicción y más amplio será el intervalo de predicción.
+Un característica importante de los intervalo de predicción es que incrementan con el horizonte. Cuánto más lejano sea el horizonte de tiempo al que hacemos forecasting, mayor será la incertidumbre asociada con esta predicción y más amplio será el intervalo de predicción
 
 <a name="implementacion"></a>
 ### Implementación de la regresión cuantílica
@@ -77,23 +77,27 @@ Métodos implementados:
 
 La regresión cuantílica tiene los siguientes usos y ventajas:
 
+*Aplicación y ventajas*
+
 * Proyectos sujetos **a gran incertidumbre** (e.g. falta de datos, gran volatilidad, mucho ruido, predicciones a futuro)
-* El poder realizar regresión sobre cualquier parte de la distribución permite conocer la influencia de los predictores desde el mínimo al máximo rango de la variable respuesta.
+* El poder realizar regresión sobre cualquier parte de la distribución permite **conocer la influencia de los predictores desde el mínimo al máximo rango de la variable respuesta**
 
-`
-En el ejemplo anterior esto equivaldría a poder responder en el peor y el mejor de los casos cúal sería el precio de la vivienda, conocer estos valores te puede ayudar a hacer una mejor previsión de los ahorros en el caso en el que haya mucha volatilidad en el precio o no sólo te interese otra carácteristica a parte del número de habitaciones que sospechas que puede afectar a los datos.
-`
+```
+En el ejemplo anterior esto equivaldría a poder responder en el peor y el mejor de los casos cúal sería 
+el precio de la vivienda, conocer estos valores te puede ayudar a hacer una mejor previsión de los ahorros
+en el caso en el que haya mucha volatilidad en el precio o no sólo te interese otra carácteristica a parte 
+del número de habitaciones que sospechas que puede afectar a los datos.
+```
 
-* Cuando las condiciones de la regresion lineal no se cumplen (homocedasticidad, normalidad, colinearidad, etc)
-
-*Ventajas*
-
+* Cuando las **condiciones de la regresion lineal no se cumplen** (homocedasticidad, normalidad, colinearidad, etc)
 * **No hace asunciones de la distribución** de los residuos
-* Ofrece una medida más robusta (estimamos la mediana condicionada) cuando la **distribución de los datos está sesgada**
+* Ofrece una medida más robusta (estimamos la mediana condicionada) cuando la **distribución de los datos está sesgada** 
+* Nos interesa realizar un **estudio de outliers** o sesgar la respuesta del modelo para minimizar el riesgo o por restricciones de negocio
 
-Ejemplos de aplicaciones:
 
-* **Estudio de la desigualdad salarial de género**. Se estudian cuales son los factores que más afectan a la brecha salarial de género o sí los salarios más bajos se corresponden realmente con salarios de mujeres u hombres
+*Ejemplos de aplicaciones*
+
+* **Estudio de la desigualdad salarial de género**. Se estudian cuales son los factores que más afectan a la brecha salarial de género o sí los salarios más bajos se corresponden realmente con salarios de mujeres u hombres [3]
 
 * **Estudio de tratamientos médicos** Queremos estudiar un tratamiento y queremos observar cómo se comporta en enfermedades raras y resulta muy costoso repetir el experimento o recoger más datos de ese sector poblacional 
 

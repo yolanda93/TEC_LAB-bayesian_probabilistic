@@ -131,6 +131,8 @@ This experiment makes predictions with a model predicting values and variance an
 Hypothesis: Adding variance prediction may slow down predicting values, so accuracy me be penalized.
 Result: Accuracy is almost the same for both values (a difference of 0.00002 in r2_score).
 
+[Notebook](TEC_LAB-bayesian_probabilistic/labs_experiments/V0.0.3-loss_function_customization/predicting-uncertainty-withoutvar.ipynb)
+
 ### 01-syntheticData-AddedDataFarAwayFromOriginal
 This experiment add data with the same distribution far away from original data.
 There is training data at (0,1) and (800,801).
