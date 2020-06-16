@@ -16,6 +16,8 @@ Está necesidad se ha detectado tras realizar un research en la industria y en B
 [Soluciones técnicas de estimación de la incertidumbre en forecasting](/poc_forecasting_uncertainty/techniques)
 * [Regresión Cuantílica](/poc_forecasting_uncertainty/techniques/quantile_regression/) 
 * [LSTM](/poc_forecasting_uncertainty/techniques/lstm/)
+* [DeepQuantile LSTM](/poc_forecasting_uncertainty/techniques/deepquantile_lstm/)
+* [UMAL](/poc_forecasting_uncertainty/techniques/umal/)
 
 ### Objetivos
 
