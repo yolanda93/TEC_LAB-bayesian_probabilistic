@@ -3,6 +3,8 @@ Deep Quantile LSTM
 **Implementación**
 ------
 
+Fixed quantile bins τ0, …, τN
+
 **Solución Naive -  Ajuste independiente de N cuantiles**: Estimación de N cuantiles ajustando un modelo independiente para cada quantile
 
 Desventajas:
@@ -13,6 +15,8 @@ Desventajas:
 
 Ventajas:
  * Nos permite resolver el problema de cuantiles cruzados
+
+
 
 
 **Hipótesis**
