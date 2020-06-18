@@ -5,7 +5,7 @@ Deep Quantile LSTM
 
 Pasos de implementación:
 
-DQR  → DQ+LSTM → MultiOutput DQ+LSTM → UMAL
+(1) DQR  → (2) DQ+LSTM → (3) MultiOutput DQ+LSTM → (4) UMAL
 
 *Paso 1 - Deep Quantile Regression*
 -----
