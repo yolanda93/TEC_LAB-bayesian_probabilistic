@@ -47,8 +47,10 @@ Dudas:
 - No tengo muy claro como de sensible es a outliers en el tiempo... ¿Cuánto crecería la incertidumbre por el efecto de outliers? 
 - LSTM con relaciones temporales y espaciales
 
-*Paso 3 - Solución Multi-Output - Predicción Conjunta de N cuantiles --> No queremos cuantiles cruzados*
+*Paso 3 - Solución Multi-Output - Predicción Conjunta de N cuantiles*
 -----
+
+ --> No queremos cuantiles cruzados
 Estimamos de forma conjunta la media condicionada y N cuantiles en un sólo modelo
 
 Ventajas:
