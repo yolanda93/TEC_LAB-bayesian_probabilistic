@@ -64,6 +64,8 @@ Aprendemos N_tau o n quantiles. Antes pasabamos una lista de N *fijos* y ahora l
 *¿Cómo lo implemento?*
 Sampleamos Q (o tau) de una distribucción uniforme (Aproximación MC de la distribución real). 
 
+UMAL lo que hace es extender las idea de mixture model, aprendiendo implicitamente un numero finito de ALD (N quantiles) para aproximar la distribucción de la variable respuesta
+
 2 modos --> training y testing. Es necesario crearse una clase en Keras para esto, ya que el batch size va a cambiar.
 
 *Training*
