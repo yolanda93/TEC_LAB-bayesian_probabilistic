@@ -5,7 +5,7 @@ Deep Quantile LSTM
 
 Pasos de implementación:
 
-(1) DQR  → (2) DQ+LSTM → (3) MultiOutput DQ+LSTM → (4) UMAL
+(1) DQR  → (1a) DQR Nquantiles → (2) DQ+LSTM → (3) MultiOutput DQ+LSTM → (4) UMAL ¿?
 
 *Paso 1 - Deep Quantile Regression*
 -----
@@ -21,7 +21,7 @@ Hipotesis: ¿ Cómo conseguimos con esto tener una medida robusta que se aproxim
 
 Solución: 1a --> Vamos a construir N estimadores para ajustarnos a N quantiles --> Podríamos verlo como discretizar un problema que sería intratable de forma continua
 
-*Paso 1a - Solución Naive -  Ajuste independiente de N cuantiles*
+**Paso 1a - Solución Naive -  Ajuste independiente de N cuantiles**
 Fixed quantile bins τ0, …, τN
 
 Estimación de N cuantiles ajustando un modelo independiente para cada quantile
