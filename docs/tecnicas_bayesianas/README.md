@@ -1,14 +1,12 @@
 <h3 id="intro_bdl">Introducción a técnicas bayesianas cómo solución al reto</h3>
 
-<h4 id="how_tecnica">¿Cómo funciona?</h4>
-
-#### Introducción a estadística bayesiana y la incertidumbre
+### Introducción a estadística bayesiana y la incertidumbre
 
 La **estadística bayesiana** es un subconjunto del campo de la estadística en la que la evidencia sobre el verdadero estado del mundo se expresa **en términos de grados de creencia, es decir, trata la modelización de la incertidumbre**.
 
 Con este enfoque podemos estimar la 'probabilidad de que una hipótesis sea cierta' (incertidumbre de la hipótesis), que llevado al campo de ML nos permite representar un modelo ML como el conjunto de asunciones o hipótesis que realiza y la probabilidad de que esas asunciones se acerquen a la realidad.
 
-Esta incertidumbre actualmente no se modela ya que **los modelos de ML se basan más en estadística frequenstita** que a diferencia de la bayesiana realiza inferencias sin expresar esta incertidumbre al respecto, evaluando las hipótesis en términos absolutos usando las evidencias disponibles y de acuerdo a unos ciertos umbrales de aceptación de tal hipótesis (p-values, CI, etc)*
+Sin embargo, esta incertidumbre actualmente no se modela ya que **los modelos de ML se basan más en estadística frequenstita** que a diferencia de la bayesiana realiza inferencias sin expresar esta incertidumbre al respecto, evaluando las hipótesis en términos absolutos usando las evidencias disponibles y de acuerdo a unos ciertos umbrales de aceptación de tal hipótesis (p-values, CI, etc)
 
 La formulación matemática de este enfoque utiliza [el teorema de bayes](https://es.wikipedia.org/wiki/Teorema_de_Bayes), descrito mediante la siguiente fórmula:
 
@@ -17,12 +15,10 @@ La formulación matemática de este enfoque utiliza [el teorema de bayes](https:
 </p>
 
 
-#### Introducción  Deep Learning Bayesiano
-El *Deep Learning Bayesiano* es una técnica que da un enfoque bayesiano, respecto al enfoque convencional basado en estadística frequentista, para estimar la incertidumbre de las inferencias de modelos de Deep Learning
+### Introducción a Deep Learning Bayesiano
+El *Deep Learning Bayesiano* es una técnica que ofrece este enfoque bayesiano, respecto al enfoque convencional frequentista, para estimar la incertidumbre de las inferencias de los modelos de Deep Learning
 
-
-
-
+Esta técnica nos permite estimar además la fiabilidad del modelo, no sólo con los datos disponibles, sino también en tiempo de inferencia y para cada una de las predicciones lo que nos ofrece unas [propiedades muy ventajosas](#why_tecnica)
 
 #### Bayesian Deep Learning
 
@@ -35,7 +31,6 @@ La marginalización u optimización de la distribución de los pesos de la red, 
 <p align="center">
   <img src="/BDL/uncertainty_estimation/doc/assets/bdl.png" width="300" height="300"/>
 </p>
-
 
 
 <h4 id="why_tecnica">¿Por qué son importantes en el contexto del reto?</h4>
