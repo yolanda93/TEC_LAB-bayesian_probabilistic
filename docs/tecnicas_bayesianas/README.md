@@ -4,20 +4,16 @@
 
 #### Introducción a estadística bayesiana y la incertidumbre
 
-*Problemática de la incertidumbre en ML*
-
 La **estadística bayesiana** es un subconjunto del campo de la estadística en la que la evidencia sobre el verdadero estado del mundo se expresa **en términos de grados de creencia, es decir, trata la modelización de la incertidumbre**.
 
-Sin embargo, actualmente +*los modelos de ML se basan más en estadística frequenstita** que a diferencia de la bayesiana realiza inferencias sin expresar la incertidumbre al respecto, evaluando las hipótesis en términos absolutos usando las evidencias disponibles y de acuerdo a unos ciertos umbrales de aceptación de tal hipótesis (p-values, CI, etc). 
+Con este enfoque podemos estimar la 'probabilidad de que una hipótesis sea cierta' (incertidumbre de la hipótesis), que llevado al campo de ML nos permite representar un modelo ML como el conjunto de asunciones o hipótesis que realiza y la probabilidad de que esas asunciones se acerquen a la realidad.
 
-*La estadística bayesiana cómo solución para modelar la incertidumbre*
-
-La estadística bayesiana permite estimar la 'probabilidad de que una hipótesis sea cierta' (incertidumbre de la hipótesis), es decir, interpreta un modelo como el conjunto de asunciones o hipótesis que realiza y la probabilidad de que esas asunciones se acerquen a la realidad.
+Esta incertidumbre actualmente no se modela ya que **los modelos de ML se basan más en estadística frequenstita** que a diferencia de la bayesiana realiza inferencias sin expresar esta incertidumbre al respecto, evaluando las hipótesis en términos absolutos usando las evidencias disponibles y de acuerdo a unos ciertos umbrales de aceptación de tal hipótesis (p-values, CI, etc)*
 
 La formulación matemática de este enfoque utiliza [el teorema de bayes](https://es.wikipedia.org/wiki/Teorema_de_Bayes), descrito mediante la siguiente fórmula:
 
 <p align="center">
-  <img src="/BDL/uncertainty_estimation/doc/assets/formula_bayes.png" width="300" height="300"/>
+  <img src="/docs/assets/formula_bayes.png" />
 </p>
 
 
