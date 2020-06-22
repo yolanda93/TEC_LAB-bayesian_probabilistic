@@ -8,11 +8,17 @@ Con este enfoque podemos estimar la 'probabilidad de que una hipótesis sea cier
 
 Sin embargo, esta incertidumbre actualmente no se modela ya que **los modelos de ML se basan más en estadística frequenstita** que a diferencia de la bayesiana realiza inferencias sin expresar esta incertidumbre al respecto, evaluando las hipótesis en términos absolutos usando las evidencias disponibles y de acuerdo a unos ciertos umbrales de aceptación de tal hipótesis (p-values, CI, etc)
 
-La formulación matemática de este enfoque utiliza [el teorema de bayes](https://es.wikipedia.org/wiki/Teorema_de_Bayes), descrito mediante la siguiente fórmula:
+Cómo resultado de aplicar este enfoque podríamos obtener la distribución (posterior) de la salida de la red y no sólo puntos de estimación.
+
+### Teorema de Bayes
+
+La formulación matemática del enfoque bayesiano utiliza [el teorema de bayes](https://es.wikipedia.org/wiki/Teorema_de_Bayes), descrito mediante la siguiente fórmula:
 
 <p align="center">
   <img src="/docs/assets/formula_bayes.png" />
 </p>
+
+En la fórmula matemática anterior podemos ver un ejemplo de cómo calcular estas probabilidades, usando el teorema de bayes. Este teorema por definición trata de calcular las probabilidades subjetivas que puede tomar un determinado suceso cuando hemos recibido algún tipo de información previa. Para ello, se calcula la probabilidad a posteriori P(A|B), en base a las probabilidades a priori o P(A) y la probabilidad de que se dé el suceso B si la hipótesis A es cierta, P(B|A). [1]
 
 
 ### Introducción a Deep Learning Bayesiano
@@ -45,5 +51,9 @@ Esto es importante por los siguientes aspectos:
 
     - En un problema de clasificación cuando una imagen no corresponde a ninguna de las características de las imagenes con etiquetas del dataset de entrenamiento el resultado de clasificación binaria sería (50/50), sin embargo la probabilidad obtenida tras la operación softmax devuelve cualquier cosa entre (0/100)-(100/0). Por ejemplo, pongamos una imagen de un pájaro, respecto a el conjunto de entrenamiento que contiene imágenes de gatos y perros. El resultado esperado sería obtener la máxima incertidumbre, es decir, 50% probabilidad de ser perro y 50% de ser gato, sin embargo podría dar perfectamente un alto grado de confianza sobre gato 80% y 20% en perro. 
 
-- **Estimación de la incertidumbre de cada inferencia**. Adicionalmente las técnicas convencionales calculan una distribucción del error de las predicciones sobre el conjunto de datos no por cada una de las inferencias, construyendo lo que se conoce como intervalos de confianza. Es decir con esto somos capaces de obtener la probabilidad de obtener una precisión mayor o igual a un CI o umbral de intervalo pero no la probabilidad de 'acierto' de una estimación concreta. 
+- **Estimación de la incertidumbre de cada inferencia**. Adicionalmente las técnicas convencionales calculan una distribucción del error de las predicciones sobre el conjunto de datos no por cada una de las inferencias, construyendo lo que se conoce como intervalos de confianza. Es decir con esto somos capaces de obtener la probabilidad de obtener una precisión mayor o igual a un CI o umbral de intervalo pero no la probabilidad de 'acierto' de una estimación concreta
+
+### Referencias
+
+[1] https://www.bbvanexttechnologies.com/bayesianos-viendo-la-inteligencia-artificial-desde-otro-prisma/
     
