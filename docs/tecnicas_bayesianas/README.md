@@ -1,6 +1,14 @@
-<h3 id="intro_bdl">Introducción a técnicas bayesianas cómo solución al reto</h3>
 
-### Introducción a estadística bayesiana y la incertidumbre
+
+### Introducción a estadística bayesiana cómo solución al reto
+- [La estadística bayesiana y la incertidumbre](#intro_bayesian)
+  - [Teorema de Bayes](#bayes)
+- [Introducción a Deep Learning Bayesiano](#intro_bdl)
+  - [Ventajas de esta técnica en el contexto del reto](#why_tecnica)
+
+<h2 id="intro_bdl">Introducción a estadística bayesiana cómo solución al reto</h2>
+
+<h3 id="intro_bayesian"> La estadística bayesiana y la incertidumbre</h3>
 
 La **estadística bayesiana** es un subconjunto del campo de la estadística en la que la evidencia sobre el verdadero estado del mundo se expresa **en términos de grados de creencia, es decir, trata la modelización de la incertidumbre**.
 
@@ -10,7 +18,7 @@ Sin embargo, esta incertidumbre actualmente no se modela ya que **los modelos de
 
 Cómo resultado de aplicar este enfoque podríamos obtener la distribución (posterior) de la salida de la red y no sólo puntos de estimación.
 
-### Teorema de Bayes
+<h4 id="bayes">Teorema de Bayes </h3>
 
 La formulación matemática del enfoque bayesiano utiliza [el teorema de bayes](https://es.wikipedia.org/wiki/Teorema_de_Bayes), descrito mediante la siguiente fórmula:
 
@@ -21,12 +29,12 @@ La formulación matemática del enfoque bayesiano utiliza [el teorema de bayes](
 En la fórmula matemática anterior podemos ver un ejemplo de cómo calcular estas probabilidades, usando el teorema de bayes. Este teorema por definición trata de calcular las probabilidades subjetivas que puede tomar un determinado suceso cuando hemos recibido algún tipo de información previa. Para ello, se calcula la probabilidad a posteriori P(A|B), en base a las probabilidades a priori o P(A) y la probabilidad de que se dé el suceso B si la hipótesis A es cierta, P(B|A). [1]
 
 
-### Introducción a Deep Learning Bayesiano
+<h3 id="bayes">Introducción a Deep Learning Bayesiano </h3>
 El *Deep Learning Bayesiano* es una técnica que ofrece este enfoque bayesiano, respecto al enfoque convencional frequentista, para estimar la incertidumbre de las inferencias de los modelos de Deep Learning
 
 Esta técnica nos permite estimar además la fiabilidad del modelo, no sólo con los datos disponibles, sino también en tiempo de inferencia y para cada una de las predicciones lo que nos ofrece unas [propiedades muy ventajosas](#why_tecnica)
 
-#### Bayesian Deep Learning
+<h3 id="intro_bdl"> Bayesian Deep Learning</h3>
 
 La técnica de *Deep Learning Bayesiano* utiliza el enfoque bayesiano para remplazar los pesos deterministicos de una red con distribucciones sobre estos parámetros. Es decir, en vez de optimizar los pesos de la red directamente, se optimiza sobre la distribucción de los posibles valores que estos parámetros pueden tomar, aplicando lo que se conoce como marginalización*
 
@@ -39,7 +47,7 @@ La marginalización u optimización de la distribución de los pesos de la red, 
 </p>
 
 
-<h4 id="why_tecnica">¿Por qué son importantes en el contexto del reto?</h4>
+<h4 id="why_tecnica">Ventajas de esta técnica en el contexto del reto</h4>
 
 La técnica de *Deep Learning Bayesiano* permite estimar la variación del error de cada una de las predicciones
 
