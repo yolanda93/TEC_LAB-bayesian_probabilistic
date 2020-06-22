@@ -1,12 +1,11 @@
 
+<h2 id="intro_bdl">Introducción a estadística bayesiana cómo solución al reto</h2>
 
-### Introducción a estadística bayesiana cómo solución al reto
 - [La estadística bayesiana y la incertidumbre](#intro_bayesian)
   - [Teorema de Bayes](#bayes)
 - [Introducción a Deep Learning Bayesiano](#intro_bdl)
   - [Ventajas de esta técnica en el contexto del reto](#why_tecnica)
 
-<h2 id="intro_bdl">Introducción a estadística bayesiana cómo solución al reto</h2>
 
 <h3 id="intro_bayesian"> La estadística bayesiana y la incertidumbre</h3>
 
@@ -18,7 +17,7 @@ Sin embargo, esta incertidumbre actualmente no se modela ya que **los modelos de
 
 Cómo resultado de aplicar este enfoque podríamos obtener la distribución (posterior) de la salida de la red y no sólo puntos de estimación.
 
-<h4 id="bayes">Teorema de Bayes </h3>
+<h4 id="bayes">Teorema de Bayes </h4>
 
 La formulación matemática del enfoque bayesiano utiliza [el teorema de bayes](https://es.wikipedia.org/wiki/Teorema_de_Bayes), descrito mediante la siguiente fórmula:
 
@@ -34,7 +33,7 @@ El *Deep Learning Bayesiano* es una técnica que ofrece este enfoque bayesiano, 
 
 Esta técnica nos permite estimar además la fiabilidad del modelo, no sólo con los datos disponibles, sino también en tiempo de inferencia y para cada una de las predicciones lo que nos ofrece unas [propiedades muy ventajosas](#why_tecnica)
 
-<h3 id="intro_bdl"> Bayesian Deep Learning</h3>
+<h4 id="intro_bdl"> Bayesian Deep Learning</h4>
 
 La técnica de *Deep Learning Bayesiano* utiliza el enfoque bayesiano para remplazar los pesos deterministicos de una red con distribucciones sobre estos parámetros. Es decir, en vez de optimizar los pesos de la red directamente, se optimiza sobre la distribucción de los posibles valores que estos parámetros pueden tomar, aplicando lo que se conoce como marginalización*
 
@@ -43,9 +42,8 @@ La técnica de *Deep Learning Bayesiano* utiliza el enfoque bayesiano para rempl
 La marginalización u optimización de la distribución de los pesos de la red, nos permite estimar a su vez la distribución de posibles valores en cada inferencia realizada. 
 
 <p align="center">
-  <img src="/BDL/uncertainty_estimation/doc/assets/bdl.png" width="300" height="300"/>
+  <img src="/docs/assets/bayes/bdl.png" width="300" height="300"/>
 </p>
-
 
 <h4 id="why_tecnica">Ventajas de esta técnica en el contexto del reto</h4>
 
