@@ -4,7 +4,7 @@ En esta carpeta se encuentra la documentación con **los aprendizajes extraídos
 ## Índice de Contenidos 
 
 -   [Contexto del reto en la industria](/docs/contexto_industria/README.md)
--   [Introducción a técnicas bayesianas cómo solución al reto](/docs/tecnicas_bayesianas/README.md) [TODO]
+-   [Introducción a técnicas bayesianas cómo solución al reto](/docs/tecnicas_bayesianas/README.md)
 -   [Profundización en las problemáticas de estimación de la incertidumbre](/docs/problematica_incertidumbre/README.md) 
 -   [Profundización en las problemática de inferencia bayesiana](/docs/problematica_bayesiana/README.md) 
 ----
