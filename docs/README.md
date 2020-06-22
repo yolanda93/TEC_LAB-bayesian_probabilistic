@@ -6,6 +6,7 @@ En esta carpeta se encuentra la documentación con **los aprendizajes extraídos
 -   [Contexto del reto en la industria](/docs/contexto_industria/README.md)
 -   [Introducción a técnicas bayesianas cómo solución al reto](/docs/tecnicas_bayesianas/README.md) [TODO]
 -   [Profundización en las problemáticas de estimación de la incertidumbre](/docs/problematica_incertidumbre/README.md) 
+-   [Profundización en las problemática de inferencia bayesiana](/docs/problematica_bayesiana/README.md) 
 ----
 -   [Soluciones Técnicas - Experimentos de Laboratorio](/docs/experimentos_labs/README.md) [TODO]
 -   [Aplicación en la problemática de Forecasting](/docs/forecasting_uncertainty/README.md) [TODO]
