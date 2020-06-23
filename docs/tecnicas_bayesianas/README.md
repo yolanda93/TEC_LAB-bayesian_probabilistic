@@ -45,6 +45,11 @@ La marginalización u optimización de la distribución de los pesos de la red, 
   <img src="/docs/assets/bayes/bdl.png" width="300" height="300"/>
 </p>
 
+
+Por tanto, el Deep Learning Bayesiano tiene 2 puntos clave:
+* Parámetros del modelo probabilisticos y no deterministicos
+* Una sálida del modelo que es una distribución de probabilidad y no un punto de estimación
+
 <h4 id="why_tecnica">Ventajas de esta técnica en el contexto del reto</h4>
 
 La técnica de *Deep Learning Bayesiano* permite estimar la variación del error de cada una de las predicciones
