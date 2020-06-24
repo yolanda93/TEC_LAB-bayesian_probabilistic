@@ -32,6 +32,38 @@ Dentro de otras aplicaciones interesantes que podría ofrecer esta técnica se h
 - Active Learning
 - Continual Learning
 
+----
+
+Quantile Reinforcement Learning
+
+Hipotesis:
+*For QR-DQN, instead of estimating a single value for each state-action pair, we learn a distribution of values. Knowing the distribution, rather than just the average, can improve the policy*
+
+---
+so the the policy estimates a 90% chance of getting a reward of at least 1, 70% chance of at least 4, 50% chance of at least 7, 30% chance of at least 10, and 10% chance of at least 56.
+Reference: https://medium.com/@fuller.evan/quantile-reinforcement-learning-56f8b3c3f134
+
+
+-----
+
+Conversaciones con Axel
+
+- Darle la vuelta al problema, es decir, ser capaces de medir la incertidumbre del humano (en los datos) --> Sesgos?
+
+- Dimensionalidad alta --> Puede estar relacionado 
+
+
+Hipotesis:
+
+La incertidumbre también se podría modelar con modelos no paramétricos (e.g. KDE) --> Muy inestables, la asunción paramétrica no me parece un problema
+Al final los modelos paramétricos hacen la asuncion de que el problema se puede modelar como una función con un número finito de parámetros.
+
+
+Opinión personal
+
+--- La incertidumbre está muy ligada al concepto de entropia
+
+
 <h2 id="doc_ref">Documentos de referencia </h2>
 
 - **Estado del Arte**:
