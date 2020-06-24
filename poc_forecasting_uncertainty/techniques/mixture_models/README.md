@@ -27,12 +27,12 @@ Las **redes de densidad mixta** (Bishop, 1994) es un tipo de red que combina las
 Entre las **aplicaciones más destacadas** se encuentra la de Apple’s Siri en iOS 11 para reconocimiento de voz[2]. En [3] se puede ver su aplicación en generación de manuscritos y Amazon Forecast lo tiene dentro su suite de algoritmos incluidos en su plataforma.
 
 
-<p align="center"><img src="/docs/assets/mdn/MDN.png" height="50" alt=“Mixture Density Network” /></p>
+<p align="center"><img src="/docs/assets/mdn/MDN.png" height="160" alt=“Mixture Density Network” /></p>
 <p align="center">Mixture Density Network</p>
 
 Formalmente la probabilidad condicionada de una red de mixturas tiene la siguiente forma:
 
-<p align="center"><img src="/docs/assets/mdn/mdn_formula.png" height="50" alt=“Mixture Density Network” /></p>
+<p align="center"><img src="/docs/assets/mdn/mdn_formula.png" height="70" alt=“Formula MDN" /></p>
 <p align="center">Mixture Density Network</p>
 
 En esta fórmula los parámetros tiene la siguiente semántica:
