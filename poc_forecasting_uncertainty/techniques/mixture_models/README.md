@@ -4,8 +4,8 @@ En está página se explica **los modelos de mixturas** como solución técnica 
 
 ### Indice de contenidos
 - [Introducción a la técnica](#introduccion)
-  - [MLE - Maximum Likelihood Estimation](#MLE - Maximum Likelihood Estimation)
-- [Mixture Density Networks](#Mixture Density Networks)
+  - [MLE - Maximum Likelihood Estimation](#MLE)
+- [Mixture Density Networks](#mdn)
 
 <a name="introduccion"></a>
 ## Introducción
@@ -13,13 +13,13 @@ En está página se explica **los modelos de mixturas** como solución técnica 
 Un **modelo de mixturas** es un modelo probabilístico que nos permite representar la presencia de sub-poblaciones de la población general. Esta representación de sub-poblaciones nos va a permitir construir un estimador más robusto en el caso en el que la distribución de la variable respuesta sea heterogénea
 
 
-<a name="MLE - Maximum Likelihood Estimation"></a>
+<a name="MLE"></a>
 ### MLE - Maximum Likelihood Estimation
 
 El algoritmo de MLE o máxima verosimilitud nos permite obtener los parámetros del modelo o distribución que maximizan la probabibilidad de obtener unos datos dados.
 
 
-<a name="Mixture Density Networks"></a>
+<a name="mdn"></a>
 ### Mixture Density Networks
 
 Las **redes de densidad mixta** (Bishop, 1994) es un tipo de red que combina las redes convencionales con la concepto de modelo de mixturas.
@@ -37,10 +37,10 @@ Formalmente la probabilidad condicionada de una red de mixturas tiene la siguien
 
 En esta fórmula los parámetros tiene la siguiente semántica:
 
-* c se corresponde con el índice de la correspondiente mixtura. Hay hasta C componentes de mixtura (e.g. distribuciones) por salida, siendo un parametro seleccionable.
-* ⍺ es el coeficiente de mezcla. Para entender este coeficiente podemos imaginarnos los controles deslizantes que controlan la mezcla de C salidas diferentes de audio. Este parámetro esta condicionado por la entrada x.
-* 𝒟 esta es la correspondiente distribución de entrada a ser mezclada. La distribución puede ser elegida atendiendo al tipo de aplicación.
-* λ son los parámetros de la distribución 𝒟. En el caso denotamos 𝒟 como una distribución gausiana, estos parametros corresponderian a λ1 sería la media condicional mean μ(x) y 
+* **c se corresponde con el índice de la correspondiente mixtura**. Hay hasta C componentes de mixtura (e.g. distribuciones) por salida, siendo un parametro seleccionable.
+* **⍺ es el coeficiente de mezcla**. Para entender este coeficiente podemos imaginarnos los controles deslizantes que controlan la mezcla de C salidas diferentes de audio. Este parámetro esta condicionado por la entrada x.
+* **𝒟 esta es la correspondiente distribución de entrada a ser mezclada**. La distribución puede ser elegida atendiendo al tipo de aplicación.
+* **λ son los parámetros de la distribución 𝒟**. En el caso denotamos 𝒟 como una distribución gausiana, estos parametros corresponderian a λ1 sería la media condicional mean μ(x) y 
 λ2 la desviación estándar σ(x). Las distribuciones pueden tener distinto número de parámetros (e.g.: Bernoulli and Chi2 tienen 1 parámetro, Beta tiene 2, y la gaussiana truncada tiene hasta 4 parámetros) Estos son parámetros que forman también la salida de la red.
 
 
