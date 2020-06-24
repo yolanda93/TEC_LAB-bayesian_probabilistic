@@ -1,5 +1,5 @@
 ## Mixture Models
-En está página se explica los modelos de mixturas como solución técnica para aproximar distribuciones heterogéneas, es decir, sabemos que los datos u observaciones provienen de fuentes o procesos diferentes
+En está página se explica los modelos de mixturas como solución técnica para aproximar distribuciones heterogéneas de la variable respuesta. Este es el caso en el que sabemos que los datos u observaciones provienen de fuentes o procesos diferentes conocidos.
 
 
 ### Indice de contenidos
