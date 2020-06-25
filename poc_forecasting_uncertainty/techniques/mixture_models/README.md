@@ -44,6 +44,17 @@ En esta fórmula los parámetros tiene la siguiente semántica:
 λ2 la desviación estándar σ(x). Las distribuciones pueden tener distinto número de parámetros (e.g.: Bernoulli and Chi2 tienen 1 parámetro, Beta tiene 2, y la gaussiana truncada tiene hasta 4 parámetros) Estos son parámetros que forman también la salida de la red.
 
 
+### Ventajas y desventajas
+
+
+* *Ventajas* 
+
+Permite estimar distribuciones heterogéneas de la variable respuesta
+
+* *Desventajas* 
+
+El tamaño de la sálida de la red creada por la capa final de la MDN es (c+2)* m, lo que supone un incremento considerable si lo comporamos con la sálida de una red convencional
+
 
 #### Referencias
 
