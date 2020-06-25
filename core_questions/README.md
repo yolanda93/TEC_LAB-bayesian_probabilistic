@@ -28,9 +28,11 @@
  - Mejora de la robustez en aplicaciones en tiempo real
  - Nos interesa ser capacaces de modelizar esa incertidumbre porque nos proporciona información core para el negocio (e.g. riesgo financiero)
 
-### Q4: ¿Qué tipo de incertidumbre estamos intentando modelar cuando hacemos experimentos con estimaciones que se alejan en eje X en función de la Y de los datos de entrenamiento?
+### Q4: ¿Qué tipo de incertidumbre estamos intentando modelar cuando hacemos experimentos con obs. que se alejan en eje X en función de la Y de los datos de entrenamiento?
 
 Incertidumbre epistémica: Es un error reducible que se está dando por falta de datos en un intervalo
+
+*Nota: El resultado de este experimento fue que obteniamos una varianza proporcional al alejamiento en el eje X*
 
 ### Q5: ¿Cómo se podría probar la incertidumbre aleatorica heterocedástica?
 
@@ -51,6 +53,8 @@ Para el cálculo de la función que máximiza el valor de los parámetros para u
 ### ¿Por qué es importante UMAL? ¿Qué tipo de problemas estamos resolviendo con UMAL?
 ### ¿Cuales son las técnicas principales de UMAL?
 ### ¿Qué papel juega la regresión cuantílica en UMAL? ¿Y las MDN?
+
+...
 
 
 ## Cuestiones e Hipótesis clave sin resolver
