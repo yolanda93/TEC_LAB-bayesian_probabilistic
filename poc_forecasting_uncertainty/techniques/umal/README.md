@@ -28,10 +28,18 @@ Este modelo se caracteriza por lo siguiente:
   * **entrada**: vector de entrada X ∈ Rn y una lista de quantiles τ (selección de ALDs)
   * **salida**: los parámetros de la ALDs condicionadas seleccionadas, y el cuantil τi 
   
+ <p align="center"><img src="/docs/assets/umal/umal_model.PNG" height="200" alt=“UMAL modelo” /></p>
+<p align="center"><em>UMAL modelo</em></p>
+
+  
 Es importante destacar que UMAL *es agnóstico del modelo de Deep Learning que se utilice*, es decir, podría ser válido tanto para CNN; LSTM, etc.
 
 <a name="how_tecnica"></a>
 ## Profundización en la técnica
+
+  
+ <p align="center"><img src="/docs/assets/umal/umal_pdf.PNG" height="300" alt=“UMAL - estimación de la pdf predictiva” /></p>
+<p align="center"><em>UMAL - estimación de la pdf predictiva</em></p>
 
 <a name="rel_cuantil"></a>
 ### Relación con la regresión cuantílica
@@ -40,6 +48,9 @@ Es importante destacar que UMAL *es agnóstico del modelo de Deep Learning que s
 ### Relación con las redes de densidad mixta
 
 En el gráfico 
+
+<p align="center"><img src="/docs/assets/umal/rel_tecnicas_umal.PNG" height="350" alt=“UMAL - Marginalización de la pdf predictiva” /></p>
+<p align="center"><em>UMAL - Marginalización de la pdf predictiva</em></p>
 
 
 Density estimation involves selecting a probability distribution function and the parameters of that distribution that best explains the joint probability distribution of the observed data (X).
