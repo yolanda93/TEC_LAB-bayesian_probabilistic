@@ -25,6 +25,9 @@ Es importante destacar que UMAL *es agnóstico del modelo de Deep Learning que s
 ## Profundización en la técnica
 
 
+### Relación con la regresión cuantílica
+
+### Relación con las redes de densidad mixta
 
 En el gráfico 
 
