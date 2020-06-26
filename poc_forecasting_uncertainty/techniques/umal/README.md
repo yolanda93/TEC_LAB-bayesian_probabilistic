@@ -17,7 +17,7 @@ En está página se explica la UMAL como solución técnica para estimar la ince
 
 Las técnicas convencionales de BDL para la modelización de la incertidumbre o generación de inferencias probabilísitcas **utilizan una fuerte asunción de priors** (e.g. dist.normal varianza de las predicciones) que no permite estimar una distribución heterógenea de la variable Y y cuyas estimaciones se aproximan a la esperanza condicional E[Y|X = x] para un x dado. 
 
-Este tipo asunciones hace que sea **imposible modelizar la inceridumbre aleatórica heterocedastica** de la cual es imposible adquirir conocimiento previo para la definición de estos priors o asunciones. Además, la modelización de la incertidumbre sin necesidad de conocimiento previo de cómo es esta incertidumbre **nos podría permitir realizar posteriormente un análisis más detallado y orientado a tarea** para poder entender las causas por las que se está dando esas variaciones en las estimaciones. 
+Este tipo asunciones hace que sea **imposible modelizar la inceridumbre aleatórica heterocedastica** de la cual es imposible adquirir conocimiento previo para la definición de estos priors o asunciones. Además, la modelización de la incertidumbre sin necesidad de conocimiento previo de cómo es esta incertidumbre **nos podría permitir realizar posteriormente un análisis más detallado y orientado a tarea** para poder entender las causas por las que se está dando esas variaciones en las estimaciones y aportarnos conocimiento o insights relevantes. 
 
 <a name="modelo_umal"></a>
 #### Modelo UMAL
@@ -37,15 +37,27 @@ Es importante destacar que UMAL *es agnóstico del modelo de Deep Learning que s
 <a name="how_tecnica"></a>
 ## Profundización en la técnica
 
+<p align="center"><img src="/docs/assets/umal/umal_function.PNG" height="90" alt=“UMAL formulación” /></p>
+<p align="center"><em>UMAL formulación</em></p>
   
- <p align="center"><img src="/docs/assets/umal/umal_pdf.PNG" height="300" alt=“UMAL - estimación de la pdf predictiva” /></p>
+<p align="center"><img src="/docs/assets/umal/umal_pdf.PNG" height="300" alt=“UMAL - estimación de la pdf predictiva” /></p>
 <p align="center"><em>UMAL - estimación de la pdf predictiva</em></p>
 
 <a name="rel_cuantil"></a>
 ### Relación con la regresión cuantílica
 
+<p align="center"><img src="/docs/assets/umal/quantile_loss.PNG" height="60" alt=“Quantile/Pinball Loss - formulación” /></p>
+<p align="center"><em>Quantile/Pinball Loss - formulación</em></p>
+
+
+<p align="center"><img src="/docs/assets/umal/ald_loss.PNG" height="70" alt=“ALDs parameter estimation - formulación” /></p>
+<p align="center"><em>ALDs parameter estimation - formulación</em></p>
+
 <a name="rel_mdn"></a>
 ### Relación con las redes de densidad mixta
+
+<p align="center"><img src="/docs/assets/umal/mdn_function.PNG" height="80" alt=“MDN - formulación” /></p>
+<p align="center"><em>MDN - formulación</em></p>
 
 En el gráfico 
 
