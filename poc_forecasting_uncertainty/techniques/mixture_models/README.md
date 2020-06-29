@@ -27,12 +27,12 @@ Las **redes de densidad mixta** (Bishop, 1994) es un tipo de red que combina las
 Entre las **aplicaciones más destacadas** se encuentra la de Apple’s Siri en iOS 11 para reconocimiento de voz[2]. En [3] se puede ver su aplicación en generación de manuscritos y Amazon Forecast lo tiene dentro su suite de algoritmos incluidos en su plataforma.
 
 
-<p align="center"><img src="/docs/assets/mdn/MDN.png" height="50" alt=“Mixture Density Network” /></p>
+<p align="center"><img src="/docs/assets/mdn/MDN.png" height="160" alt=“Mixture Density Network” /></p>
 <p align="center">Mixture Density Network</p>
 
 Formalmente la probabilidad condicionada de una red de mixturas tiene la siguiente forma:
 
-<p align="center"><img src="/docs/assets/mdn/mdn_formula.png" height="50" alt=“Mixture Density Network” /></p>
+<p align="center"><img src="/docs/assets/mdn/mdn_formula.png" height="70" alt=“Formula MDN" /></p>
 <p align="center">Mixture Density Network</p>
 
 En esta fórmula los parámetros tiene la siguiente semántica:
@@ -43,6 +43,17 @@ En esta fórmula los parámetros tiene la siguiente semántica:
 * **λ son los parámetros de la distribución 𝒟**. En el caso denotamos 𝒟 como una distribución gausiana, estos parametros corresponderian a λ1 sería la media condicional mean μ(x) y 
 λ2 la desviación estándar σ(x). Las distribuciones pueden tener distinto número de parámetros (e.g.: Bernoulli and Chi2 tienen 1 parámetro, Beta tiene 2, y la gaussiana truncada tiene hasta 4 parámetros) Estos son parámetros que forman también la salida de la red.
 
+
+### Ventajas y desventajas
+
+
+* *Ventajas* 
+
+Permite estimar distribuciones heterogéneas de la variable respuesta
+
+* *Desventajas* 
+
+El tamaño de la sálida de la red creada por la capa final de la MDN es (c+2)* m, lo que supone un incremento considerable si lo comporamos con la sálida de una red convencional
 
 
 #### Referencias
