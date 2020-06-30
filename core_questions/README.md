@@ -1,5 +1,7 @@
 
-## Hipótesis/cuestiones resueltas 
+# Hipótesis/cuestiones resueltas 
+
+## Cuestiones correspondientes a experimentos del Q3
 
 ### Q1: ¿Qué limitaciones tiene la técnica Exp.I Varianza al vuelo? 
 
@@ -8,7 +10,7 @@
 
 *Nota: Consideramos como parte de los priors la arquitectura y parámetros de la red*
 
-### Q2: ¿Dónde tendría sentido aplicar la técnica Exp.I varianza al vuelo? 
+### Q2: ¿Dónde tendría sentido aplicar la técnica Exp.I varianza al vuelo?  [Core Question]
 
 **Conocimiento del problema**
   - En aquellos problemas en los que tengamos cierta certeza de que la distribución del error de la P(Y|x) se puede aproximar usando una distribución gausiana
@@ -18,7 +20,7 @@
   - Robótica e IoT: Aprox. la incertidumbre con una dist.normal podría evitar inestabilidades en sistema complejos.
   A veces no interesa modelizar 'en su completitud' la incertidumbre de las estimaciones que utilizan como fuente de datos sensores calibrados puesto que se sabe que este error se podría aproximar con una distribucción gaussiana, además tampoco interesa recoger picos de la distribucción ya que podrían dar lugar a inestabilidades en el propio sistema. (e.g. estimaciones que se van a pasar como input a un controlador PID)
 
-### Q3: ¿Dónde tendría sentido aplicar la técnica UMAL?
+### Q3: ¿Dónde tendría sentido aplicar la técnica UMAL? [Core Question]
 
 **Conocimiento del problema**
  - Problemas en los que (se sospecha) que no se dispone o va a disponer de información relevante de la problemática o conjunto de variables que modelizan esa problemática. Es decir, tenemos un alto grado de incertidumbre.
@@ -28,13 +30,13 @@
  - Mejora de la robustez en aplicaciones en tiempo real
  - Nos interesa ser capacaces de modelizar esa incertidumbre porque nos proporciona información core para el negocio (e.g. riesgo financiero)
 
-### Q4: ¿Qué tipo de incertidumbre estamos intentando modelar cuando hacemos experimentos con obs. que se alejan en eje X en función de la Y de los datos de entrenamiento?
+### Q4: ¿Qué tipo de incertidumbre estamos intentando modelar cuando hacemos experimentos con obs. que se alejan en eje X en función de la Y de los datos de entrenamiento? 
 
 Incertidumbre epistémica: Es un error reducible que se está dando por falta de datos en un intervalo
 
 *Nota: El resultado de este experimento fue que obteniamos una varianza proporcional al alejamiento en el eje X*
 
-### Q5: ¿Cómo se podría probar la incertidumbre aleatorica heterocedástica?
+### Q5: ¿Cómo se podría probar la incertidumbre aleatorica heterocedástica? 
 
 Para probar la incertidumbre aleatórica es necesario introducir error en la sálida de la red (predicciones de la red) en datos de testing. Este error no puede ser igual al error conocido, es decir, en nuestro caso el prior es una distribución normal y potencialmente distinto de la distribucción del error real de los datos de entrenamiento.
 La incertidumbre heterocedástica es aquel error que puede provenir de distintas fuentes. Por tanto, necesitamos N procesos distintos generadores de ese ruido aleatórico.
@@ -44,6 +46,18 @@ La incertidumbre heterocedástica es aquel error que puede provenir de distintas
 Solución Naive:
 Cambiando la función de pérdida de la red para optimizar los valores de los parámetros de la distribución conocida.
 Para el cálculo de la función que máximiza el valor de los parámetros para un conjunto de datos se utiliza el algoritmo de MLE (Maximum Likelihood Estimation)
+
+
+## Cuestiones correspondientes a experimentos del Q4
+
+### Q1: ¿Por qué es importante la incertidumbre en forecasting? [Core Question]
+
+### Q2: ¿Cual es la aproximación más sencilla (solucion naive) de estimar la incertidumbre en problemas de forecasting?
+
+### Q3: ¿Qué son las LSTM? ¿Qué problemática concreta resuelven las LSTM? ¿Por qué es una técnica referente en forecasting? [Core Question]
+
+### Q4: ¿Qué desventajas tiene la estimación de la incertidumbre usando N modelos de regresión cuantílica?
+
 
 ## Próximas preguntas
 
