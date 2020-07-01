@@ -37,11 +37,25 @@ Es importante destacar que UMAL *es agnóstico del modelo de Deep Learning que s
 <a name="how_tecnica"></a>
 ## Profundización en la técnica
 
+En el siguiente gráfico se puede observar la técnica de UMAL en contraposición a otras técnicas de BDL vistas. En el gráfico se muestran unos datos sintéticos cuya distribucción de Y varia a lo largo del eje X por zonas. A la izquierda se ve una **representación de la aproximación de la distribucción de Y para un input dado x=0.6**. En este caso vemos como UMAL es capaz de capturar distribucciones heterogéneas que aproximan mejor a la distribucción real de Y que otras técnicas basadas en aproximar una distribucción normal (curva amarilla) 
+
+<p align="center"><img src="/docs/assets/umal/umal_pdf.PNG" height="300" alt=“UMAL - estimación de la pdf predictiva” /></p>
+<p align="center"><em>UMAL - estimación de la pdf predictiva</em></p>
+
+La distribucción P(Y|X=x) es el resultado del algoritmo MAP (Maximum A posteriori Estimation) que selecciona aquel valor de parámetros de la distribucción que mejor explica la probabilidad de que den un conjunto de observaciones (Y), denominandose esta como Likelihood.
+
+
+La formulación de una distribucción UMAL queda descrita por la siguiente figura. En esta formula, se describe **la función de densidad predictiva de un UMAL como el conjunto ponderado de N distribucciones asimétricas de laplace - ALDs**. Estas distribucciones se suman como resultado de la marginalización sobre el parámetro tau (o cuantíl) ya que se consideran independientes entre sí (véase MDN). 
+
 <p align="center"><img src="/docs/assets/umal/umal_function.PNG" height="90" alt=“UMAL formulación” /></p>
 <p align="center"><em>UMAL formulación</em></p>
   
-<p align="center"><img src="/docs/assets/umal/umal_pdf.PNG" height="300" alt=“UMAL - estimación de la pdf predictiva” /></p>
-<p align="center"><em>UMAL - estimación de la pdf predictiva</em></p>
+<a name="aplicaciones"></a>
+## Aplicaciones
+
+**Algunos ejemplos de aplicaciones** dónde podría tener sentido esta técnica son: *la evaluación del riesgo in aplicaciones financieras, predicción de demanda/mobilidad para la optimización de sistemas de transporte o predicción del consumo energético*. 
+
+**Todas estas problemáticas comparten un componente aleatórico heterocedastico dificil de modelar** que proporciona información muy relevante para el negocio. Para la evaluación de riesgo financiero nos daría predicciones mucho más robustas, en el caso de optimización de sistemas de transporte nos podría ofrecer información relevante para estimar la probabilidad de accidentes o congestiones de tráfico y en el caso de consumo energético nos podría servir para anticipar posibles picos de consumo.
 
 <a name="rel_cuantil"></a>
 ### Relación con la regresión cuantílica
@@ -65,13 +79,8 @@ En el gráfico
 <p align="center"><em>UMAL - Marginalización de la pdf predictiva</em></p>
 
 
-Density estimation involves selecting a probability distribution function and the parameters of that distribution that best explains the joint probability distribution of the observed data (X).
 
-<a name="aplicaciones"></a>
-## Aplicaciones
 
-**Algunos ejemplos de aplicaciones** dónde podría tener sentido esta técnica son: *la evaluación del riesgo in aplicaciones financieras, predicción de demanda/mobilidad para la optimización de sistemas de transporte o predicción del consumo energético*. 
 
-**Todas estas problemáticas comparten un componente aleatórico heterocedastico dificil de modelar** que proporciona información muy relevante para el negocio. Para la evaluación de riesgo financiero nos daría predicciones mucho más robustas, en el caso de optimización de sistemas de transporte nos podría ofrecer información relevante para estimar la probabilidad de accidentes o congestiones de tráfico y en el caso de consumo energético nos podría servir para anticipar posibles picos de consumo.
 
 
