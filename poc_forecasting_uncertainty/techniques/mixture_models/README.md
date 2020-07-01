@@ -4,8 +4,8 @@ En está página se explica **los modelos de mixturas** como solución técnica 
 
 ### Indice de contenidos
 - [Introducción a la técnica](#introduccion)
-  - [MLE - Maximum Likelihood Estimation](#MLE)
 - [Mixture Density Networks](#mdn)
+- [MLE - Maximum Likelihood Estimation](#MLE) [TODO]
 
 <a name="introduccion"></a>
 ## Introducción
