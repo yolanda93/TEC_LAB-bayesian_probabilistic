@@ -73,12 +73,6 @@ La formulación de una distribucción UMAL queda descrita por la siguiente figur
 <p align="center"><img src="/docs/assets/umal/mdn_function.PNG" height="80" alt=“MDN - formulación” /></p>
 <p align="center"><em>MDN - formulación</em></p>
 
-En el gráfico 
-
-<p align="center"><img src="/docs/assets/umal/rel_tecnicas_umal.PNG" height="350" alt=“UMAL - Marginalización de la pdf predictiva” /></p>
-<p align="center"><em>UMAL - Marginalización de la pdf predictiva</em></p>
-
-
 
 
 
