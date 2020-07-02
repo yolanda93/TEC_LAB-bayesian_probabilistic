@@ -1,8 +1,6 @@
-El problema de la inferencia Bayesiana
+### El problema de la inferencia Bayesiana
 
-La inferencia bayesiana puede convertirse en un problema intratable o con una complejidad computacional muy alta dependiendo de las **asunciones tomadas por el modelo y la dimensionalidad**
-
-En la práctica 
+La inferencia bayesiana puede convertirse en un problema intratable o con una complejidad computacional muy alta dependiendo de las **asunciones tomadas por el modelo y la dimensionalidad**. Por ello todas las técnicas se basan en métodos de aproximación basandose en el conocimiento del problema para la modelización del prior o mediante la aproximación de la distribucción a posteriori
 
 En este sentido se han desarrollado técnicas que permiten aproximar su resultado:
 
