@@ -8,7 +8,7 @@ En esta carpeta se encuentra la documentación con **los aprendizajes extraídos
 -   [Profundización en las problemáticas de estimación de la incertidumbre](/docs/problematica_incertidumbre/README.md) 
 -   [Profundización en las problemática de inferencia bayesiana](/docs/problematica_bayesiana/README.md) 
 ----
--   [Soluciones Técnicas - Experimentos de Laboratorio](/docs/experimentos_labs/README.md) [TODO]
+-   [Soluciones Técnicas - Experimentos de Laboratorio](/docs/experimentos_labs/README.md) 
 -   [Aplicación en la problemática de Forecasting](/docs/forecasting_uncertainty/README.md) [TODO]
 ----
 -   [Diagrama de aplicabilidad de las técnicas estudiadas](/docs/problematica_incertidumbre/README.md) [TODO]
@@ -32,7 +32,7 @@ Dentro de otras aplicaciones interesantes que podría ofrecer esta técnica se h
 - Active Learning
 - Continual Learning
 
-----
+----- Notas personales [Borrador Yolanda proximos pasos]
 
 Quantile Reinforcement Learning
 
@@ -43,8 +43,6 @@ Hipotesis:
 so the the policy estimates a 90% chance of getting a reward of at least 1, 70% chance of at least 4, 50% chance of at least 7, 30% chance of at least 10, and 10% chance of at least 56.
 Reference: https://medium.com/@fuller.evan/quantile-reinforcement-learning-56f8b3c3f134
 
-
------
 
 Conversaciones con Axel
 
