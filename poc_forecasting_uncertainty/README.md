@@ -13,6 +13,12 @@ Está necesidad se ha detectado tras realizar un research en la industria y en B
 * [Modelado de la solución](/poc_forecasting_uncertainty/m5_forecasting_uncertainty/ml_solutions/) *Aplicación de soluciones técnicas*
 * [MVP](/poc_forecasting_uncertainty/m5_forecasting_uncertainty/mvp_final_solution/) *Despliegue y documentatión de la solución final*
 
+[Técnicas de estimación de la incertidumbre en forecasting](/poc_forecasting_uncertainty/techniques)
+ * [Regresión Cuantílica](/poc_forecasting_uncertainty/techniques/quantile_regression/) 
+ * [LSTM](/poc_forecasting_uncertainty/techniques/lstm/)
+ * [DeepQuantile LSTM](/poc_forecasting_uncertainty/techniques/deepquantile_lstm/)
+ * [Mixture Models](/poc_forecasting_uncertainty/techniques/mixture_models/)
+ * [UMAL](/poc_forecasting_uncertainty/techniques/umal/)
 
 ### Objetivos
 
