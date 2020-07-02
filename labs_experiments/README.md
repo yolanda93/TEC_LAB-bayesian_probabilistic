@@ -8,7 +8,7 @@ En esta carpeta se encuentran los **experimentos de laboratorio** realizados par
 * DATE: ---
 * DESCRIPTION: The goal of this notebook is twofold: first, it is explained the original experiment design since a bayesian perspective. Secondly, it is proposed the evaluation of the conformity of the assumptions taken
 * RESOURCES:
-  * [Notebook](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V0.0.5-bayesian_interpretation/exp1_bayesian_interpretation.ipynb)
+  * [Notebook](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/labs_experiments/V0.0.5-bayesian_interpretation/exp1_bayesian_interpretation.ipynb)
 
 ### V0.2.0-tensorflow
 * DATE: ---
@@ -30,7 +30,7 @@ En esta carpeta se encuentran los **experimentos de laboratorio** realizados par
 * DESCRIPTION: Validate the Mixture Density Networks with the synthetic data used for Exp.I
    * EXPERIMENT GOAL: Compare of MDN with Exp.I
 * RESOURCES:
-  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V3.0.0-mixture_density_networks)
+  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/labs_experiments/V3.0.0-mixture_density_networks)
 
 ### V2.2.0-umal
 * DATE: 04/01/2019
@@ -39,7 +39,7 @@ En esta carpeta se encuentran los **experimentos de laboratorio** realizados par
 * DESCRIPTION: UMAL is the technique presented by Axel Brando (BBVA-Data) in BBVA - IA Conference
    * EXPERIMENT GOAL: Understand the work of Axel Brando. Why does he use mixture density networks?
 * RESOURCES:
-  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V2.2.0-umal)
+  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/labs_experiments/V2.2.0-umal)
 
 ### V0.1.6-real_datasets
 * DATE: 30/12/2019
@@ -48,7 +48,7 @@ En esta carpeta se encuentran los **experimentos de laboratorio** realizados par
 * DESCRIPTION: Play with real datasets in regression problems
    * EXPERIMENT GOAL:  Validation with real datasets
 * RESOURCES:
-  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V0.1.6-real_datasets)
+  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/labs_experiments/V0.1.6-real_datasets)
 
 ### V0.0.5-prior_loss_distributions
 * DATE: 30/12/2019
@@ -57,7 +57,7 @@ En esta carpeta se encuentran los **experimentos de laboratorio** realizados par
 * DESCRIPTION: Play with different non gaussian error distirbutions and adapt the loss functions accordingly
    * EXPERIMENT GOAL: Do we improve results if the prior is satisfied?
 * RESOURCES:
-  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V0.0.5-prior_loss_distributions)
+  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/labs_experiments/V0.0.5-prior_loss_distributions)
 
 ### V0.0.4-loss_function_frameworks
 * DATE: 27/12/2019
@@ -66,7 +66,7 @@ En esta carpeta se encuentran los **experimentos de laboratorio** realizados par
 * DESCRIPTION: Implementation in different deep learning frameworks: pytorch, tensorflow
    * EXPERIMENT GOAL: Tests compatibility of the experiment-technique with different deep learning frameworks
 * RESOURCES:
-  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V0.0.4-loss_function_frameworks)
+  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/labs_experiments/V0.0.4-loss_function_frameworks)
 
 ### V0.0.3-loss_function_customization
 * DATE: 24/12/2019
@@ -75,7 +75,7 @@ En esta carpeta se encuentran los **experimentos de laboratorio** realizados par
 * DESCRIPTION: Play with the loss functions using different custom losses
     * EXPERIMENT GOAL: Understand how is propagated both errors (y and sigma losses)
 * RESOURCES:
-  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V0.0.3-loss_function_customization)
+  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/labs_experiments/V0.0.3-loss_function_customization)
 
 ### V0.0.2-data_faraway_original
 * DATE: 11/12/2019
@@ -84,7 +84,7 @@ En esta carpeta se encuentran los **experimentos de laboratorio** realizados par
 * DESCRIPTION: Added data in both training and validation far away from the original dataset distribution
     * EXPERIMENT GOAL: We would like to test if the uncertainty estimation increases in that points
 * RESOURCES:
-  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V0.0.2-data_faraway_original)
+  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/labs_experiments/V0.0.2-data_faraway_original)
 
 ### V0.0.1-nongaussian_noise
 * DATE: 11/12/2019
@@ -92,7 +92,7 @@ En esta carpeta se encuentran los **experimentos de laboratorio** realizados par
 * DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
 * DESCRIPTION: add non gaussian noise to the original process
 * RESOURCES:
-  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V0.0.1-nongaussian_noise)
+  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/labs_experiments/V0.0.1-nongaussian_noise)
 
 ### V1.0.0-nonbayesian_techniques
 * DATE: 03/12/2019
@@ -101,7 +101,7 @@ En esta carpeta se encuentran los **experimentos de laboratorio** realizados par
 * DESCRIPTION: Explore other non bayesian and standard approches commonly applied in ML
     * EXPERIMENT GOAL: Understand its limitations. Why should be use a bayesian approach?
 * RESOURCES:
-  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V1.0.0-nonbayesian_techniques)
+  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/labs_experiments/V1.0.0-nonbayesian_techniques)
 
 ### V0.0.0-initial_validation
 * DATE: 28/11/2019
@@ -110,7 +110,7 @@ En esta carpeta se encuentran los **experimentos de laboratorio** realizados par
 * DESCRIPTION: Validation of the original experiment - no modification added
     * EXPERIMENT GOAL: Validate the implementation of the original experiment
 * RESOURCES:
-  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V0.0.0-initial_validation)
+  * [Notebooks](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/labs_experiments/V0.0.0-initial_validation)
 ---
 
 ## First Experiment: Synthetic data
