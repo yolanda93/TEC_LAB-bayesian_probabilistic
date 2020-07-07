@@ -13,7 +13,7 @@ Un ejemplo de este escenario lo podemos ver en [problemas de predicción de vent
 * [Libro de Aprendizajes](/docs/README.md) *Documentación sobre el conocimiento adquirido*
 * [Presentacion Ejecutiva del Reto](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc) 
 * [Conceptos y preguntas clave](/core_questions/README.md)
-* [Other resources](/resources/README.md)
+* [Otros recursos](/resources/README.md)
 
 ## Contexto y alcance del reto
 
