@@ -1,0 +1,7 @@
+
+- different evaluation metrics and competitions for measureing point forecast and uncertainty
+- desastres naturales. datasets externos
+- quantiles are equally weighted
+- median​, and the​50%, 67%, 95%, and 99% 
+-  we expect from the best performing forecasting methods to derive lower forecasting errors for the series that are more valuable for the company
+-  it must provide accurate forecasts across all hierarchical levels
