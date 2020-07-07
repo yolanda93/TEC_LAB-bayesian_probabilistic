@@ -15,7 +15,7 @@ def generate_synth_tseries(t0: int, series_lenght: int, num_ts: int, period: int
         time_ticks = np.array(range(series_lenght))
         source = level + seas_amplitude*np.sin(time_ticks*(2*np.pi)/period)
         noise = sig*np.random.randn(series_lenght)
-        data = source + noise
+        data = source + noise # add noise
         index = pd.DatetimeIndex(start=t0, freq=freq, periods=series_lenght)
         time_series.append(pd.Series(data=data, index=index))
     time_series_df = pd.DataFrame(time_series)
