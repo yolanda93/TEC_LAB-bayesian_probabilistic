@@ -1,0 +1,9 @@
+ggplot
+keras
+numpy
+opencv-python
+pandas
+tensorflow_probability
+tensorflow
+scipy
+boto3
