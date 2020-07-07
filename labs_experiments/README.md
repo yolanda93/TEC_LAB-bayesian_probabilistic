@@ -11,10 +11,10 @@ En esta carpeta se encuentran los **experimentos de laboratorio** realizados par
   * [Notebook](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/labs_experiments/V0.0.5-bayesian_interpretation/exp1_bayesian_interpretation.ipynb)
 
 ### V0.2.0-tensorflow
-* DATE: ---
-* DESCRIPTION: replication of the technique in the Tensorflow 2.0 framework.
+* DATE: 07/07/2020
+* DESCRIPTION: uncertainty estimation on-the-fly. Replication and  of the technique in the Tensorflow 2.0 framework.
 * RESOURCES:
-  * [Notebook](V0.2.0-tensorflow/01-tf_original.ipynb)
+  * [Notebook](V0.2.0-tensorflow/01-original-on_the_fly-tf.ipynb)
 
 
 ### V4.3.0-traffic_lights
