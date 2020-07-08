@@ -1,12 +1,3 @@
-
-## [Bayesian deep learning](BDL)
-  * [Uncertainty estimation](BDL/uncertainty_estimation)
-
-
-
-## Resources
-* [Introduction to Bayesian data analysis - part 1: What is Bayes?](https://www.youtube.com/watch?v=3OJEae7Qb_o)
-=======
 # Estimación de la Incertidumbre 
 
 El reto de estimación de la incertidumbre tiene como objetivo ofrecer una **medida de fiabilidad** sobre las predicciones de un modelo de Machine Learning o Deep Learning
@@ -22,6 +13,7 @@ Un ejemplo de este escenario lo podemos ver en [problemas de predicción de vent
 * [Libro de Aprendizajes](/docs/README.md) *Documentación sobre el conocimiento adquirido*
 * [Presentacion Ejecutiva del Reto](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc) 
 * [Conceptos y preguntas clave](/core_questions/README.md)
+* [Otros recursos](/resources/README.md)
 
 ## Contexto y alcance del reto
 

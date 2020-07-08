@@ -5,18 +5,12 @@ En está página se explica **los modelos de mixturas** como solución técnica 
 ### Indice de contenidos
 - [Introducción a la técnica](#introduccion)
 - [Mixture Density Networks](#mdn)
-- [MLE - Maximum Likelihood Estimation](#MLE) [TODO]
+- [MLE - Maximum Likelihood Estimation](#MLE) 
 
 <a name="introduccion"></a>
 ## Introducción
 
 Un **modelo de mixturas** es un modelo probabilístico que nos permite representar la presencia de sub-poblaciones de la población general. Esta representación de sub-poblaciones nos va a permitir construir un estimador más robusto en el caso en el que la distribución de la variable respuesta sea heterogénea
-
-
-<a name="MLE"></a>
-### MLE - Maximum Likelihood Estimation
-
-El algoritmo de MLE o máxima verosimilitud nos permite obtener los parámetros del modelo o distribución que maximizan la probabibilidad de obtener unos datos dados.
 
 
 <a name="mdn"></a>
@@ -43,6 +37,12 @@ En esta fórmula los parámetros tiene la siguiente semántica:
 * **λ son los parámetros de la distribución 𝒟**. En el caso denotamos 𝒟 como una distribución gausiana, estos parametros corresponderian a λ1 sería la media condicional mean μ(x) y 
 λ2 la desviación estándar σ(x). Las distribuciones pueden tener distinto número de parámetros (e.g.: Bernoulli and Chi2 tienen 1 parámetro, Beta tiene 2, y la gaussiana truncada tiene hasta 4 parámetros) Estos son parámetros que forman también la salida de la red.
 
+<a name="MLE"></a>
+### MLE - Maximum Likelihood Estimation
+
+El algoritmo de MLE o máxima verosimilitud nos permite obtener los parámetros del modelo o distribución que maximizan la probabibilidad de obtener unos datos dados.
+
+Referencia - [Ejemplo de cálculo de MLE para la implementación de la función de pérdida](https://d3c33hcgiwev3.cloudfront.net/_f678abd2f50f7171a76c7cb3ec03f726_MLE-for-Gaussian.pdf?Expires=1594252800&Signature=lDPX5Y6JT03mRyNj65JYEMZ7gjQuP5oXy-7019GmL8e8VuYRLo07K-N1iGU3geREMr1xj-VwjEh4qsV4R~PDQRpQuoH~UvEnrlpC3NyCzlgd1vcAKFQkppHqMXWsLDSg8HLu796cvDiu0R8bKy24ppHRdF4dta7sJCb3tvF8P8c_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
 
 ### Ventajas y desventajas
 

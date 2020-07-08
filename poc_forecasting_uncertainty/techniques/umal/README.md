@@ -60,15 +60,20 @@ La formulación de una distribucción UMAL queda descrita por la siguiente figur
 <a name="rel_cuantil"></a>
 ### Relación con la regresión cuantílica
 
-<p align="center"><img src="/docs/assets/umal/quantile_loss.PNG" height="60" alt=“Quantile/Pinball Loss - formulación” /></p>
-<p align="center"><em>Quantile/Pinball Loss - formulación</em></p>
+La estimación de la densidad posterior predictiva en [estadística bayesiana es intratable computacionalmente](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/docs/problematica_bayesiana/README.md) por ello es necesario un método de aproximación que nos permita aproximar esta CDF. La aproximación utilizada en UMAL utiliza la función de pérdida de la regresión cuantílica o Pinball Loss para aproximar N distribucciones del tipo ALD que se ajustan a distintos cuantíles o partes concretas de la distribucción de la predicción de Y para un input X dado.
 
+<p align="center"><em>Quantile/Pinball Loss - formulación</em></p>
+<p align="center"><img src="/docs/assets/umal/quantile_loss.PNG" height="60" alt=“Quantile/Pinball Loss - formulación” /></p>
+
+La estimación de paramétros de las ALD se calcula usando el MLE descrita por la siguiente formula:
 
 <p align="center"><img src="/docs/assets/umal/ald_loss.PNG" height="70" alt=“ALDs parameter estimation - formulación” /></p>
 <p align="center"><em>ALDs parameter estimation - formulación</em></p>
 
 <a name="rel_mdn"></a>
-### Relación con las redes de densidad mixta
+### Relación con las mixturas de componentes
+
+Para estimar una **distribución heterógenea de la variable Y** es necesario ajustar N familias de distribucciones utilizando lo que se conoce como mixturas de componentes. En el caso de UMAL la familia de distribucciones a ajustar es la distrbucciones asimétricas de laplace. Este metodo está descrito en [detalle aqui](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/poc_forecasting_uncertainty/techniques/mixture_models) y se cálcula mediante la siguiente fórmula:
 
 <p align="center"><img src="/docs/assets/umal/mdn_function.PNG" height="80" alt=“MDN - formulación” /></p>
 <p align="center"><em>MDN - formulación</em></p>
