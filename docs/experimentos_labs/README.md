@@ -1,4 +1,4 @@
-# Técnicas - Aprendizajes de experimentos del reto estimación de la incertidumbre
+# Técnicas - Aprendizajes de experimentos del reto
 En esta carpeta se encuentran los aprendizajes de los experimentos de laboratorio realizados para profundizar en distintas soluciones técnicas asociadas al reto de la estimación de la incertidumbre
 
 
