@@ -1,9 +1,10 @@
-# Estimación de la incertidumbre - Detalle de los aprendizajes de experimentos
+# Soluciones Técnicas - Aprendizajes de experimentos del reto estimación de la incertidumbre
+En esta carpeta se encuentran los aprendizajes de los experimentos de laboratorio realizados para profundizar en distintas soluciones técnicas asociadas al reto de la estimación de la incertidumbre
 
-Tabla de Contenidos
-=================
 
--   [Framework: Validación de las medidas de incertidumbre](#Framework)
+### Indice de Contenidos
+
+-   [Framework: Validación de las medidas de incertidumbre](#Framework) [TODO]
     -   [State-of-Art](#state-of-art)
     -   [Experimentos](#experimentos)
 -   [Técnicas No Bayesianas](#non_bay)
@@ -14,9 +15,14 @@ Tabla de Contenidos
     -   [Experimentos - Validación ruido no gausiano](#experimentos_4)
     -   [Experimentos - Validación datasets reales](#experimentos_5)
     -   [Conclusiones](#conclusiones)
--   [Redes de densidad mixta](#mdn)
+-   [Técnica: Redes de densidad mixta](#mdn)
     -   [Motivación](#mdn_motivacion)
     -   [Experimentos y conclusiones](#mdn_exp-conclusiones)
+-   [Técnica: Regresión Cuantílica](/poc_forecasting_uncertainty/techniques/quantile_regression/) 
+-   [Técnica: LSTM](/poc_forecasting_uncertainty/techniques/lstm/) [TODO]
+-   [Técnica: DeepQuantile LSTM](/poc_forecasting_uncertainty/techniques/deepquantile_lstm/)
+-   [Técnica: Mixture Models](/poc_forecasting_uncertainty/techniques/mixture_models/)
+-   [Técnica: UMAL](/poc_forecasting_uncertainty/techniques/umal/)
 ---
 
 # Aprendizajes de experimentos
