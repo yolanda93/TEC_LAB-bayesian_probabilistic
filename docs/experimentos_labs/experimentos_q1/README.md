@@ -1,5 +1,20 @@
 
-# Aprendizajes de experimentos
+# Aprendizajes de experimentos iniciales - Q1
+
+-   [Framework: Validación de las medidas de incertidumbre](#Framework) [TODO]
+    -   [State-of-Art](#state-of-art)
+    -   [Experimentos](#experimentos)
+-   [Técnicas No Bayesianas](#non_bay)
+-   [Técnica: Exp.I - Estimacion de la varianza al vuelo](#exp_I)
+    -   [Experimentos - Validación inicial de estimación de incertidumbre](#experimentos_1)
+    -   [Experimentos - Validación de la interpretación de incertidumbre](#experimentos_2)
+    -   [Experimentos - Compatibilidad de frameworks](#experimentos_3)
+    -   [Experimentos - Validación ruido no gausiano](#experimentos_4)
+    -   [Experimentos - Validación datasets reales](#experimentos_5)
+    -   [Conclusiones](#conclusiones)
+-   [Técnica: Redes de densidad mixta](#mdn)
+    -   [Motivación](#mdn_motivacion)
+    -   [Experimentos y conclusiones](#mdn_exp-conclusiones)
 
 
 <h2 id="exp_I">Técnica: Exp.I - Estimacion de la varianza al vuelo</h2>
