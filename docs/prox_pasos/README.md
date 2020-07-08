@@ -14,9 +14,12 @@ Dentro de otras aplicaciones interesantes que podría ofrecer esta técnica se h
 - Active Learning
 - Continual Learning
 
------ Notas personales [Borrador Yolanda proximos pasos]
+----- Notas personales [Borrador - Yolanda proximos pasos] ----------------------------------------------------------------------------
 
-Quantile Reinforcement Learning
+**Pruning Deep Learning**
+Aplicación en la reducción del tamaño del modelo
+
+**Quantile Reinforcement Learning**
 
 Hipotesis:
 *For QR-DQN, instead of estimating a single value for each state-action pair, we learn a distribution of values. Knowing the distribution, rather than just the average, can improve the policy*
@@ -26,11 +29,11 @@ so the the policy estimates a 90% chance of getting a reward of at least 1, 70% 
 Reference: https://medium.com/@fuller.evan/quantile-reinforcement-learning-56f8b3c3f134
 
 
-Conversaciones con Axel
+**Datasets**
 
 - Darle la vuelta al problema, es decir, ser capaces de medir la incertidumbre del humano (en los datos) --> Sesgos?
 
-- Dimensionalidad alta --> Puede estar relacionado 
+- Estimación de la incertidumbre con dataset de alta dimensionalidad  
 
 
 Hipotesis:
