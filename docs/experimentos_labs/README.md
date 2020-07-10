@@ -5,9 +5,9 @@ En esta carpeta se encuentran los aprendizajes de los experimentos de laboratori
 ### Indice de Contenidos
 
 -   [Framework: Validación de las medidas de incertidumbre](#Framework) [TODO]
--   [Técnicas No Bayesianas](#non_bay)
--   [Técnica: Exp.I - Estimacion de la varianza al vuelo](/experimentos_q1/README.md)
--   [Técnica: Redes de densidad mixta](#mdn)
+-   [Técnicas No Bayesianas](/docs/experimentos_labs/experimentos_q1/README.md#non_bay)
+-   [Técnica: Exp.I - Estimacion de la varianza al vuelo](/docs/experimentos_labs/experimentos_q1/README.md)
+-   [Técnica: Redes de densidad mixta](/docs/experimentos_labs/experimentos_q1/README.md#mdn)
 -   [Técnica: Regresión Cuantílica](/poc_forecasting_uncertainty/techniques/quantile_regression/) 
 -   [Técnica: LSTM](/poc_forecasting_uncertainty/techniques/lstm/) [TODO]
 -   [Técnica: DeepQuantile LSTM](/poc_forecasting_uncertainty/techniques/deepquantile_lstm/)
