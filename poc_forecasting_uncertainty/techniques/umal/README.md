@@ -76,8 +76,6 @@ Sin embargo, esta función de pérdida sólo nos ofrece el parámetro de ubicaci
 
 De esta manera se modifica la función de pérdida o Pinball Loss definida anteriormente se modifica para la estimación de los parámetros de la ALD  (μ,  τ , **σ** ). Esto se consigue maximizando el log-likelihood:
 
-
-
 <p align="center"><img src="/docs/assets/umal/MLE_ALD.PNG" height="70" alt=“Maximización del log-likelihood de la función ALD - formulación” /></p>
 <p align="center"><em>Maximización del log-likelihood de la función ALD  - formulación</em></p>
 
@@ -96,8 +94,11 @@ Para estimar una **distribución heterógenea de la variable Y** es necesario aj
 <p align="center"><img src="/docs/assets/umal/mdn_function.PNG" height="80" alt=“MDN - formulación” /></p>
 <p align="center"><em>MDN - formulación</em></p>
 
+Con el método anterior (véase Relación la regresión cuantílica) tendríamos la estimación de parámetros de la ALD. El método UMAL estima la distribucción posterior o predicitva como la suma ponderada de los pesos para cada ALDs. El número de ALDs a estimar viene determinado por la lista de quantiles τ  =  { 0.1, 0.2, … ,0.9} que es un parámetro de entrada de la red. A mayor número de quantiles, mayor es la aproximación a la distribucción real de Y. 
 
 
+<p align="center"><img src="/docs/assets/umal/rel_tecnicas_umal.PNG" height="340" alt=“MDN UMAL - representación gráfica” /></p>
+<p align="center"><em>MDN UMAL - representación gráfica</em></p>
 
 
 
