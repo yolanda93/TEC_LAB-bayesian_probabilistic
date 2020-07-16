@@ -38,7 +38,7 @@ En problemas de forecasting se suele hacer forecasting sobre distintos horizonte
 
 El cálculo de esta varianza o intervalo de predicción en forecasting en el h-instante (h:horizonte) de la variable respuesta y con una desviación estándar σₕ, puede ser calculada como:
 
- <p align="center"><img src="/docs/assets/quantile_regression/forecast_variance.png" height="50" alt=“Ejemplo de regresión cuantílica” /></p>
+<p align="center"><img src="/docs/assets/quantile_regression/forecast_variance.png" height="50" alt=“Ejemplo de regresión cuantílica” /></p>
 <p align="center"><em>Estimación de la varianza de forecasting en el instante u horizonte h</em><sup>[2]</sup></p>
 
 La constante c depende de la cobertura de probabilidades. Estos valores se pueden encontrar [aqui](https://otexts.com/fpp2/prediction-intervals.html)
@@ -55,7 +55,14 @@ La **función de pérdida de la regresión cuantílica** minimiza una suma con *
 
 En concreto, se observa que los errores más positivos (sobre-predicciones) son penalizados más en los cuantiles superiores (se tienen más en cuenta) y los errores más negativos (infra-predicciones) se penalizan más en los cuantiles inferiores. En el caso del cuantil 50 o mediana, se penaliza por igual
 
+Esto ofrece la capacidad de poder estimar un cuantil concreto de la distribucción de la variable respuesta como se muestra en el siguiente cuadro:
+
+<p align="center"><img src="/docs/assets/quantile_regression/loss_quantile_learning.png" height="50" alt=“Métodos de aproximación de la variable respuesta” /></p>
+<p align="center"><em>Métodos de aproximación de la variable respuesta</em><sup></sup></p>
+
+
 *Notebook de referencia: [quantile_regression_loss_function.ipynb](./quantile_regression_loss_function.ipynb)*
+
 
 <a name="tecnicas"></a>
 #### Técnicas de regresión cuantílica
