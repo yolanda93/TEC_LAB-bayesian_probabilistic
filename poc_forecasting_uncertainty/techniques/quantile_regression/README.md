@@ -57,7 +57,7 @@ En concreto, se observa que los errores más positivos (sobre-predicciones) son 
 
 Esto ofrece la capacidad de poder estimar un cuantil concreto de la distribucción de la variable respuesta como se muestra en el siguiente cuadro:
 
-<p align="center"><img src="/docs/assets/quantile_regression/loss_quantile_learn.PNG" height="50" alt=“Métodos de aproximación de la variable respuesta” /></p>
+<p align="center"><img src="/docs/assets/quantile_regression/loss_quantile_learn.PNG" height="270" alt=“Métodos de aproximación de la variable respuesta” /></p>
 <p align="center"><em>Métodos de aproximación de la variable respuesta</em><sup></sup></p>
 
 
