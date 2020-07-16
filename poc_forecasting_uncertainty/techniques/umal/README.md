@@ -60,15 +60,33 @@ La formulación de una distribucción UMAL queda descrita por la siguiente figur
 <a name="rel_cuantil"></a>
 ### Relación con la regresión cuantílica
 
-La estimación de la densidad posterior predictiva en [estadística bayesiana es intratable computacionalmente](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/docs/problematica_bayesiana/README.md) por ello es necesario un método de aproximación que nos permita aproximar esta CDF. La aproximación utilizada en UMAL utiliza la función de pérdida de la regresión cuantílica o Pinball Loss para aproximar N distribucciones del tipo ALD que se ajustan a distintos cuantíles o partes concretas de la distribucción de la predicción de Y para un input X dado.
+La estimación de la densidad posterior predictiva en [estadística bayesiana es intratable computacionalmente](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/docs/problematica_bayesiana/README.md) por ello es necesario un método de aproximación que nos permita aproximar esta CDF. La aproximación utilizada en UMAL utiliza la función de pérdida de la regresión cuantílica o Pinball Loss para aproximar N distribucciones del tipo ALD que se ajustan a distintos cuantíles  τ  =  { 0.1, 0.2, … ,0.9} o partes concretas de la distribucción de la predicción de Y para un input X dado.
 
-<p align="center"><em>Quantile/Pinball Loss - formulación</em></p>
+Esta función de Pinball Loss, como se describió en el capítulo de regresión cuantílica, nos permite ajustar los pesos w y así estimar el valor de un cuantíl concreto τ de la distribucción P(Y|X) mediante la siguiente fórmula:
+
 <p align="center"><img src="/docs/assets/umal/quantile_loss.PNG" height="60" alt=“Quantile/Pinball Loss - formulación” /></p>
+<p align="center"><em>Quantile/Pinball Loss - formulación</em></p>
 
-La estimación de paramétros de las ALD se calcula usando el MLE descrita por la siguiente formula:
+Sin embargo, esta función de pérdida sólo nos ofrece el parámetro de ubicación (location parameter) o la moda de la distribucción ALD. Para estimar la distribucción de ALD necesitamos obtener la varianza  (μ,  τ , **σ** ) cómo se observa en la formulación de la distribucción:
+
+
+<p align="center"><img src="/docs/assets/umal/ALD_distribution.PNG" height="70" alt=“ALDs distribución - formulación” /></p>
+<p align="center"><em>ALDs distribución - formulación</em></p>
+
+
+De esta manera se modifica la función de pérdida o Pinball Loss definida anteriormente se modifica para la estimación de los parámetros de la ALD  (μ,  τ , **σ** ). Esto se consigue maximizando el log-likelihood:
+
+
+
+<p align="center"><img src="/docs/assets/umal/MLE_ALD.PNG" height="70" alt=“Maximización del log-likelihood de la función ALD - formulación” /></p>
+<p align="center"><em>Maximización del log-likelihood de la función ALD  - formulación</em></p>
+
+Finalmente la función de pérdida de UMAL para obtener el ajuste de los pesos w que maximizen de forma conjunta los parámetros de la ALD quedaría de la siguiente manera:
 
 <p align="center"><img src="/docs/assets/umal/ald_loss.PNG" height="70" alt=“ALDs parameter estimation - formulación” /></p>
-<p align="center"><em>ALDs parameter estimation - formulación</em></p>
+<p align="center"><em>Función de pérdida UMAL - formulación</em></p>
+
+
 
 <a name="rel_mdn"></a>
 ### Relación con las mixturas de componentes
