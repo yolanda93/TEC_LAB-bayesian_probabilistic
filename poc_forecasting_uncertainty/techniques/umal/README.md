@@ -15,12 +15,21 @@ En está página se explica la UMAL como **solución técnica para estimar la in
 <a name="introduccion"></a>
 ## Introducción a UMAL
 
+**¿Qué es UMAL?**
+
+**UMAL (Uncountable Mixture Asymetric Laplacian)** es una técnica bayesiana que sirve para estimar la incertidumbre aleatórica heterocesdástica de P(Y|X) sin necesidad de conocimiento previo de cómo se modela esta incertidumbre, permite obtener una distribucción de Y del tipo *heterogénea* que se puede adaptar a la distribucción real en escenarios de alta incertidumbre. 
+
+Esta estimación se realiza utilizando el agregado de componentes de ALD (distribucciones asimétricas de laplace), también usadas en regresión cuantílica que evitan hacer una fuerte asunción de priors.
+
+
+**¿Qué problemática resuelve UMAL?**
+
 Las técnicas convencionales de BDL para la modelización de la incertidumbre o generación de inferencias probabilísitcas **utilizan una fuerte asunción de priors** (e.g. dist.normal varianza de las predicciones) que **no permite estimar una distribución heterógenea de la variable Y, P(Y|X=x)** y cuyas estimaciones se aproximan a la esperanza condicional E[Y|X = x] para un x dado. 
 
 Este tipo asunciones hace que sea **dificil modelizar la inceridumbre aleatórica heterocedástica** de la cual es imposible adquirir conocimiento previo para la definición de estos priors o asunciones. Además, la modelización de la incertidumbre sin necesidad de conocimiento previo de cómo es esta incertidumbre **nos podría permitir realizar posteriormente un análisis más detallado y orientado a tarea** para poder entender las causas por las que se está dando esas variaciones en las estimaciones y aportarnos conocimiento o insights relevantes. 
 
 
-**Desripción de la problemática**
+**Profundización técnica en el tipo de problemática que resuelve UMAL**
 
 En el siguiente gráfico se muestra un problema de regresión con unos datos sintéticos cuya distribucción de Y varia a lo largo del eje X por zonas. Estas zonas son generadas con distintos procesos generadores que modelan distintas distribucciones de probabilidad, en este caso: asymétrica, simétrica, uniforme, multimodal. Estas variaciones a lo largo del eje X hace que el tipo de incertidumbre a modelar sea del tipo *heterocedástica*, ya que la variabilidad de la Y en función de la X no se mantiene constante. 
 
