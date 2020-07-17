@@ -17,12 +17,14 @@ En está página se explica la UMAL como **solución técnica para estimar la in
 
 **¿Qué es UMAL?**
 
-**UMAL (Uncountable Mixture Asymetric Laplacian)** es una técnica bayesiana que sirve para estimar la incertidumbre aleatórica heterocesdástica de P(Y|X) sin necesidad de conocimiento previo de cómo se modela esta incertidumbre, es decir, permite obtener una distribucción de Y del tipo *heterogénea* que se puede adaptar a la distribucción real en escenarios de alta incertidumbre. 
-
+**UMAL (Uncountable Mixture Asymetric Laplacian)** es una técnica bayesiana que sirve para estimar la incertidumbre aleatórica heterocesdástica de P(Y|X) sin necesidad de conocimiento previo de cómo se modela esta incertidumbre, es decir, permite obtener una distribucción de Y del tipo *heterogénea* que se puede adaptar mejor a la distribucción real en escenarios de alta incertidumbre
 
 **¿Qué problemática resuelve UMAL?**
 
-Las técnicas convencionales de BDL para la modelización de la incertidumbre o generación de inferencias probabilísitcas **utilizan una fuerte asunción de priors** (e.g. dist.normal varianza de las predicciones) que **no permite estimar una distribución heterógenea de la variable Y, P(Y|X=x)** y cuyas estimaciones se aproximan a la esperanza condicional E[Y|X = x] para un x dado. 
+Las técnicas convencionales de BDL para la modelización de la incertidumbre o generación de inferencias probabilísitcas **utilizan una fuerte asunción de priors** (e.g. dist.normal varianza de las predicciones) que **no permite estimar una distribución heterógenea de la variable Y, P(Y|X=x)** cómo se observa en la fig.1. (curva verde) y cuyas estimaciones se aproximan a la esperanza condicional E[Y|X = x] para un x dado. 
+
+<p align="center"><img src="/docs/assets/umal/umal_pdf.PNG" height="300" alt=“UMAL - estimación de la pdf predictiva” /></p>
+<p align="center"><em>UMAL - estimación de la pdf predictiva</em></p>
 
 Este tipo asunciones hace que sea **dificil modelizar la inceridumbre aleatórica heterocedástica** de la cual es imposible adquirir conocimiento previo para la definición de estos priors o asunciones. Además, la modelización de la incertidumbre sin necesidad de conocimiento previo de cómo es esta incertidumbre **nos podría permitir realizar posteriormente un análisis más detallado y orientado a tarea** para poder entender las causas por las que se está dando esas variaciones en las estimaciones y aportarnos conocimiento o insights relevantes. 
 
@@ -43,8 +45,6 @@ Para comprender la aplicación de UMAL respecto a otras técnicas bayesianas, es
 
     Para ello, se hace una aproximación de esta distribucción usando una composición de distintas ALDs (Asymmetric Laplace Distribution) que realiza una discretización por partes de la distribucción real, es decir, hace una estimación por cuantil de la distribucción. (Nota: La moda de la distribucción posterior de la función de probabilidad de la ALD se corresponde con el valor del estimador de la regresión cuantilica para un cuantil)
 
-<p align="center"><img src="/docs/assets/umal/umal_pdf.PNG" height="300" alt=“UMAL - estimación de la pdf predictiva” /></p>
-<p align="center"><em>UMAL - estimación de la pdf predictiva</em></p>
 
 
 <a name="modelo_umal"></a>
