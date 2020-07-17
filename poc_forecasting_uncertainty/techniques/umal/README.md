@@ -26,7 +26,7 @@ El **modelo de UMAL (Uncountable Mixture Asymetric Laplacian)** tiene cómo obje
  
 Este modelo se caracteriza por lo siguiente:
   * **entrada**: vector de entrada X ∈ Rn y una lista de quantiles τ  =  { 0.1, 0.2, … ,0.9}  (selección de ALDs)
-  * **salida**: los parámetros de la ALDs condicionadas seleccionadas, y el cuantil τi 
+  * **salida**: los parámetros de la ALDs condicionadas seleccionadas, y el cuantil τi :  {μ,  τ , σ }
   
  <p align="center"><img src="/docs/assets/umal/umal_model.PNG" height="200" alt=“UMAL modelo” /></p>
 <p align="center"><em>UMAL modelo</em></p>
