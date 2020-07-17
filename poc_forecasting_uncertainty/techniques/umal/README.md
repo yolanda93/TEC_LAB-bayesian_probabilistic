@@ -17,9 +17,7 @@ En está página se explica la UMAL como **solución técnica para estimar la in
 
 **¿Qué es UMAL?**
 
-**UMAL (Uncountable Mixture Asymetric Laplacian)** es una técnica bayesiana que sirve para estimar la incertidumbre aleatórica heterocesdástica de P(Y|X) sin necesidad de conocimiento previo de cómo se modela esta incertidumbre, permite obtener una distribucción de Y del tipo *heterogénea* que se puede adaptar a la distribucción real en escenarios de alta incertidumbre. 
-
-Esta estimación se realiza utilizando el agregado de componentes de ALD (distribucciones asimétricas de laplace), también usadas en regresión cuantílica que evitan hacer una fuerte asunción de priors.
+**UMAL (Uncountable Mixture Asymetric Laplacian)** es una técnica bayesiana que sirve para estimar la incertidumbre aleatórica heterocesdástica de P(Y|X) sin necesidad de conocimiento previo de cómo se modela esta incertidumbre, es decir, permite obtener una distribucción de Y del tipo *heterogénea* que se puede adaptar a la distribucción real en escenarios de alta incertidumbre. 
 
 
 **¿Qué problemática resuelve UMAL?**
