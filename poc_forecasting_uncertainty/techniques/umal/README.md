@@ -25,7 +25,7 @@ Este tipo asunciones hace que sea **dificil modelizar la inceridumbre aleatóric
 El **modelo de UMAL (Uncountable Mixture Asymetric Laplacian)** tiene cómo objetivo aproximar la densidad predictiva P(Y|X) de tipo heterogénea. (véase Figura 1). Para ello predice para cada input x los parámetros de la ALDs condicionadas seleccionadas (por la lista de quantiles que se introduce como entrada) de manera simultánea.
  
 Este modelo se caracteriza por lo siguiente:
-  * **entrada**: vector de entrada X ∈ Rn y una lista de quantiles τ (selección de ALDs)
+  * **entrada**: vector de entrada X ∈ Rn y una lista de quantiles τ  =  { 0.1, 0.2, … ,0.9}  (selección de ALDs)
   * **salida**: los parámetros de la ALDs condicionadas seleccionadas, y el cuantil τi 
   
  <p align="center"><img src="/docs/assets/umal/umal_model.PNG" height="200" alt=“UMAL modelo” /></p>
