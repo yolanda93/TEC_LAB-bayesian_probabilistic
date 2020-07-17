@@ -6,7 +6,7 @@ En está página se explica la UMAL como **solución técnica para estimar la in
 ### Indice de contenidos
 - [Introducción a la técnica](#introduccion)
   - [Modelo UMAL](#modelo_umal)
-- [Profundización en la técnica](#how_tecnica)
+- [Profundización teórica de UMAL](#how_tecnica)
   - [Relación con la regresión cuantílica](#rel_cuantil)
   - [Relación con las redes de densidad mixta](#rel_mdn)
  - [Aplicaciones](#aplicaciones)
@@ -28,14 +28,19 @@ Este modelo se caracteriza por lo siguiente:
   * **entrada**: vector de entrada X ∈ Rn y una lista de quantiles τ  =  { 0.1, 0.2, … ,0.9}  (selección de ALDs)
   * **salida**: los parámetros de la ALDs condicionadas seleccionadas, y el cuantil τi :  {μ,  τ , σ }
   
- <p align="center"><img src="/docs/assets/umal/umal_model.PNG" height="200" alt=“UMAL modelo” /></p>
+<p align="center"><img src="/docs/assets/umal/umal_model.PNG" height="200" alt=“UMAL modelo” /></p>
 <p align="center"><em>UMAL modelo</em></p>
 
-  
 Es importante destacar que UMAL *es agnóstico del modelo de Deep Learning que se utilice*, es decir, podría ser válido tanto para CNN; LSTM, etc.
 
+<a name="implementacion"></a>
+#### Ejemplos de Implementación 
+
+* [Notebook 1 - Uncertainty Forecasting with UMAL](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/poc_forecasting_uncertainty/techniques/umal/umal_implementation.ipynb) *Implementación de UMAL con aplicación en medición de la incertidumbre en forecasting mediante la generación de una serie temporal sintética*
+
+
 <a name="how_tecnica"></a>
-## Profundización en la técnica
+## Profundización téorica de UMAL
 
 En el siguiente gráfico se puede observar la técnica de UMAL en contraposición a otras técnicas de BDL vistas. En el gráfico se muestran unos datos sintéticos cuya distribucción de Y varia a lo largo del eje X por zonas, cada zona se podría identificar con distintos procesos generadores que dan lugar a una distribución heterogénea de P(Y|X). A la izquierda se ve una **representación de la aproximación de la distribucción de Y para un input dado x=0.6**. En este caso vemos como UMAL es capaz de capturar distribucciones heterogéneas que aproximan mejor a la distribucción real de Y que otras técnicas basadas en aproximar una distribucción normal (curva amarilla) 
 
