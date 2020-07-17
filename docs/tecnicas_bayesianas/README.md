@@ -15,7 +15,7 @@ Con este enfoque podemos estimar la 'probabilidad de que una hipótesis sea cier
 
 Sin embargo, esta incertidumbre actualmente no se modela ya que **los modelos de ML se basan más en estadística frequenstita** que a diferencia de la bayesiana realiza inferencias sin expresar esta incertidumbre al respecto, evaluando las hipótesis en términos absolutos usando las evidencias disponibles y de acuerdo a unos ciertos umbrales de aceptación de tal hipótesis (p-values, CI, etc)
 
-Cómo resultado de aplicar este enfoque podríamos obtener la distribución (posterior) de la salida de la red y no sólo puntos de estimación.
+Cómo resultado de aplicar este enfoque podríamos obtener la distribución (posterior) de los parámetros del modelo y no sólo puntos de estimación como se puede observar en la siguiente fórmula:
 
 <h4 id="bayes">Teorema de Bayes </h4>
 

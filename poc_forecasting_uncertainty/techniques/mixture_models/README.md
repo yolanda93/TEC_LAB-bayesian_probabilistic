@@ -16,10 +16,7 @@ Un **modelo de mixturas** es un modelo probabilístico que nos permite represent
 <a name="mdn"></a>
 ### Mixture Density Networks
 
-Las **redes de densidad mixta** (Bishop, 1994) es un tipo de red que combina las redes convencionales con la concepto de modelo de mixturas.
-
-Entre las **aplicaciones más destacadas** se encuentra la de Apple’s Siri en iOS 11 para reconocimiento de voz[2]. En [3] se puede ver su aplicación en generación de manuscritos y Amazon Forecast lo tiene dentro su suite de algoritmos incluidos en su plataforma.
-
+Las **redes de densidad mixta** (Bishop, 1994) es un tipo de red que combina las redes convencionales con el concepto de modelo de mixturas. En este modelo, la sálida de la DNN hace la estimación de parámetros para la familia de distribuciones o componentes seleccionadas las cuales se suman teniendo en cuenta el coeficiente de mezcla ⍺ para obtener finalmente una distribucción condicional hetérogena de y respecto a la entrada: 
 
 <p align="center"><img src="/docs/assets/mdn/MDN.png" height="160" alt=“Mixture Density Network” /></p>
 <p align="center">Mixture Density Network</p>
@@ -44,8 +41,12 @@ El algoritmo de MLE o máxima verosimilitud nos permite obtener los parámetros 
 
 Referencia - [Ejemplo de cálculo de MLE para la implementación de la función de pérdida](https://d3c33hcgiwev3.cloudfront.net/_f678abd2f50f7171a76c7cb3ec03f726_MLE-for-Gaussian.pdf?Expires=1594252800&Signature=lDPX5Y6JT03mRyNj65JYEMZ7gjQuP5oXy-7019GmL8e8VuYRLo07K-N1iGU3geREMr1xj-VwjEh4qsV4R~PDQRpQuoH~UvEnrlpC3NyCzlgd1vcAKFQkppHqMXWsLDSg8HLu796cvDiu0R8bKy24ppHRdF4dta7sJCb3tvF8P8c_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
 
-### Ventajas y desventajas
 
+### Aplicaciones
+
+Entre las **aplicaciones más destacadas** se encuentra la de Apple’s Siri en iOS 11 para reconocimiento de voz[2]. En [3] se puede ver su aplicación en generación de manuscritos y Amazon Forecast lo tiene dentro su suite de algoritmos incluidos en su plataforma.
+
+### Ventajas y desventajas
 
 * *Ventajas* 
 
@@ -53,8 +54,7 @@ Permite estimar distribuciones heterogéneas de la variable respuesta
 
 * *Desventajas* 
 
-El tamaño de la sálida de la red creada por la capa final de la MDN es (c+2)* m, lo que supone un incremento considerable si lo comporamos con la sálida de una red convencional
-
+El tamaño de la sálida de la red creada por la capa final de la MDN es (c+2)* m, dónde c es la dimensión de sálida de la red convencional y m el número de mixturas que estamos usando. Esto supone un incremento considerable en la dimensión de sálida respecto a la red convencional lo que puede volverlas muy inestables.
 
 #### Referencias
 

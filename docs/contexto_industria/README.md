@@ -12,7 +12,7 @@ En particular, se ha visto que esta técnica **ofrece las siguientes ventajas en
 
      *  **Aplicaciones de sistemas embebidos** por la capacidad que podrían ofrecer para reducir la complejidad de la red (*neural network prunning*) sin empeorar su robustez en aplicaciones en tiempo real con recursos límitados
      * **Aprendizaje Activo** se podría establecer una colaboración humano-IA, en la que la IA pide ayuda al humano (oráculo) para clasificar los ejemplos en los que tiene mayor incertidumbre
-     * **Reinforcement Learning** podría servir para mejorar la exploración en sistemas RF
+     * **Reinforcement Learning** podría servir para mejorar la exploración en sistemas RF. Otra aplicación en este aspecto es el de *distributional reinforcement learning* que modeliza el estado-acción como una distribucción, en vez de como un valor escalar. Esto mejora la selección de políticas. [Distributional Reinforcement Learning with Quantile Regression](https://arxiv.org/abs/1710.10044)
 
 * [**Ética y responsabilidad**](https://github.com/beeva/TEC_LAB-Trustworthy_AI/blob/master/pages/areas/sesgo.md): Al no ser posible cuantificar la incertdumbre o el grado de certeza de las inferencias de los modelos, se podrían *tomar decisiones automatizadas erroneas sin ser incluso capaces de cuantificar los daños*, en el caso de que no se comportará de la forma esperada. De esta manera, esta técnica, nos permitiría detectar estos casos y no realizar una toma de decisiones automatizada trasladando esta responsabilidad al humano. 
 
