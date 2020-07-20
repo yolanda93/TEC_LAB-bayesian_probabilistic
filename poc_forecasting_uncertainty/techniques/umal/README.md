@@ -17,7 +17,7 @@ En está página se explica la UMAL como **solución técnica para estimar la in
 
 **¿Qué es UMAL?**
 
-**UMAL (Uncountable Mixture Asymetric Laplacian)** es una técnica bayesiana que sirve para estimar la incertidumbre aleatórica <a name="heterocesdástica"></a> de las predicciones P(Y|X) *sin necesidad de conocimiento previo* de cómo se modela esta incertidumbre, es decir, permite obtener una distribucción de Y del tipo <a name="heterogénea"></a> que se puede adaptar mejor a la distribucción real en *escenarios de alta incertidumbre*
+**UMAL (Uncountable Mixture Asymetric Laplacian)** es una técnica bayesiana que sirve para estimar la incertidumbre aleatórica [heterocesdástica](#heterocesdástica) de las predicciones P(Y|X) *sin necesidad de conocimiento previo* de cómo se modela esta incertidumbre, es decir, permite obtener una distribucción de Y del tipo [heterogénea](#heterogénea) que se puede adaptar mejor a la distribucción real en *escenarios de alta incertidumbre*
 
 **¿Qué problemática resuelve UMAL?**
 
@@ -31,9 +31,9 @@ Este tipo asunciones hace que sea **dificil modelizar la inceridumbre aleatóric
 
 **Profundización técnica en el tipo de problemática que resuelve UMAL**
 
-En la figura.1 anterior se muestra un problema de regresión con unos datos sintéticos cuya distribucción de Y varia a lo largo del eje X por zonas. Estas zonas son generadas con distintos procesos generadores que modelan distintas distribucciones de probabilidad, en este caso de los tipos: asimétrica, simétrica, uniforme, multimodal. Estas variaciones a lo largo del eje X hace que el tipo de incertidumbre a modelar sea del tipo [*heterocedástica*, ya que la variabilidad de la Y en función de la X no se mantiene constante](#heterocesdástica). 
+En la figura.1 anterior se muestra un problema de regresión con unos datos sintéticos cuya distribucción de Y varia a lo largo del eje X por zonas. Estas zonas son generadas con distintos procesos generadores que modelan distintas distribucciones de probabilidad, en este caso de los tipos: asimétrica, simétrica, uniforme, multimodal. Estas variaciones a lo largo del eje X hace que el tipo de incertidumbre a modelar sea del tipo <a name="heterocesdástica"> *heterocedástica*, ya que la variabilidad de la Y en función de la X no se mantiene constante </a>. 
 
-Además si nos fijamos en un input de X concreto, pongamos X1 = 0.6 vemos que [el tipo de distribucción de Y puede presentar varias modas, es decir, la varianza de la distribucción de Y es del tipo *heterogénea*](#heterogénea).
+Además si nos fijamos en un input de X concreto, pongamos X1 = 0.6 vemos que <a name="heterogénea"> el tipo de distribucción de Y puede presentar varias modas, es decir, la varianza de la distribucción de Y es del tipo *heterogénea* </a>.
 
 **¿Qué soluciones existen para estimar este tipo de incertidumbre?**
 
