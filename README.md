@@ -27,3 +27,9 @@ En esta línea se hará foco en **la estadística bayesiana** cómo una solució
 
 **Inicialmente se propone validar estas técnicas en el contexto de problemas de regresión** sobre datos sintéticos y de juguete para explotar sus capacidades en un entorno controlado. **Posteriormente, se propone llevarlo a un entorno de pruebas real** dentro de una problemática detectada de gran aplicabilidad como es **la problemática de forecasting** con el objetivo de explotar estas técnicas con datos reales y ofrecer una referencia de uso de las mismas.
 
+
+## Recursos 
+
+* [Video Lecture - Introduction to Bayesian data analysis - part 1: What is Bayes?](https://www.youtube.com/watch?v=3OJEae7Qb_o)
+* [Video Discussion - Is bayesian the most brilliant thing ever?](https://www.youtube.com/watch?v=HumFmLu3CJ8)
+
