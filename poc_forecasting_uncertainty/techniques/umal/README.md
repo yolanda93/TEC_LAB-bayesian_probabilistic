@@ -7,9 +7,9 @@ En está página se explica UMAL como **solución técnica para estimar la incer
 - [Introducción a UMAL](#introduccion)
 - [¿Qué problemática resuelve UMAL?](#umal_problematica)
 - [Comparación con otras técnicas](#comparacion_tecnicas)
-- [Modelo de implementación UMAL](#modelo_umal)
 - [Aplicaciones](#aplicaciones)
-- [Ejemplos de implementación UMAL](#modelo_umal)
+- [Modelo de implementación UMAL](#modelo_umal)
+- [Ejemplos de implementación](#implementacion)
 
 
 <a name="introduccion"></a>
@@ -44,8 +44,15 @@ Para comprender la aplicación de UMAL respecto a otras técnicas bayesianas, es
 
     Para ello, se hace una aproximación de esta distribucción usando una composición de distintas ALDs (Asymmetric Laplace Distribution) que realiza una discretización por partes de la distribucción real, es decir, hace una estimación por cuantil de la distribucción. (*Nota: La moda de la distribucción posterior de la función de probabilidad de la ALD se corresponde con el valor del estimador de la regresión cuantilica para un cuantil*)
 
+<a name="aplicaciones"></a>
+## Aplicaciones
+
+**Algunos ejemplos de aplicaciones** dónde podría tener sentido esta técnica son: *la evaluación del riesgo in aplicaciones financieras, predicción de demanda/mobilidad para la optimización de sistemas de transporte o predicción del consumo energético*. 
+
+**Todas estas problemáticas comparten un componente aleatórico heterocedastico dificil de modelar** que proporciona información muy relevante para el negocio. Para la evaluación de riesgo financiero nos daría predicciones mucho más robustas, en el caso de optimización de sistemas de transporte nos podría ofrecer información relevante para estimar la probabilidad de accidentes o congestiones de tráfico y en el caso de consumo energético nos podría servir para anticipar posibles picos de consumo.
+
 <a name="modelo_umal"></a>
-#### Modelo UMAL
+#### Modelo de implementación UMAL
 
 El **modelo de UMAL (Uncountable Mixture Asymetric Laplacian)**, como se ha mencionado anteriormente, tiene cómo objetivo aproximar la densidad predictiva P(Y|X) de tipo heterogénea. (véase Figura 1). Para ello predice para cada input x los parámetros de la ALDs condicionadas seleccionadas (por la lista de quantiles que se introduce como entrada) de manera simultánea.
  
@@ -57,13 +64,6 @@ Este modelo se caracteriza por lo siguiente:
 <p align="center"><em>UMAL modelo</em></p>
 
 Es importante destacar que UMAL *es agnóstico del modelo de Deep Learning que se utilice*, es decir, podría ser válido tanto para CNN; LSTM, etc.
-
-<a name="aplicaciones"></a>
-## Aplicaciones
-
-**Algunos ejemplos de aplicaciones** dónde podría tener sentido esta técnica son: *la evaluación del riesgo in aplicaciones financieras, predicción de demanda/mobilidad para la optimización de sistemas de transporte o predicción del consumo energético*. 
-
-**Todas estas problemáticas comparten un componente aleatórico heterocedastico dificil de modelar** que proporciona información muy relevante para el negocio. Para la evaluación de riesgo financiero nos daría predicciones mucho más robustas, en el caso de optimización de sistemas de transporte nos podría ofrecer información relevante para estimar la probabilidad de accidentes o congestiones de tráfico y en el caso de consumo energético nos podría servir para anticipar posibles picos de consumo.
 
 <a name="implementacion"></a>
 #### Ejemplos de Implementación 
