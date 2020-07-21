@@ -23,7 +23,7 @@ En está página se explica la UMAL como **solución técnica para estimar la in
 
 Las técnicas convencionales de BDL para la modelización de la incertidumbre o generación de inferencias probabilísitcas **utilizan una fuerte asunción de priors** (e.g. dist.normal varianza de las predicciones) que **no permite estimar una distribución heterógenea de la variable Y, P(Y|X=x)** cómo se observa en la fig.1. (curva verde) y cuyas estimaciones se aproximan a la esperanza condicional E[Y|X = x] para un x dado (e.g. media de la distrbucción normal çomo se representa en amarillo en la fig.1)
 
-<p align="center"><img src="/docs/assets/umal/umal_pdf.PNG" height="300" alt=“Figura1. UMAL - estimación de la pdf predictiva” /></p>
+<p align="center"><img src="/docs/assets/umal/technique1_vs_umal.png" height="400" alt=“Figura1. UMAL - estimación de la pdf predictiva” /></p>
 <p align="center"><em>UMAL - estimación de la pdf predictiva</em></p>
 
 Este tipo asunciones hace que sea **dificil modelizar la inceridumbre aleatórica heterocedástica** de la cual es imposible adquirir conocimiento previo para la definición de estos priors o asunciones. Además, la modelización de la incertidumbre sin necesidad de conocimiento previo de cómo es esta incertidumbre **nos podría permitir realizar posteriormente un análisis más detallado y orientado a tarea** para poder entender las causas por las que se está dando esas variaciones en las estimaciones y aportarnos conocimiento o insights relevantes. 
