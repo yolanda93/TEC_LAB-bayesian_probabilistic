@@ -1,25 +1,24 @@
 
 ## UMAL (Uncountable Mixture Asymetric Laplacian)
-En está página se explica la UMAL como **solución técnica para estimar la incertidumbre aleatórica heterocedastica**
+En está página se explica UMAL como **solución técnica para estimar la incertidumbre aleatórica heterocedastica**
 
 
 ### Indice de contenidos
-- [Introducción a la técnica](#introduccion)
-  - [Modelo UMAL](#modelo_umal)
-- [Profundización teórica de UMAL](#how_tecnica)
-  - [Relación con la regresión cuantílica](#rel_cuantil)
-  - [Relación con las redes de densidad mixta](#rel_mdn)
- - [Aplicaciones](#aplicaciones)
+- [Introducción a UMAL](#introduccion)
+- [¿Qué problemática resuelve UMAL?](#umal_problematica)
+- [Comparación con otras técnicas](#comparacion_tecnicas)
+- [Modelo de implementación UMAL](#modelo_umal)
+- [Aplicaciones](#aplicaciones)
+- [Ejemplos de implementación UMAL](#modelo_umal)
 
 
 <a name="introduccion"></a>
 ## Introducción a UMAL
 
-**¿Qué es UMAL?**
-
 **UMAL (Uncountable Mixture Asymetric Laplacian)** es una técnica bayesiana que sirve para estimar la incertidumbre aleatórica [heterocesdástica](#heterocesdástica) de las predicciones P(Y|X) *sin necesidad de conocimiento previo* de cómo se modela esta incertidumbre, es decir, permite obtener una distribucción de Y del tipo [heterogénea](#heterogénea) que se puede adaptar mejor a la distribucción real en *escenarios de alta incertidumbre*
 
-**¿Qué problemática resuelve UMAL?**
+<a name="umal_problematica"></a>
+## ¿Qué problemática resuelve UMAL?
 
 Las técnicas convencionales de BDL para la modelización de la incertidumbre o generación de inferencias probabilísitcas **utilizan una fuerte asunción de priors** (e.g. dist.normal varianza de las predicciones) que **no permite estimar una distribución heterógenea de la variable Y, P(Y|X=x)** cómo se observa en la fig.1. (curva verde) y cuyas estimaciones se aproximan a la esperanza condicional E[Y|X = x] para un x dado (e.g. media de la distrbucción normal çomo se representa en amarillo en la fig.1)
 
@@ -28,13 +27,13 @@ Las técnicas convencionales de BDL para la modelización de la incertidumbre o 
 
 Este tipo asunciones hace que sea **dificil modelizar la inceridumbre aleatórica heterocedástica** de la cual es imposible adquirir conocimiento previo para la definición de estos priors o asunciones. Además, la modelización de la incertidumbre sin necesidad de conocimiento previo de cómo es esta incertidumbre **nos podría permitir realizar posteriormente un análisis más detallado y orientado a tarea** para poder entender las causas por las que se está dando esas variaciones en las estimaciones y aportarnos conocimiento o insights relevantes. 
 
-
 **Profundización técnica en el tipo de problemática que resuelve UMAL**
 
 En la figura.1 anterior se muestra un problema de regresión con unos datos sintéticos cuya distribucción de Y varia a lo largo del eje X por zonas. Estas zonas son generadas con distintos procesos generadores que modelan distintas distribucciones de probabilidad, en este caso de los tipos: asimétrica, simétrica, uniforme, multimodal. Estas variaciones a lo largo del eje X hace que el tipo de incertidumbre a modelar sea del tipo <a name="heterocesdástica"> *heterocedástica*, ya que la variabilidad de la Y en función de la X no se mantiene constante </a>. 
 
 Además si nos fijamos en un input de X concreto, pongamos X1 = 0.6 vemos que <a name="heterogénea"> el tipo de distribucción de Y puede presentar varias modas, es decir, la varianza de la distribucción de Y es del tipo *heterogénea* </a>.
 
+<a name="comparacion_tecnicas"></a>
 **¿Qué soluciones existen para estimar este tipo de incertidumbre?**
 
 Para comprender la aplicación de UMAL respecto a otras técnicas bayesianas, es necesario compararlo con aunción de prior que realizan otras técnicas. Para esto nos ponemos  en 2 casos o soluciones hipóteticas
@@ -44,8 +43,6 @@ Para comprender la aplicación de UMAL respecto a otras técnicas bayesianas, es
 * **Solución 2: Asunción menos restrictiva, agnóstica del tipo de distribucción de probabilidad - UMAL**: En UMAL utilizamos el concepto de regresión cuantílica que permite construir un estimador sin realizar fuertes asunciones del tipo de distribucción de Y. Esto permite estimar una distribucción heterogénea que como se ve en el gráfico (curva verde) al final se aproxima mejor a la distribucción real de Y. 
 
     Para ello, se hace una aproximación de esta distribucción usando una composición de distintas ALDs (Asymmetric Laplace Distribution) que realiza una discretización por partes de la distribucción real, es decir, hace una estimación por cuantil de la distribucción. (*Nota: La moda de la distribucción posterior de la función de probabilidad de la ALD se corresponde con el valor del estimador de la regresión cuantilica para un cuantil*)
-
-
 
 <a name="modelo_umal"></a>
 #### Modelo UMAL
@@ -60,6 +57,13 @@ Este modelo se caracteriza por lo siguiente:
 <p align="center"><em>UMAL modelo</em></p>
 
 Es importante destacar que UMAL *es agnóstico del modelo de Deep Learning que se utilice*, es decir, podría ser válido tanto para CNN; LSTM, etc.
+
+<a name="aplicaciones"></a>
+## Aplicaciones
+
+**Algunos ejemplos de aplicaciones** dónde podría tener sentido esta técnica son: *la evaluación del riesgo in aplicaciones financieras, predicción de demanda/mobilidad para la optimización de sistemas de transporte o predicción del consumo energético*. 
+
+**Todas estas problemáticas comparten un componente aleatórico heterocedastico dificil de modelar** que proporciona información muy relevante para el negocio. Para la evaluación de riesgo financiero nos daría predicciones mucho más robustas, en el caso de optimización de sistemas de transporte nos podría ofrecer información relevante para estimar la probabilidad de accidentes o congestiones de tráfico y en el caso de consumo energético nos podría servir para anticipar posibles picos de consumo.
 
 <a name="implementacion"></a>
 #### Ejemplos de Implementación 
@@ -129,9 +133,4 @@ Con el método anterior (véase Relación la regresión cuantílica) tendríamos
 
 
 
-<a name="aplicaciones"></a>
-## Aplicaciones
 
-**Algunos ejemplos de aplicaciones** dónde podría tener sentido esta técnica son: *la evaluación del riesgo in aplicaciones financieras, predicción de demanda/mobilidad para la optimización de sistemas de transporte o predicción del consumo energético*. 
-
-**Todas estas problemáticas comparten un componente aleatórico heterocedastico dificil de modelar** que proporciona información muy relevante para el negocio. Para la evaluación de riesgo financiero nos daría predicciones mucho más robustas, en el caso de optimización de sistemas de transporte nos podría ofrecer información relevante para estimar la probabilidad de accidentes o congestiones de tráfico y en el caso de consumo energético nos podría servir para anticipar posibles picos de consumo.
