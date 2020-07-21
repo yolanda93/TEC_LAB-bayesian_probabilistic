@@ -93,10 +93,10 @@ De este punto se aprendió la importancia de explicitar, o detectar el prior imp
 También se ha de tener en cuenta que la solución buscada introduce un sesgo sobre el tipo de distribución de la solución. Así, si se busca una media y una varianza implicitamente se está buscando una distribución gausiana, lo cual puede no ser coherente con el método o el problema
 
 Visto el comportamiento del algoritmo se identificaron los siguientes problemas:
-* Limitaciones en la modelización de incertidumbre aleatórica hereocedastica
-* Tener otros métodos de referencia para comprobar el aporte de valor
-* Obtener una definición de incertidumbre en este contexto
-* Otros métodos de medicción de la incertidumbre que permitieran modelar distintas familias de distribucciones
+* *Asunciones realizadas*: Limitaciones en la modelización de incertidumbre aleatórica hereocedastica sin conocimiento previo de cómo se puede modelar esta incertidumbre
+* *Soporte*: No es una técnica utilizada ampliamente por la comunidad científica y serían necesarias más pruebas para acotar su utilización
+* *Generalización*: La técnica puede presentar problemas de generalización debido a la arquitectura de red utilizada
+* *Modificación de priors* Es complicado modificar la función de pérdida para modelar distintas familias de distribucciones
 
 Con respecto a tener una referencia, se recopilación una serie de [métodos no bayesianos de medir la incertidumbre](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V1.0.0-nonbayesian_techniques), así como sus ventajas y limitaciones, para poder compararlos.
 
