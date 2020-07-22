@@ -22,7 +22,7 @@ En está página se explica UMAL como **solución técnica para estimar la incer
 
 Las técnicas convencionales de BDL para la modelización de la incertidumbre o generación de inferencias probabilísitcas **utilizan una fuerte suposición de asunciones** (e.g. Y∼N(μ,σ) ) que **no permite modelar distribuciones más complejas de la variable Y, P(Y|X=x)** cómo las distintas distribuciones que modelan el dataset de la fig.1. y cuyas estimaciones se aproximan a la esperanza condicional E[Y|X = x] para un x dado
 
-<p align="center"><img src="/docs/assets/umal/heterogeneous_dataset_umal.PNG" alt=“Dataset sintético generado con 4 distribuciones distintas” /></p>
+<p align="center"><img src="/docs/assets/umal/heterogeneous_dataset_umal2.PNG" alt=“Dataset sintético generado con 4 distribuciones distintas” /></p>
 <p align="center"><em>Dataset sintético generado con 4 distribuciones distintas</em></p>
 
 Este tipo asunciones hace que sea **dificil modelizar la inceridumbre aleatórica heterocedástica** de la cual es imposible adquirir conocimiento previo para la definición de estos priors o asunciones. Además, la modelización de la incertidumbre sin necesidad de conocimiento previo de cómo es esta incertidumbre **nos podría permitir realizar posteriormente un análisis más detallado y orientado a tarea** para poder entender las causas por las que se está dando esas variaciones en las estimaciones y aportarnos conocimiento o insights relevantes. 
