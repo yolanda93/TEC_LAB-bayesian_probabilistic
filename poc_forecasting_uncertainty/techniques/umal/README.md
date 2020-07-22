@@ -1,5 +1,5 @@
 
-## UMAL (Uncountable Mixture Asymetric Laplacian)
+# UMAL (Uncountable Mixture Asymetric Laplacian)
 En está página se explica UMAL como **solución técnica para estimar la incertidumbre aleatórica heterocedastica**
 
 
@@ -61,12 +61,12 @@ Se ha detectado que esta técnica *es de especial interés en problemas de forec
 
 **Algunos ejemplos de estas aplicaciones** son: *la evaluación del riesgo en aplicaciones financieras, predicción de demanda/mobilidad para la optimización de sistemas de transporte o predicción del consumo energético*. 
 
-* *Evaluación de riesgo financiero*: En este caso nos podría dar predicciones mucho más robustas; también se podría utilizar cómo sustituto de la métrica VaR (Value at Risk), utilizada actualmente en negocio y que mide la exposición al riesgo de un determinado activo financiero. En este caso tendríamos una métrica mucho más robusta que no realiza asunciones previas de cúal es la distribucción de la varianza del valor del activo.
+* *Evaluación de riesgo financiero*: En este caso nos podría dar predicciones mucho más robustas; también se podría utilizar cómo sustituto de la métrica VaR (Value at Risk), utilizada actualmente en negocio y que mide la exposición al riesgo de un determinado activo financiero. En este caso, tendríamos una métrica mucho más robusta que no realiza asunciones previas de cúal es la distribucción de la varianza del valor del activo.
 
 
 * *Optimización de sistemas de transporte*: Utilizando información del tráfico podríamos inferir información relevante para estimar la probabilidad de accidentes o congestiones puntuales de tráfico. Además podría ayudar a los operadores de tráfico a interpretar mejor las posibles varianciones de tráfico mostrando la varianza de las mismas.
 
-* *Consumo energético*: En este caso nos podría servir para anticipar posibles picos de consumo o detectar y conocer las causas por las que se están dando estas variaciones de consumo.
+* *Consumo energético*: En este caso, nos podría servir para anticipar posibles picos de consumo o detectar y conocer las causas por las que se están dando estas variaciones de consumo.
 
 Cómo se puede observar, **todas estas problemáticas comparten un componente aleatórico heterocedastico dificil de modelar** que proporciona información muy relevante para el negocio. 
 
@@ -82,14 +82,13 @@ Para ilustrar mejor la aplicabilidad de esta técnica se ha desarrollado el [Not
 <p align="center"><img src="/docs/assets/umal/forecasting_uncertainty.png" alt=“Fig.3 Forecasting - estimación de la incertidumbre - UMAL” /></p>
 <p align="center"><em>Fig.3 Forecasting - estimación de la incertidumbre - UMAL </em></p>
 
-En la Fig.3 se puede observar un dataset sintético o serie temporal representativa de problemas de forecasting. Este tipo de problemática a diferencia de la regresión convencional encuentra relaciones temporales en datos ordenados cronológicamente en el tiempo para infererir predicciones a futuro. Estas relaciones pueden ser muy simples como estacionalidades, ciclos, etc. o más complejas que tengan en cuenta la autocorrelación de distintas variables en el tiempo.
+En la Fig.3 se puede observar un dataset sintético o serie temporal representativa de problemas de forecasting. Este tipo de problemática a diferencia de la regresión convencional **encuentra relaciones temporales en datos ordenados cronológicamente en el tiempo para infererir predicciones a futuro**. Estas relaciones pueden ser muy simples como estacionalidades, ciclos, etc. o más complejas que tengan en cuenta la autocorrelación de otras variables asociadas o contexto.
 
 Para hacer inferencias a futuro en este tipo de problemáticas **se suele establecer un horizonte o ventana de tiempo** a la que se quiere predecir (e.g. predicción de demanda a 2 horas vista). En el caso del dataset representado de la Fig.3 se ha utilizado un horizonte de 1 hora. Sin embargo, la selección de este horizonte de tiempo no suele ser arbitraria y suele venir dado por el conocimiento actual de negocio. 
 
-En escenarios de alta incertidumbre, no se tiene el conocimiento o los datos de negocio necesarios para medir el riesgo de las predicciones que nos permitirian mejorar la selección de este horizonte. Es en estos escenarios dónde es importante contar con un método robusto como el propuesto aqui sin necesidad de tener conocimiento o datos del problema y que permita tomar decisiones teniendo en cuenta el riesgo de estas.
+En escenarios de alta incertidumbre, a veces no es posible adquirir este conocimiento o los datos de negocio necesarios para medir el riesgo de las predicciones que nos permitirian mejorar la selección de este horizonte. Es en estos escenarios dónde es importante contar con un método robusto cómo el propuesto aqui sin necesidad de tener conocimiento o datos del problema y que permita tomar decisiones teniendo en cuenta el riesgo de estas.
 
-Para resolver este problema, UMAL estima intervalos de predicción o cuantiles que discretizan la distribucción de P(Y|X) y **permite modelar la varianza de las predicciones para cada uno de los intervalos** (representada con una line transversal para cada cuantil). Esta varianza nos permite medir el riesgo de las predicciones por partes de la distribuccion, ayudándonos por ejemplo a ponernos en el mejor y peor escenario.
-
+Para resolver este problema, UMAL estima intervalos de predicción o cuantiles, representados en franjas de colores en el gráfico, que realizan una discretización de la distribucción de P(Y|X) y **permite modelar la varianza de las predicciones para cada uno de los intervalos** (representada con una linea transversal para cada cuantil). Esta varianza nos permite medir el riesgo de las predicciones por partes de la distribuccion, ayudándonos por ejemplo a ponernos en el mejor y peor escenario y facilitar la selección del horizonte temporal de predicción.
 
 <a name="modelo_umal"></a>
 ## Modelo de implementación UMAL
@@ -111,9 +110,3 @@ Es importante destacar que UMAL *es agnóstico del modelo de Deep Learning que s
 * [Notebook 1 - synthetic_regression_umal_vs_exp_1.ipynb](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/poc_forecasting_uncertainty/techniques/umal/synthetic_regression_umal_vs_exp_1.ipynb) *Comparativa de UMAL con técnicas BDL que utilizan asunciones restrictivas en la modelización de la incertidumbre de las predicciones*
 
 * [Notebook 2 - Uncertainty Forecasting with UMAL](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/poc_forecasting_uncertainty/techniques/umal/umal_implementation.ipynb) *Implementación de UMAL con aplicación en medición de la incertidumbre en forecasting mediante la generación de una serie temporal sintética*
-
-
-
-
-
-
