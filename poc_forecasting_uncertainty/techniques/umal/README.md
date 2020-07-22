@@ -10,7 +10,7 @@ En está página se explica UMAL como **solución técnica para estimar la incer
 - [Aplicaciones](#aplicaciones)
 - [Modelo de implementación UMAL](#modelo_umal)
 - [Ejemplos de implementación](#implementacion)
-- [ANEXO: Profundización téorica UMAL]
+- [*ANEXO: Profundización téorica UMAL*](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/poc_forecasting_uncertainty/techniques/umal/umal_profundizacion_teorica.md)
 
 
 <a name="introduccion"></a>
