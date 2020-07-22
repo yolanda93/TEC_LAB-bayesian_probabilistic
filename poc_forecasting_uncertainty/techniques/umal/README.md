@@ -76,8 +76,20 @@ Para ilustrar mejor la aplicabilidad de esta técnica se ha desarrollado el [Not
 > H2: Can we use UMAL to model aleatoric uncertainty in forecasting tasks? How does this uncertainty interpreted?
 ----
 
+
+**Aplicación de UMAL en la problemática de Forecasting**
+
 <p align="center"><img src="/docs/assets/umal/forecasting_uncertainty.png" alt=“Fig.3 Forecasting - estimación de la incertidumbre - UMAL” /></p>
 <p align="center"><em>Fig.3 Forecasting - estimación de la incertidumbre - UMAL </em></p>
+
+En la Fig.3 se puede observar un dataset sintético o serie temporal representativa de problemas de forecasting. Este tipo de problemática a diferencia de la regresión convencional encuentra relaciones temporales en datos ordenados cronológicamente en el tiempo para infererir predicciones a futuro. Estas relaciones pueden ser muy simples como estacionalidades, ciclos, etc. o más complejas que tengan en cuenta la autocorrelación de distintas variables en el tiempo.
+
+Para hacer inferencias a futuro en este tipo de problemáticas **se suele establecer un horizonte o ventana de tiempo** a la que se quiere predecir (e.g. predicción de demanda a 2 horas vista). En el caso del dataset representado de la Fig.3 se ha utilizado un horizonte de 1 hora. Sin embargo, la selección de este horizonte de tiempo no suele ser arbitraria y suele venir dado por el conocimiento actual de negocio. 
+
+En escenarios de alta incertidumbre, no se tiene el conocimiento o los datos de negocio necesarios para medir el riesgo de las predicciones que nos permitirian mejorar la selección de este horizonte. Es en estos escenarios dónde es importante contar con un método robusto como el propuesto aqui sin necesidad de tener conocimiento o datos del problema y que permita tomar decisiones teniendo en cuenta el riesgo de estas.
+
+Para resolver este problema, UMAL estima intervalos de predicción o cuantiles que discretizan la distribucción de P(Y|X) y **permite modelar la varianza de las predicciones para cada uno de los intervalos** (representada con una line transversal para cada cuantil). Esta varianza nos permite medir el riesgo de las predicciones por partes de la distribuccion, ayudándonos por ejemplo a ponernos en el mejor y peor escenario.
+
 
 <a name="modelo_umal"></a>
 ## Modelo de implementación UMAL
