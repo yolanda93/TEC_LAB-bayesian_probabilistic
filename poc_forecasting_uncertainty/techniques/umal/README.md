@@ -76,7 +76,8 @@ Para ilustrar mejor la aplicabilidad de esta técnica se ha desarrollado el [Not
 > H2: Can we use UMAL to model aleatoric uncertainty in forecasting tasks? How does this uncertainty interpreted?
 ----
 
-
+<p align="center"><img src="/docs/assets/umal/forecasting_uncertainty.png" alt=“Fig.3 Forecasting - estimación de la incertidumbre - UMAL” /></p>
+<p align="center"><em>Fig.3 Forecasting - estimación de la incertidumbre - UMAL </em></p>
 
 <a name="modelo_umal"></a>
 ## Modelo de implementación UMAL
