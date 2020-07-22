@@ -27,14 +27,14 @@ Las técnicas convencionales de BDL para la modelización de la incertidumbre o 
 
 Este tipo asunciones hace que sea **dificil modelizar la inceridumbre aleatórica heterocedástica** de la cual es imposible adquirir conocimiento previo para la definición de estos priors o asunciones. Además, la modelización de la incertidumbre sin necesidad de conocimiento previo de cómo es esta incertidumbre **nos podría permitir realizar posteriormente un análisis más detallado y orientado a tarea** para poder entender las causas por las que se está dando esas variaciones en las estimaciones y aportarnos conocimiento o insights relevantes. 
 
-**Profundización técnica en el tipo de problemática que resuelve UMAL**
+## Profundización técnica en el tipo de problemática que resuelve UMAL
 
 En la fig.2 se muestra un problema de regresión con unos datos sintéticos cuya distribucción de Y varia a lo largo del eje X por zonas. Estas zonas son generadas con distintos procesos generadores que modelan distintas distribucciones de probabilidad, en este caso de los tipos: asimétrica, simétrica, uniforme, multimodal. Estas variaciones a lo largo del eje X hace que el tipo de incertidumbre a modelar sea del tipo <a name="heterocesdástica"> *heterocedástica*, ya que la variabilidad de la Y en función de la X no se mantiene constante </a>. 
 
 Además, si nos fijamos en un input de X concreto, pongamos X1 = 0.6 vemos que <a name="heterogénea"> el tipo de distribucción de Y puede presentar varias modas, es decir, la varianza de la distribucción de Y es del tipo *heterogénea* </a>.
 
 <a name="comparacion_tecnicas"></a>
-**¿Qué soluciones existen para estimar este tipo de incertidumbre?**
+**Qué soluciones existen para estimar este tipo de incertidumbre?**
 
 Para comprender la aplicación de UMAL respecto a otras técnicas bayesianas, es necesario compararlo con las aunciones iniciales que realizan otras técnicas. Para esto es necesario ponernos en 2 casos o soluciones hipóteticas
 
@@ -77,7 +77,10 @@ Es importante destacar que UMAL *es agnóstico del modelo de Deep Learning que s
 <a name="implementacion"></a>
 #### Ejemplos de Implementación 
 
-* [Notebook 1 - Uncertainty Forecasting with UMAL](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/poc_forecasting_uncertainty/techniques/umal/umal_implementation.ipynb) *Implementación de UMAL con aplicación en medición de la incertidumbre en forecasting mediante la generación de una serie temporal sintética*
+* [Notebook 1 - synthetic_regression_umal_vs_exp_1.ipynb](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/poc_forecasting_uncertainty/techniques/umal/synthetic_regression_umal_vs_exp_1.ipynb) *Comparativa de UMAL con técnicas BDL que utilizan asunciones restrictivas en la modelización de la incertidumbre de las predicciones*
+
+* [Notebook 2 - Uncertainty Forecasting with UMAL](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/poc_forecasting_uncertainty/techniques/umal/umal_implementation.ipynb) *Implementación de UMAL con aplicación en medición de la incertidumbre en forecasting mediante la generación de una serie temporal sintética*
+
 
 
 <a name="how_tecnica"></a>
