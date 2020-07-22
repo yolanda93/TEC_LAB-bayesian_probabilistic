@@ -94,7 +94,7 @@ Para resolver este problema, UMAL estima intervalos de predicción o cuantiles q
 <a name="modelo_umal"></a>
 ## Modelo de implementación UMAL
 
-El **modelo de UMAL (Uncountable Mixture Asymetric Laplacian)**, como se ha mencionado anteriormente, tiene cómo objetivo aproximar la densidad predictiva P(Y|X) de tipo heterogénea. (véase Figura 1). Para ello predice para cada input x los parámetros de la ALDs condicionadas seleccionadas (por la lista de quantiles que se introduce como entrada) de manera simultánea.
+El **modelo de UMAL (Uncountable Mixture Asymetric Laplacian)**, como se ha mencionado anteriormente, tiene cómo objetivo aproximar la densidad predictiva P(Y|X) de tipo heterogénea. (véase Figura 1). Para ello predice para cada input x los parámetros de la ALDs condicionadas seleccionadas (μ,  τ , σ ) (por la lista de quantiles que se introduce como entrada) de manera simultánea.
  
 Este modelo se caracteriza por lo siguiente:
   * **entrada**: vector de entrada X ∈ Rn y una lista de quantiles τ  =  { 0.1, 0.2, … ,0.9}  (selección de ALDs)
