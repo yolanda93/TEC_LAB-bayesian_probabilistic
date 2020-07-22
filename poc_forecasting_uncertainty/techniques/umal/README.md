@@ -15,12 +15,12 @@ En está página se explica UMAL como **solución técnica para estimar la incer
 <a name="introduccion"></a>
 ## Introducción a UMAL
 
-**UMAL (Uncountable Mixture Asymetric Laplacian)** es una técnica bayesiana que sirve para estimar la incertidumbre aleatórica [heterocesdástica](#heterocesdástica) de las predicciones P(Y|X) *sin necesidad de conocimiento previo* de cómo se modela esta incertidumbre, es decir, permite obtener una distribucción de Y del tipo [heterogénea](#heterogénea) que se puede adaptar mejor a la distribucción real en *escenarios de alta incertidumbre*
+**UMAL (Uncountable Mixture Asymetric Laplacian)** es una técnica bayesiana que perimte estimar la incertidumbre aleatórica [heterocesdástica](#heterocesdástica) de las predicciones P(Y|X) *sin necesidad de conocimiento previo* de cómo se modela esta incertidumbre. Esta técnica es *capaz de modelar caraceterísticas complejas de las distribuciones* (e.g. asimétrias, multimodalidades), adaptandose mejor a la distribucción real de las mismas y *ofreciendo información relevante en escenarios de alta incertidumbre*.
 
 <a name="umal_problematica"></a>
 ## ¿Qué problemática resuelve UMAL?
 
-Las técnicas convencionales de BDL para la modelización de la incertidumbre o generación de inferencias probabilísitcas **utilizan una fuerte asunción de priors** (e.g. dist.normal varianza de las predicciones) que **no permite estimar una distribución heterógenea de la variable Y, P(Y|X=x)** cómo se observa en la fig.1. (curva verde) y cuyas estimaciones se aproximan a la esperanza condicional E[Y|X = x] para un x dado (e.g. media de la distrbucción normal çomo se representa en amarillo en la fig.1)
+Las técnicas convencionales de BDL para la modelización de la incertidumbre o generación de inferencias probabilísitcas **utilizan una fuerte suposición de asunciones** (e.g. Y∼N(μ,σ) ) que **no permite modelar distribuciones más complejas de la variable Y, P(Y|X=x)** cómo las distintas distribuciones que modelan el dataset de la fig.1. y cuyas estimaciones se aproximan a la esperanza condicional E[Y|X = x] para un x dado
 
 <p align="center"><img src="/docs/assets/umal/heterogeneous_dataset_umal.PNG" alt=“Dataset sintético generado con 4 distribuciones distintas” /></p>
 <p align="center"><em>Dataset sintético generado con 4 distribuciones distintas</em></p>
@@ -29,23 +29,29 @@ Este tipo asunciones hace que sea **dificil modelizar la inceridumbre aleatóric
 
 **Profundización técnica en el tipo de problemática que resuelve UMAL**
 
-En la figura.1 anterior se muestra un problema de regresión con unos datos sintéticos cuya distribucción de Y varia a lo largo del eje X por zonas. Estas zonas son generadas con distintos procesos generadores que modelan distintas distribucciones de probabilidad, en este caso de los tipos: asimétrica, simétrica, uniforme, multimodal. Estas variaciones a lo largo del eje X hace que el tipo de incertidumbre a modelar sea del tipo <a name="heterocesdástica"> *heterocedástica*, ya que la variabilidad de la Y en función de la X no se mantiene constante </a>. 
+En la fig.2 se muestra un problema de regresión con unos datos sintéticos cuya distribucción de Y varia a lo largo del eje X por zonas. Estas zonas son generadas con distintos procesos generadores que modelan distintas distribucciones de probabilidad, en este caso de los tipos: asimétrica, simétrica, uniforme, multimodal. Estas variaciones a lo largo del eje X hace que el tipo de incertidumbre a modelar sea del tipo <a name="heterocesdástica"> *heterocedástica*, ya que la variabilidad de la Y en función de la X no se mantiene constante </a>. 
 
-Además si nos fijamos en un input de X concreto, pongamos X1 = 0.6 vemos que <a name="heterogénea"> el tipo de distribucción de Y puede presentar varias modas, es decir, la varianza de la distribucción de Y es del tipo *heterogénea* </a>.
+Además, si nos fijamos en un input de X concreto, pongamos X1 = 0.6 vemos que <a name="heterogénea"> el tipo de distribucción de Y puede presentar varias modas, es decir, la varianza de la distribucción de Y es del tipo *heterogénea* </a>.
 
 <a name="comparacion_tecnicas"></a>
 **¿Qué soluciones existen para estimar este tipo de incertidumbre?**
 
-Para comprender la aplicación de UMAL respecto a otras técnicas bayesianas, es necesario compararlo con aunción de prior que realizan otras técnicas. Para esto nos ponemos  en 2 casos o soluciones hipóteticas
+Para comprender la aplicación de UMAL respecto a otras técnicas bayesianas, es necesario compararlo con las aunciones iniciales que realizan otras técnicas. Para esto es necesario ponernos en 2 casos o soluciones hipóteticas
 
-<p align="center"><img src="/docs/assets/umal/technique1_vs_umal.png" height="400" alt=“Figura1. UMAL - estimación de la pdf predictiva” /></p>
-<p align="center"><em>UMAL - estimación de la pdf predictiva</em></p>
+<p align="center"><img src="/docs/assets/umal/technique1_vs_umal.png" height="400" alt=“Fig.2  Comparación de soluciones - estimación de la incertidumbre” /></p>
+<p align="center"><em>Fig.2  Comparación de soluciones - estimación de la incertidumbre </em></p>
 
-* **Solución 1 : Asunción restrictiva de prior - Utilizada por técnicas convencionales Bayesian Deep Learning**: Este es el caso en el que estimamos Y como *una esperanza condicional E[Y|X = x] asumiendo una distribucción normal de Y*, como sucede en la mayoría de las técnicas BDL. El resultado que obtendriamos utilizando este tipo de soluciones es que para la zona en la que la distribucción es simétrica; no nos alejaríamos mucho de la distribucción real de Y puesto que este tipo de distribucción está centrada en la media. Sin embargo, si nos vamos a otras regiones en el eje X, como por ejemplo, la que se muestra en el gráfico x=0.6, vemos que no vale con tomar una distribucción centrada en la media de Y (curva amarilla del gráfico) puesto que la varianza de la misma varía según el valor que esta tome, es decir, el tipo de distribucción es multimodal o *heterogénea*
+* **Solución 1 : Asunción restrictiva de prior - Utilizada por técnicas convencionales Bayesian Deep Learning**: Este es el caso en el que estimamos Y como *una esperanza condicional E[Y|X = x] asumiendo una distribucción normal de Y*, como sucede en la mayoría de las técnicas BDL. El resultado que obtendriamos utilizando este tipo de soluciones es que para la zona en la que la distribucción es simétrica; no nos alejaríamos mucho de la distribucción real de Y puesto que este tipo de distribucción está centrada en la media. Sin embargo, si nos vamos a otras regiones en el eje X, como por ejemplo, la que se muestra en el gráfico x=0.6, vemos que no vale con tomar una distribucción centrada en la media de Y (solución 1 gráfico) puesto que la varianza de la misma varía según el valor que esta tome, es decir, el tipo de distribucción es multimodal o *heterogénea*
 
-* **Solución 2: Asunción menos restrictiva, agnóstica del tipo de distribucción de probabilidad - UMAL**: En UMAL utilizamos el concepto de regresión cuantílica que permite construir un estimador sin realizar fuertes asunciones del tipo de distribucción de Y. Esto permite estimar una distribucción heterogénea que como se ve en el gráfico (curva verde) al final se aproxima mejor a la distribucción real de Y. 
+* **Solución 2: Asunción menos restrictiva, agnóstica del tipo de distribucción de probabilidad - UMAL**: En UMAL utilizamos el concepto de regresión cuantílica que permite construir un estimador sin realizar fuertes asunciones del tipo de distribucción de Y. Esto permite estimar una distribucción heterogénea que cómo se ve en el gráfico (solución 2) al final se aproxima mejor a la distribucción real de Y. 
 
     Para ello, se hace una aproximación de esta distribucción usando una composición de distintas ALDs (Asymmetric Laplace Distribution) que realiza una discretización por partes de la distribucción real, es decir, hace una estimación por cuantil de la distribucción. (*Nota: La moda de la distribucción posterior de la función de probabilidad de la ALD se corresponde con el valor del estimador de la regresión cuantilica para un cuantil*)
+    
+    
+----
+Esta comparativa de soluciones se puede encontrar en el notebook [synthetic_regression_umal_vs_exp_1.ipynb](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/poc_forecasting_uncertainty/techniques/umal/synthetic_regression_umal_vs_exp_1.ipynb) que utiliza el dataset sintético explicado anteriormente para responder a la pregunta:
+> H1: Can we use techniques with restrictive priors to model aleatoric uncertainty with zero-knowledge about this uncertainty? How does this restrictive prior affect model performance?
+----
 
 <a name="aplicaciones"></a>
 ## Aplicaciones
