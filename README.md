@@ -8,29 +8,30 @@ Un ejemplo de este escenario lo podemos ver en [problemas de predicción de vent
 
 ## Índice de Contenidos 
 
+### Introducción
 -   [Contexto y alcance del reto](/docs/contexto_industria/README.md)
 -   [Introducción a técnicas bayesianas cómo solución al reto](/docs/tecnicas_bayesianas/README.md)
 -   [La inferencia bayesiana y la estimación de la incertidumbre](/docs/problematica_bayesiana_y_estimacion_incertidumbre.md) 
-----
+
+### Técnicas
 -   [Técnica: Exp.I - Estimacion de la varianza al vuelo](/docs/experimentos_labs/experimentos_q1/README.md)
 -   [Técnica: Regresión Cuantílica](/poc_forecasting_uncertainty/techniques/quantile_regression/) 
 -   [Técnica: Redes de densidad mixta](/docs/experimentos_labs/experimentos_q1/README.md#mdn)
 -   [Técnica: DeepQuantile LSTM](/poc_forecasting_uncertainty/techniques/deepquantile_lstm/)
 -   [Técnica: UMAL](/poc_forecasting_uncertainty/techniques/umal/)
 -   [PoC Aplicación en Forecasting - Kaggle M5 Forecasting Uncertainty](/docs/forecasting_uncertainty/README.md) 
-----
+
+### Proximos pasos
 -   [Diagrama de aplicabilidad de las técnicas estudiadas](/docs/problematica_incertidumbre/README.md) [TODO]
 -   [Proximos pasos](#prox_pasos)
--   [Documentos de referencia](#doc_ref)
--   [Recursos de referencia](#recursos_referencia)
 
-
-## Otros Recursos
+## Recursos 
 
 * [Experimentos Labs](/labs_experiments) *Experimentos realizados con datos de juguete para profundizar en las técnicas*
 * [Presentacion Ejecutiva del Reto](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc) 
+* [Documentos a enlaces externos](/docs/doc_externos.md)
 * [Conceptos y preguntas clave](/core_questions/README.md)
-* [Recursos de referencia](/resources/README.md)
+* [Recursos de referencia](/docs/recursos_referencia.md)
 
 
 
