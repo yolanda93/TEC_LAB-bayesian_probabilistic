@@ -1,10 +1,6 @@
 
 # Aprendizajes de experimentos iniciales - Q1
 
--   [Framework: Validación de las medidas de incertidumbre](#Framework) [TODO]
-    -   [State-of-Art](#state-of-art)
-    -   [Experimentos](#experimentos)
--   [Técnicas No Bayesianas](#non_bay)
 -   [Técnica: Exp.I - Estimacion de la varianza al vuelo](#exp_I)
     -   [Experimentos - Validación inicial de estimación de incertidumbre](#experimentos_1)
     -   [Experimentos - Validación de la interpretación de incertidumbre](#experimentos_2)
