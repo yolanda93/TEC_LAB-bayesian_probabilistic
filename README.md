@@ -16,9 +16,9 @@ Un ejemplo de este escenario lo podemos ver en [problemas de predicción de vent
 ### Técnicas
 -   [Técnica: Exp.I - Estimacion de la varianza al vuelo](/docs/experimentos_labs/experimentos_q1/README.md)
 -   [Técnica: Regresión Cuantílica](/poc_forecasting_uncertainty/techniques/quantile_regression/) 
--   [Técnica: Redes de densidad mixta](/docs/experimentos_labs/experimentos_q1/README.md#mdn)
+-   [Técnica: Redes de densidad mixta](/docs/mixture_density_networks.md)
 -   [Técnica: DeepQuantile LSTM](/poc_forecasting_uncertainty/techniques/deepquantile_lstm/)
--   [Técnica: UMAL](/poc_forecasting_uncertainty/techniques/umal/)
+-   [Técnica: UMAL](/docs/umal/)
 -   [PoC Aplicación en Forecasting - Kaggle M5 Forecasting Uncertainty](/docs/forecasting_uncertainty/README.md) 
 
 ### Proximos pasos
