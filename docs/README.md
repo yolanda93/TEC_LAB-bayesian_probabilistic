@@ -8,7 +8,7 @@ En esta carpeta se encuentra la documentación con **los aprendizajes extraídos
 -   [La inferencia bayesiana y la estimación de la incertidumbre](/docs/problematica_bayesiana_y_estimacion_incertidumbre.md) 
 ----
 -   [Soluciones Técnicas - Aprendizajes de experimentos](/docs/experimentos_labs/README.md) 
--   [Aplicación en la problemática de Forecasting](/docs/forecasting_uncertainty/README.md) [TODO]
+-   [Aplicación en la problemática de Forecasting](/docs/forecasting_uncertainty/README.md) 
 ----
 -   [Diagrama de aplicabilidad de las técnicas estudiadas](/docs/problematica_incertidumbre/README.md) [TODO]
 -   [Proximos pasos](#prox_pasos)
