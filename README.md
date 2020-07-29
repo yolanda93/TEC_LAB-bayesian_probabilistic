@@ -25,13 +25,13 @@ Un ejemplo de este escenario lo podemos ver en [problemas de predicción de vent
 -   [Diagrama de aplicabilidad de las técnicas estudiadas](/docs/problematica_incertidumbre/README.md) [TODO]
 -   [Proximos pasos](#prox_pasos)
 
-## Recursos 
+### Otros recursos
 
-* [Experimentos Labs](/labs_experiments) *Experimentos realizados con datos de juguete para profundizar en las técnicas*
-* [Presentacion Ejecutiva del Reto](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc) 
-* [Documentos a enlaces externos](/docs/doc_externos.md)
-* [Conceptos y preguntas clave](/core_questions/README.md)
-* [Recursos de referencia](/docs/recursos_referencia.md)
+- [Experimentos Labs](/labs_experiments) *Experimentos realizados con datos de juguete para profundizar en las técnicas*
+- [Presentacion Ejecutiva del Reto](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc) 
+- [Documentos a enlaces externos](/docs/doc_externos.md)
+- [Conceptos y preguntas clave](/core_questions/README.md)
+- [Recursos de referencia](/docs/recursos_referencia.md)
 
 
 
