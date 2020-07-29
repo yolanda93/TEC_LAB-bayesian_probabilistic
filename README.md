@@ -22,6 +22,7 @@ Un ejemplo de este escenario lo podemos ver en [problemas de predicción de vent
 -   [Diagrama de aplicabilidad de las técnicas estudiadas](/docs/problematica_incertidumbre/README.md) [TODO]
 -   [Proximos pasos](#prox_pasos)
 -   [Documentos de referencia](#doc_ref)
+-   [Recursos de referencia](#recursos_referencia)
 
 
 ## Otros Recursos
