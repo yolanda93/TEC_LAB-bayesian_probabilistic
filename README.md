@@ -19,7 +19,7 @@ Un ejemplo de este escenario lo podemos ver en [problemas de predicción de vent
 -   [Técnica: Regresión cuantílica](/docs/quantile_regression.md) 
 -   [Técnica: DeepQuantile LSTM](/poc_forecasting_uncertainty/techniques/deepquantile_lstm/)
 -   [Técnica: UMAL](/docs/umal/)
--   [PoC Aplicación en Forecasting - Kaggle M5 Forecasting Uncertainty](/docs/forecasting_uncertainty/README.md) 
+-   [PoC Aplicación en Forecasting - Kaggle M5 Forecasting Uncertainty](/docs/aplicacion_forecasting/) 
 
 ### Proximos pasos
 -   [Diagrama de aplicabilidad de las técnicas estudiadas](/docs/problematica_incertidumbre/README.md) [TODO]
