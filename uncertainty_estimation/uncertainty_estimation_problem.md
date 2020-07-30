@@ -37,10 +37,6 @@ De acuerdo con esta definición, se pueden diferenciar, a su vez y en conjunto c
 2- **Presencia de incertidumbre heterocedastica**: Las muestras tienen diferentes errores de medición (no todas son igual de fiables). En este caso el valor de la varianza de las predicciones varía a lo largo del tiempo.
 
 
-## La inferencia bayesiana y la estimación de la incertidumbre
-
-La estimación de la incertidumbre y la inferencia bayesiana[METER ENLACE] son dos conceptos separados que, para los propósitos de este reto, de utilizan de forma conjunta, utilizando la inferencia bayesiana para realizar la estimación de la incertidumbre. 
-
 ## Preguntas frecuentes
 
 ### ¿Qué tipo de incertidumbre estamos intentando modelar cuando hacemos experimentos con obs. que se alejan en eje X en función de la Y de los datos de entrenamiento? 
