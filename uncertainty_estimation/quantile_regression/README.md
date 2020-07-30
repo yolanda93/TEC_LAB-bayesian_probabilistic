@@ -45,9 +45,6 @@ La constante c depende de la cobertura de probabilidades. Estos valores se puede
 
 Un característica importante de los intervalo de predicción es que incrementan con el horizonte. Cuánto más lejano sea el horizonte de tiempo al que hacemos forecasting, mayor será la incertidumbre asociada con esta predicción y más amplio será el intervalo de predicción
 
-<a name="implementacion"></a>
-### Implementación de la regresión cuantílica
-
 <a name="validacion"></a>
 ####  Función de Pérdida
 
@@ -78,6 +75,11 @@ Métodos implementados:
 * Deep quantile regression
 
 *Notebook de referencia: [quantile_regression_techniques.ipynb](./quantile_regression_techniques.ipynb)*
+
+<a name="implementacion"></a>
+### Implementación de la regresión cuantílica
+
+Se han implementado dos notebooks, uno sobre [técnicas de regresión cuantílica](experiments/V5.1.0-quantile_regression/quantile_regression_techniques.ipynb) y otro sobre [funciones de pérdida en regresiones cuantílicas](experiments/V5.1.0-quantile_regression/quantile_regression_loss_functions.ipynb). [REVISAR]
 
 <a name="aplicaciones"></a>
 ### Otras aplicaciones de la regresión cuantílica

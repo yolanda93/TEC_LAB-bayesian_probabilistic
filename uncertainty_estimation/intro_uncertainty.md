@@ -14,10 +14,9 @@ Un ejemplo de este escenario lo podemos ver en [problemas de predicción de vent
 * [La estimación de la incertidumbre y deep learning](bayesian_statistics_and_deep_learning.md) 
 * [Contexto del reto en la industria](industry_uncertainty_estimation.md)
 * [Experimentos Labs](/labs_experiments) *Experimentos realizados con datos sintéticos para profundizar en las técnicas*
-* [PoC: Forecasting de ventas de producto](/poc_forecasting_uncertainty) *Aplicación en una problemática real*
+* [PoC: Forecasting de ventas de producto](poc_forecasting_uncertainty) *Aplicación en una problemática real de todas las técnicas*
 * [Presentacion Ejecutiva del Reto](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc) 
-* [Conceptos y preguntas clave](/core_questions/README.md)
-* [Soluciones Técnicas - Aprendizajes de experimentos](/docs/experimentos_labs/README.md) 
+* [Soluciones Técnicas - Aprendizajes de experimentos](/docs/experimentos_labs/README.md)
 * [Otros recursos](/resources/README.md)
 * [Proximos pasos](uncertainty_estimation_next_steps.md)
 * [Documentos de referencia](#documentos-de-referencia)
