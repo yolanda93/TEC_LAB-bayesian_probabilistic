@@ -8,12 +8,12 @@ Está necesidad se ha detectado tras realizar un research en la industria y en B
 
 ### Indice de contenidos
 
-[PoC: Predicción de incertidumbre en ventas de producto](m5_forecasting_uncertainty)
-* [Exploratorio de datos](m5_forecasting_uncertainty/dataset_exploration/) *Formulación de Hipótesis y Exploratorio de datos* 
-* [Limipieza de datos](m5_forecasting_uncertainty/dataset_cleaning/) *Transformaciones para la limpieza de datos*
-* [Transformación de datos](m5_forecasting_uncertainty/dataset_tranformation/) *Procesamiento y transformación de datos necesarias, feature engineering*
-* [Modelado de la solución](m5_forecasting_uncertainty/ml_solutions/) *Aplicación de soluciones técnicas*
-* [MVP](m5_forecasting_uncertainty/mvp_final_solution/) *Despliegue y documentatión de la solución final*
+[PoC: Predicción de incertidumbre en ventas de producto](experiments/m5_forecasting_uncertainty)
+* [Exploratorio de datos](experiments/m5_forecasting_uncertainty/dataset_exploration/) *Formulación de Hipótesis y Exploratorio de datos* 
+* [Limipieza de datos](experiments/m5_forecasting_uncertainty/dataset_cleaning/) *Transformaciones para la limpieza de datos*
+* [Transformación de datos](experiments/m5_forecasting_uncertainty/dataset_tranformation/) *Procesamiento y transformación de datos necesarias, feature engineering*
+* [Modelado de la solución](experiments/m5_forecasting_uncertainty/ml_solutions/) *Aplicación de soluciones técnicas*
+* [MVP](experiments/m5_forecasting_uncertainty/mvp_final_solution/) *Despliegue y documentatión de la solución final*
 
 Técnicas de estimación de la incertidumbre en forecasting
  * [Regresión Cuantílica](../quantile_regression/) 
