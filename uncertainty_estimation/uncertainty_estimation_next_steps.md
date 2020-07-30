@@ -1,8 +1,8 @@
-<h2 id="prox">Proximos pasos </h2>
+<h2 id="prox">Proximos pasos en estimación de la incertidumbre</h2>
 
 *Monte Carlo Dropout*
   
-Respecto a la clasificación con BDL, se revisó el [experimento que utilizaba Montecarlo dropout](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/BDL/uncertainty_estimation/V4.3.0-traffic_lights), pero no se pudo profundizar suficiente para entender su comportamiento. Tras realizar una revisión del estado del arte se vió que este método estaba ampliamente aceptado en la comunidad científica y se utilizaba como baseline en distintos benchmarks.
+Respecto a la clasificación con BDL, se revisó el [experimento que utilizaba Montecarlo dropout](montecarlo_dropout/experiments/V4.3.0-traffic_lights), pero no se pudo profundizar suficiente para entender su comportamiento. Tras realizar una revisión del estado del arte se vió que este método estaba ampliamente aceptado en la comunidad científica y se utilizaba como baseline en distintos benchmarks.
 
 En este caso, estamos interesados en la distribución posterior de los pesos de la red dados unos datos observados. Con ello, intentamos estimar la distribucción predictiva de la sálida y* para un nuevo xi [¿QUE ES UN XI AQUÍ?]. Es decir, dado un input x queremos obtener la distribucción sobre mi predicción. Así, muestreamos los pesos de la red sobre la distribucción posterior, que sería parecido a aproximar esta distribucción sumando las inferencias de N redes con N pesos deterministas cada una de ellas o el ensamble de estas.
 
