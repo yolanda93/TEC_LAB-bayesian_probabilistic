@@ -10,6 +10,7 @@ La estimación de la incertidumbre presenta distintas dificultades asociadas que
 
 - [Conocimiento del problema y asunciones realizadas por el modelo de IA](#asunciones)
 - [Variabilidad de la incertidumbre a modelar](#var_incertidumbre)
+- [Preguntas frecuentes](#preguntas-frecuentes)
 
 <h4 id="asunciones">Conocimiento del problema y asunciones realizadas por el modelo de IA</h4> 
 
@@ -39,3 +40,22 @@ De acuerdo con esta definición, se pueden diferenciar, a su vez y en conjunto c
 ## La inferencia bayesiana y la estimación de la incertidumbre
 
 La estimación de la incertidumbre y la inferencia bayesiana[METER ENLACE] son dos conceptos separados que, para los propósitos de este reto, de utilizan de forma conjunta, utilizando la inferencia bayesiana para realizar la estimación de la incertidumbre. 
+
+## Preguntas frecuentes
+
+### ¿Qué tipo de incertidumbre estamos intentando modelar cuando hacemos experimentos con obs. que se alejan en eje X en función de la Y de los datos de entrenamiento? 
+
+Incertidumbre epistémica: Es un error reducible que se está dando por falta de datos en un intervalo
+
+*Nota: El resultado de este experimento fue que obteniamos una varianza proporcional al alejamiento en el eje X*
+
+### ¿Cómo se podría probar la incertidumbre aleatorica heterocedástica? 
+
+Para probar la incertidumbre aleatórica es necesario introducir error en la sálida de la red (predicciones de la red) en datos de testing. Este error no puede ser igual al error conocido, es decir, en nuestro caso el prior es una distribución normal y potencialmente distinto de la distribucción del error real de los datos de entrenamiento.
+La incertidumbre heterocedástica es aquel error que puede provenir de distintas fuentes. Por tanto, necesitamos N procesos distintos generadores de ese ruido aleatórico.
+
+### ¿Cómo podríamos modelar una incertidumbre conocida e.g. dist.laplace, exponencial?
+
+Solución Naive:
+Cambiando la función de pérdida de la red para optimizar los valores de los parámetros de la distribución conocida.
+Para el cálculo de la función que máximiza el valor de los parámetros para un conjunto de datos se utiliza el algoritmo de MLE (Maximum Likelihood Estimation)

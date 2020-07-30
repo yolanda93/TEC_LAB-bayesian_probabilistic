@@ -16,7 +16,6 @@ Un ejemplo de este escenario lo podemos ver en [problemas de predicción de vent
 * [Listado de técnicas exploradas](techniques_summary.md)
 * [PoC: Forecasting de ventas de producto](poc_forecasting_uncertainty) *Aplicación en una problemática real de las técnicas presentadas*
 * [Proximos pasos](uncertainty_estimation_next_steps.md)
-* [Preguntas frecuentes](#preguntas-frecuentes)
 * [Documentos de referencia](#documentos-de-referencia)
 * [Recursos externos](#recursos)
 * [Presentacion Ejecutiva del Reto](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc) 
@@ -33,27 +32,6 @@ En esta línea se hará foco en **la estadística bayesiana** cómo una solució
 **La estadística bayesiana se selecciona tras** realizar un [estado del arte](https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit). y analizar el feedback recibido de universidades y otros expertos en IA de las técnicas utilizadas para la resolución de este reto. Marcando cómo principal objetivo de la línea ganar conocimiento en las límitaciones y ventajas de estas técnicas frente a las utilizadas actualmente en este contexto.
 
 **Inicialmente se propone validar estas técnicas en el contexto de problemas de regresión** sobre datos sintéticos y datasets pequeños para explotar sus capacidades en un entorno controlado. **Posteriormente, se propone llevarlo a un entorno de pruebas real** dentro de una problemática detectada de gran aplicabilidad como es **la problemática de forecasting** con el objetivo de explotar estas técnicas con datos reales y ofrecer una referencia de uso de las mismas.
-
-## Preguntas frecuentes
-
-### ¿Qué tipo de incertidumbre estamos intentando modelar cuando hacemos experimentos con obs. que se alejan en eje X en función de la Y de los datos de entrenamiento? 
-
-Incertidumbre epistémica: Es un error reducible que se está dando por falta de datos en un intervalo
-
-*Nota: El resultado de este experimento fue que obteniamos una varianza proporcional al alejamiento en el eje X*
-
-### ¿Cómo se podría probar la incertidumbre aleatorica heterocedástica? 
-
-Para probar la incertidumbre aleatórica es necesario introducir error en la sálida de la red (predicciones de la red) en datos de testing. Este error no puede ser igual al error conocido, es decir, en nuestro caso el prior es una distribución normal y potencialmente distinto de la distribucción del error real de los datos de entrenamiento.
-La incertidumbre heterocedástica es aquel error que puede provenir de distintas fuentes. Por tanto, necesitamos N procesos distintos generadores de ese ruido aleatórico.
-
-### ¿Cómo podríamos modelar una incertidumbre conocida e.g. dist.laplace, exponencial?
-
-Solución Naive:
-Cambiando la función de pérdida de la red para optimizar los valores de los parámetros de la distribución conocida.
-Para el cálculo de la función que máximiza el valor de los parámetros para un conjunto de datos se utiliza el algoritmo de MLE (Maximum Likelihood Estimation)
-
-
 
 ## Documentos de referencia
 
