@@ -11,7 +11,7 @@ En está página se explica UMAL como **solución técnica para estimar la incer
 - [Comparación con otras técnicas](#comparacion_tecnicas)
 
 - [Aplicaciones](#aplicaciones)
-- [FAQ](faq_umal.md)
+- [FAQ](#FAQ)
 - [Modelo de implementación UMAL](#modelo_umal)
 - [Ejemplos de implementación](#implementacion)
 - [*ANEXO: Profundización téorica UMAL*](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/poc_forecasting_uncertainty/techniques/umal/umal_profundizacion_teorica.md)
@@ -132,3 +132,17 @@ Es importante destacar que UMAL *es agnóstico del modelo de Deep Learning que s
 * [Notebook 2 - Uncertainty Forecasting with UMAL](experiments/umal_implementation.ipynb) *Implementación de UMAL con aplicación en medición de la incertidumbre en forecasting mediante la generación de una serie temporal sintética*
 
 * [Original UMAL collaboration notebook](experiments/UMAL_original/README.md) *Notebook original generated along collaboration with Axel Brando*
+
+### FAQ
+
+##### ¿Dónde tendría sentido aplicar la técnica UMAL? [Core Question]
+
+**Conocimiento del problema**
+ - Problemas en los que (se sospecha) que no se dispone o va a disponer de información relevante de la problemática o conjunto de variables que modelizan esa problemática. Es decir, tenemos un alto grado de incertidumbre.
+ [En problemas de forecasting siempre se va a dar esta problemática y va ser dependiente del horizonte de tiempo de predicción](#https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/poc_forecasting_uncertainty/techniques/quantile_regression#por-que-utilizar-intervalos-de-predicci%C3%B3n-o-cuantiles-en-forecasting) 
+
+**Aplicación**
+ - Mejora de la robustez en aplicaciones en tiempo real
+ - Nos interesa ser capacaces de modelizar esa incertidumbre porque nos proporciona información core para el negocio (e.g. riesgo financiero)
+
+

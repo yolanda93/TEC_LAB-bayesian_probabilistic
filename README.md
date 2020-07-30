@@ -14,18 +14,10 @@ Así, la inferencia bayesiana abre los límites de las aproximaciones frecuentis
 Con esta idea en mente, se han realizado una serie de trabajos orientados a obtener predicciones y la incertidumbre asociada a estas predicciones. De este modo, quienes interpreten los resultados no sólo obtendrán un valor, si no también una métrica que informe acerca de lo preciso, válido o importante que sea este valor, dependiendo de cómo se haya aplicado la métrica.
 
 Estos trabajos parten de la determinación del grado de confianza en un resultado mediante técnicas más comunes y específicas hasta la utilización de una técnica avanzanda generalista utilizando redes neuronales.
- 
-### Trabajos realizados
 
--   [Framework: Validación de las medidas de incertidumbre](#Framework) [TODO]
--   [Técnicas No Bayesianas](/docs/experimentos_labs/experimentos_q1/README.md#non_bay)
--   [Técnica: Exp.I - Estimacion de la varianza al vuelo](/docs/experimentos_labs/experimentos_q1/README.md)
--   [Técnica: Redes de densidad mixta](/docs/experimentos_labs/experimentos_q1/README.md#mdn)
--   [Técnica: Regresión Cuantílica](/poc_forecasting_uncertainty/techniques/quantile_regression/) 
--   [Técnica: LSTM](/poc_forecasting_uncertainty/techniques/lstm/) [TODO]
--   [Técnica: DeepQuantile LSTM](/poc_forecasting_uncertainty/techniques/deepquantile_lstm/)
--   [Técnica: Mixture Models](/poc_forecasting_uncertainty/techniques/mixture_models/)
--   [Técnica: UMAL](/poc_forecasting_uncertainty/techniques/umal/)
+### Aplicaciones de la inferencia bayesiana
+
+Una de las grandes aplicaciones de la estadística bayesiana es la [estimación de la incertidumbre](uncertainty_estimation). Se ha realizado un amplio trabajo en este área, realizandose un estudio del problema, técnicas existentes y formas de abordarlo.  
 
 
 ### El problema de la inferencia Bayesiana

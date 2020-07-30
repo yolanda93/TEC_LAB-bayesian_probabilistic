@@ -73,6 +73,12 @@ Conclusiones:
     
 En cualquier caso, los resultados continuaban siendo sobre el conjunto de valores que se habían seleccionado para el experimento originalmente, por lo que se decidió [probar con un dataset real de valores inmobiliarios](experiments/V0.1.6-real_datasets/uncertainty_prediction_house_prices.ipynb) que contuviese valores heterocedásticos. Las [conclusiones de usar este dataset](experiments/uncertainty_estimation/V0.1.6-real_datasets/conclusions.md) fueron que, si bien se suavizan las varianzas, el algoritmo se comporte como era de esperar y permite descartar aquellas predicciones no válidas.
 
+
+<h3 id="experimentos_6">Reimplementación en TF</h3>
+    
+Existían dudas sobre si el comportamiento de esta técnica podía variar en función de la implementación, por lo que se ha [reimplementado en TensorFlow](V0.2.0-tensorflow/01-original-on_the_fly-tf.ipynb), comparado con el [original usando pytorch](V0.2.0-tensorflow/00-original_pytorch.ipynb).
+
+
 <h3 id="conclusiones">Conclusiones de la técnica</h3>
 
 *Interpretación Bayesiana*
@@ -100,14 +106,14 @@ Tras revisar como se maneja [este concepto en otros entornos](https://docs.googl
 
 ## Preguntas frecuentes
 
-### Q1: ¿Qué limitaciones tiene la técnica Exp.I Varianza al vuelo? 
+### ¿Qué limitaciones tiene la técnica Exp.I Varianza al vuelo? 
 
 - **Capacidad de modelizar la incertidumbre**: Este tipo de distribucción no permite modelar incertidumbre heterogénea o heterocedastica por punto de estimación. La distribución del error de la P(Y|X=x), es decir, distribución de Y para una xi dada, se aproxima a una distribución gaussiana. 
 - **Capacidad de generalización**: La fuerte asunción de priors podría generar problemas de overfitting. Al final es una técnica que tiene limitaciones de generalización. Esto no debería ser un problema si conoces bien la problemática y sabes que la problemática se ajusta a las asunciones o priors de esta técnica. Este tipo de problemas se da en cualquier modelo ML/Deep Learning y es necesario un conjunto de datos representativo o conocimiento de la problemática para poder evaluarla*.
 
 *Nota: Consideramos como parte de los priors la arquitectura y parámetros de la red*
 
-### Q2: ¿Dónde tendría sentido aplicar la técnica Exp.I varianza al vuelo?  [Core Question]
+### ¿Dónde tendría sentido aplicar la técnica Exp.I varianza al vuelo?  [Core Question]
 
 **Conocimiento del problema**
   - En aquellos problemas en los que tengamos cierta certeza de que la distribución del error de la P(Y|x) se puede aproximar usando una distribución gausiana
