@@ -14,7 +14,7 @@ La **estadística bayesiana** es un subconjunto del campo de la estadística en 
 
 Con este enfoque podemos estimar la 'probabilidad de que una hipótesis sea cierta' (incertidumbre de la hipótesis), que llevado al campo de ML nos permite representar un modelo ML como el conjunto de asunciones o hipótesis que realiza y la probabilidad de que esas asunciones se acerquen a la realidad.
 
-Sin embargo, esta incertidumbre actualmente no se modela ya que **los modelos de ML se basan más en estadística frequenstita** que a diferencia de la bayesiana realiza inferencias sin expresar esta incertidumbre al respecto, evaluando las hipótesis en términos absolutos usando las evidencias disponibles y de acuerdo a unos ciertos umbrales de aceptación de tal hipótesis (p-values, CI, etc)
+Sin embargo, esta incertidumbre actualmente no se modela ya que **los modelos de ML se basan más en estadística frecuenstita** que a diferencia de la bayesiana realiza inferencias sin expresar esta incertidumbre al respecto, evaluando las hipótesis en términos absolutos usando las evidencias disponibles y de acuerdo a unos ciertos umbrales de aceptación de tal hipótesis (p-values, CI, etc)
 
 Cómo resultado de aplicar este enfoque podríamos obtener la distribución (posterior) de los parámetros del modelo y no sólo puntos de estimación como se puede observar en la siguiente fórmula:
 
