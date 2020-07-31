@@ -30,7 +30,6 @@ En esta línea se hará foco en **la estadística bayesiana** cómo una solució
 * [Proximos pasos](uncertainty_estimation_next_steps.md)
 * [Documentos de referencia](#documentos-de-referencia)
 * [Recursos externos](#recursos)
-* [Presentacion Ejecutiva del Reto](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc) 
 * [Listado detallado de experimentos](/docs/experimentos_labs/README.md) *Experimentos realizados con datos sintéticos para profundizar en las técnicas*
 
 ## Listado de técnicas exploradas
@@ -69,6 +68,9 @@ Para la estimación de la incertidumbre, tras un comienzo con técnicas más sen
 
 - **Estado del Arte**:
 https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit
+
+- **Presentacion Ejecutiva del Reto** 
+[Presentacion](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc) 
 
 - **Sprint [27 de Nov - 11 de Dec] 2019**
 https://docs.google.com/document/d/1bp_Rl6-gARMsEufxQt622elKwv38dIKmtIs2tWVcrOc/edit#heading=h.et9co8t7x85v
