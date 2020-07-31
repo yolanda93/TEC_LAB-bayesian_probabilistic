@@ -10,7 +10,6 @@ La estimación de la incertidumbre presenta distintas dificultades asociadas que
 
 - [Conocimiento del problema y asunciones realizadas por el modelo de IA](#asunciones)
 - [Variabilidad de la incertidumbre a modelar](#var_incertidumbre)
-- [Preguntas frecuentes](#preguntas-frecuentes)
 
 <h4 id="asunciones">Conocimiento del problema y asunciones realizadas por el modelo de IA</h4> 
 
