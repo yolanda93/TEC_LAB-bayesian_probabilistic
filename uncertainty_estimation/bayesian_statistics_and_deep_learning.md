@@ -1,6 +1,6 @@
 # Estadística bayesiana y Deep Learning
 
-## Introducción a estadística bayesiana cómo solución al reto
+## Introducción a estadística bayesiana y su relación con deep learning
 
 - [La estadística bayesiana y la incertidumbre](#la-estadistica-bayesiana-y-la-incertidumbre)
   - [Teorema de Bayes](#Teorema-de-bayes)
