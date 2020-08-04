@@ -1,6 +1,10 @@
 # Métodos Bayesianos y Programación Probabilística
 
-## Introducción
+## Introducción (TODO)
+* ¿Qué es?
+* ¿por qué es interesante?
+
+
 Actualmente se están utilizando multitud de técnicas para obtención de indicadores y métricas dentro de las tecnologías de la información, que van desde estadística básica hasta técnicas de aprendizaje automático. Así, se obtienen unos valores que aportan una información que ayuda en las estimaciones y toma de decisiones. No obstante, la naturaleza de gran parte de los datos y, sobre todo, de gran parte de las métricas que se quieren obtener es probabilística. 
 
 Las técnicas más tradicionales, orientadas desde el punto de vista frecuentista, nos permiten obtener medidas descriptivas de los datos, tales como la mediai, la moda o la varianza de los datos. Sin embargo, obteniendo estos datos como descriptivos, podemos estar cayendo en una serie de asunciones de las que no somos conscientes: si asumimos que una media y una varianza describen nuestros datos, seguramente sea porque estamos suponiendo que nuestros datos siguen una distribución normal, o gausiana.
@@ -33,5 +37,15 @@ En este sentido se han estudiado técnicas que permiten aproximar su resultado:
 - **Aproximation-based**: Variatonal Inference (VI). Este algoritmo aproxima la distribución a posteriori a través de funciones de distribución más sencillas, de esta forma transforma el problema a uno de optimización donde buscamos minimizar la diferencia entre la función a posteriori y la aproximación. Esta diferencia se mide a través de la divergencia de Kullback-Leibler.
 
 
-
-
+## Trabajo realizado
+* [Bayesian Deep Learning](bayesian_deep_learning) (TODO: [doc de drive](https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit#heading=h.mpi76vkvje70) )
+  * [Uncertainty estimation](bayesian_deep_learning/uncertainty_estimation)
+* Bayesian networks
+* Gaussian processes
+* Causality
+  * [Folder on Drive](https://drive.google.com/drive/folders/1uefX12ZtAieVE3SVsTqI94E8s5wXOs07)
+  * [Structural Equation Modelling](https://github.com/beeva/TEC_LAB-structural_equation_modeling)
+  * [Causality "vs" Machine Learning](https://github.com/beeva/TEC_LAB-causality_vs_machine_learning)
+* Tools and libraries
+  * [Pyro](https://github.com/next-samuelmunoz/bayprob) (Pytorch library)
+  * [Bayesian Decision Trees](https://github.com/beeva/TEC_LAB-bayesian_decision_trees)
