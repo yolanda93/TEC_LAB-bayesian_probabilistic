@@ -17,7 +17,7 @@ Estos trabajos parten de la determinación del grado de confianza en un resultad
 
 ### Aplicaciones de la inferencia bayesiana
 
-Una de las grandes aplicaciones de la estadística bayesiana es la [estimación de la incertidumbre](uncertainty_estimation). Se ha realizado un amplio trabajo en este área, realizandose un estudio del problema, técnicas existentes y formas de abordarlo.  
+Una de las grandes aplicaciones de la estadística bayesiana es la [estimación de la incertidumbre](bayesian_deep_learning/uncertainty_estimation). Se ha realizado un amplio trabajo en este área, realizandose un estudio del problema, técnicas existentes y formas de abordarlo.  
 
 
 ### El problema de la inferencia Bayesiana
