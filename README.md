@@ -1,4 +1,4 @@
-# Programación probabilística
+# Métodos Bayesianos y Programación Probabilística
 
 ## Introducción
 Actualmente se están utilizando multitud de técnicas para obtención de indicadores y métricas dentro de las tecnologías de la información, que van desde estadística básica hasta técnicas de aprendizaje automático. Así, se obtienen unos valores que aportan una información que ayuda en las estimaciones y toma de decisiones. No obstante, la naturaleza de gran parte de los datos y, sobre todo, de gran parte de las métricas que se quieren obtener es probabilística. 
