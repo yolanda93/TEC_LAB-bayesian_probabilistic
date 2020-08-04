@@ -1,29 +1,37 @@
-# Estimación de la Incertidumbre 
+# Métodos Bayesianos y Programación Probabilística
 
-El reto de estimación de la incertidumbre tiene como objetivo ofrecer una **medida de fiabilidad** sobre las predicciones de un modelo de Machine Learning o Deep Learning
+## Introducción
+Actualmente se están utilizando multitud de técnicas para obtención de indicadores y métricas dentro de las tecnologías de la información, que van desde estadística básica hasta técnicas de aprendizaje automático. Así, se obtienen unos valores que aportan una información que ayuda en las estimaciones y toma de decisiones. No obstante, la naturaleza de gran parte de los datos y, sobre todo, de gran parte de las métricas que se quieren obtener es probabilística. 
 
-Esto es importante para poder **cuantificar el margen de error cometido en las predicciones** de un modelo en escenarios con **alta incertidumbre**. 
+Las técnicas más tradicionales, orientadas desde el punto de vista frecuentista, nos permiten obtener medidas descriptivas de los datos, tales como la mediai, la moda o la varianza de los datos. Sin embargo, obteniendo estos datos como descriptivos, podemos estar cayendo en una serie de asunciones de las que no somos conscientes: si asumimos que una media y una varianza describen nuestros datos, seguramente sea porque estamos suponiendo que nuestros datos siguen una distribución normal, o gausiana.
 
-Un ejemplo de este escenario lo podemos ver en [problemas de predicción de ventas de producto](/poc_forecasting_uncertainty) en los que se plantean cuestiones con alta incertidumbre como ¿Cuántos equipamentos de acampada vamos a vender el mes que viene? Ser capaces de dar una estimación de por ejemplo 50 equipamentos con un margen de error bajo (e.g. +-4) o alto (e.g. +-30) nos podría ayudar a optimizar mejor las campañas de ventas y evitar costes innecesarios
+Es decir, estamos haciendo unas suposiciones a priori sobre nuestros datos, lo que nos lleva a unos resultados a posteriori sobre ellos. Pero podemos cambiar esas asuciones por otras cualesquiera, y el modelo estadístico que permite trabajar con esta serie de asunciones es la estadística bayesiana [METER ENLACE].
 
-## Entregables
+Una vez entramos en este enfoque, podemos ir mas allá. Un modelo de red neuronal se puede determinar como, dados unos priors, como son la arquitectura y los datos de entrada, obtenemos a posteriori unos pesos para la neuronas.[REVISAR]
 
-* [Experimentos Labs](/labs_experiments) *Experimentos realizados con datos de juguete para profundizar en las técnicas*
-* [PoC: Forecasting de ventas de producto](/poc_forecasting_uncertainty) *Aplicación en una problemática real*
-* [Libro de Aprendizajes](/docs/README.md) *Documentación sobre el conocimiento adquirido*
-* [Presentacion Ejecutiva del Reto](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc) 
-* [Conceptos y preguntas clave](/core_questions/README.md)
-* [Otros recursos](/resources/README.md)
+Así, la inferencia bayesiana abre los límites de las aproximaciones frecuentistas y propociona un campo más amplio de trabajo, donde no sólo obtenemos unos resultados, si no que obtenemos información asociada a esos resultados.
 
-## Contexto y alcance del reto
+Con esta idea en mente, se han realizado una serie de trabajos orientados a obtener predicciones y la incertidumbre asociada a estas predicciones. De este modo, quienes interpreten los resultados no sólo obtendrán un valor, si no también una métrica que informe acerca de lo preciso, válido o importante que sea este valor, dependiendo de cómo se haya aplicado la métrica.
 
-El **reto de la estimación de la incertidumbre tiene como objetivo** desarrollar técnicas de inteligencia artificial que, además de realizar su cometido, ofrezcan **una medida de fiabilidad de lo bueno que es su resultado**. Esta solución es de especial importancia de acuerdo a las directrices publicadas por comisión europea en 2018 de [Inteligencia Artificial Confiable](https://github.com/beeva/TEC_LAB-Trustworthy_AI) que responde a la necesidad de industria de construir IA segura con una visión 'human-centric' 
+Estos trabajos parten de la determinación del grado de confianza en un resultado mediante técnicas más comunes y específicas hasta la utilización de una técnica avanzanda generalista utilizando redes neuronales.
 
-## Aproximación de la línea
+### Aplicaciones de la inferencia bayesiana
 
-En esta línea se hará foco en **la estadística bayesiana** cómo una solución técnica alternativa a otras técnicas de uso más extendido en en proyectos de ciencia de dato basadas en estadística frequentista. 
+Una de las grandes aplicaciones de la estadística bayesiana es la [estimación de la incertidumbre](bayesian_deep_learning/uncertainty_estimation). Se ha realizado un amplio trabajo en este área, realizandose un estudio del problema, técnicas existentes y formas de abordarlo.  
 
-**La estadística bayesiana se selecciona tras** realizar un [estado del arte](https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit). y analizar el feedback recibido de universidades y otros expertos en IA de las técnicas utilizadas para la resolución de este reto. Marcando cómo principal objetivo de la línea ganar conocimiento en las límitaciones y ventajas de estas técnicas frente a las utilizadas actualmente en este contexto.
 
-**Inicialmente se propone validar estas técnicas en el contexto de problemas de regresión** sobre datos sintéticos y de juguete para explotar sus capacidades en un entorno controlado. **Posteriormente, se propone llevarlo a un entorno de pruebas real** dentro de una problemática detectada de gran aplicabilidad como es **la problemática de forecasting** con el objetivo de explotar estas técnicas con datos reales y ofrecer una referencia de uso de las mismas.
+### El problema de la inferencia Bayesiana
+
+La inferencia bayesiana puede convertirse en un problema intratable o con una complejidad computacional muy alta dependiendo de las **asunciones tomadas por el modelo y la dimensionalidad**. Por ello todas las técnicas se basan en métodos de aproximación basandose en el conocimiento del problema para la modelización del prior o mediante la aproximación de la distribución a posteriori
+
+En este sentido se han estudiado técnicas que permiten aproximar su resultado:
+
+- **Sampling-based**: MCMC Markov Chain Monte Carlo. Las cadenas de Markov de Monte Carlo es un método númerico de aproximación que tiene como objetivo aproximar una distribución de probabilidad determinada. La idea del algoritmo es simular una cadena de Markov cuya distribución estacionaria se aproxime a la distribución a posteriori del modelo, de esta forma somos capaces de obtener una aproximación de la distribucción. Destacan 2 métodos:
+	- Metropolis-Hasting 
+	- Gibbs Sampling
+	
+- **Aproximation-based**: Variatonal Inference (VI). Este algoritmo aproxima la distribución a posteriori a través de funciones de distribución más sencillas, de esta forma transforma el problema a uno de optimización donde buscamos minimizar la diferencia entre la función a posteriori y la aproximación. Esta diferencia se mide a través de la divergencia de Kullback-Leibler.
+
+
+
 
