@@ -81,8 +81,3 @@ https://docs.google.com/document/d/1DkcUwaWw3lTW_1ylt3POmfGURaD08xCuaUBYcRnc_5U/
 - **Sprint 1Q2S - 2020 - Estimación de la Incertidumbre - Validación - Scoring**
 https://docs.google.com/document/d/110_gQ9yhVaELgoZJfjLxlWeL_D8YyORFrRyxF1da4UM/edit
 
-## Recursos 
-
-* [Video Lecture - Introduction to Bayesian data analysis - part 1: What is Bayes?](https://www.youtube.com/watch?v=3OJEae7Qb_o)
-* [Video Discussion - Is bayesian the most brilliant thing ever?](https://www.youtube.com/watch?v=HumFmLu3CJ8)
-

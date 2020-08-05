@@ -49,3 +49,11 @@ En este sentido se han estudiado técnicas que permiten aproximar su resultado:
 * Tools and libraries
   * [Pyro](https://github.com/next-samuelmunoz/bayprob) (Pytorch library)
   * [Bayesian Decision Trees](https://github.com/beeva/TEC_LAB-bayesian_decision_trees)
+  
+  
+## Referencias
+* Youtube - Introduction to Bayesian data analysis
+  * [Part 1: What is Bayes?](https://www.youtube.com/watch?v=3OJEae7Qb_o)
+  * [Part 2: Why use Bayes?](https://www.youtube.com/watch?v=mAUwjSo5TJE)
+  * [Part 3: How to do Bayes?](https://www.youtube.com/watch?v=Ie-6H_r7I5A)
+* * Youtube, NIPS 2016 - [Is bayesian the most brilliant thing ever?](https://www.youtube.com/watch?v=HumFmLu3CJ8)
