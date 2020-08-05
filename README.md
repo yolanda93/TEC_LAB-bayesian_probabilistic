@@ -2,7 +2,27 @@
 
 ## Introducción (TODO)
 * ¿Qué es?
+La **estadística bayesiana** es un subconjunto del campo de la estadística en la que la evidencia sobre el verdadero estado del mundo se expresa **en términos de grados de creencia, es decir, trata la modelización de la incertidumbre**.
 * ¿por qué es interesante?
+
+Con este enfoque podemos estimar la 'probabilidad de que una hipótesis sea cierta' (incertidumbre de la hipótesis), que llevado al campo de ML nos permite representar un modelo ML como el conjunto de asunciones o hipótesis que realiza y la probabilidad de que esas asunciones se acerquen a la realidad.
+
+Sin embargo, esta incertidumbre actualmente no se modela ya que **los modelos de ML se basan más en estadística frecuentista** que a diferencia de la bayesiana realiza inferencias sin expresar esta incertidumbre al respecto, evaluando las hipótesis en términos absolutos usando las evidencias disponibles y de acuerdo a unos ciertos umbrales de aceptación de tal hipótesis (p-values, CI, etc)
+
+Cómo resultado de aplicar este enfoque podríamos obtener la distribución (posterior) de los parámetros del modelo y no sólo puntos de estimación como se puede observar en la siguiente fórmula:
+
+---
+
+## Teorema de Bayes
+
+La formulación matemática del enfoque bayesiano utiliza [el teorema de bayes](https://es.wikipedia.org/wiki/Teorema_de_Bayes), descrito mediante la siguiente fórmula:
+
+![](img/formula_bayes.png)
+
+En la fórmula matemática anterior podemos ver un ejemplo de cómo calcular estas probabilidades, usando el teorema de bayes. Este teorema por definición trata de calcular las probabilidades subjetivas que puede tomar un determinado suceso cuando hemos recibido algún tipo de información previa. Para ello, se calcula la probabilidad a posteriori P(A|B), en base a las probabilidades a priori o P(A) y la probabilidad de que se dé el suceso B si la hipótesis A es cierta, P(B|A). [1]
+
+
+---
 
 
 Actualmente se están utilizando multitud de técnicas para obtención de indicadores y métricas dentro de las tecnologías de la información, que van desde estadística básica hasta técnicas de aprendizaje automático. Así, se obtienen unos valores que aportan una información que ayuda en las estimaciones y toma de decisiones. No obstante, la naturaleza de gran parte de los datos y, sobre todo, de gran parte de las métricas que se quieren obtener es probabilística. 
@@ -52,8 +72,11 @@ En este sentido se han estudiado técnicas que permiten aproximar su resultado:
   
   
 ## Referencias
-* Youtube - Introduction to Bayesian data analysis
+* [Bayesianos, viendo la inteligencia artificial desde otro prisma](https://www.bbvanexttechnologies.com/bayesianos-viendo-la-inteligencia-artificial-desde-otro-prisma/) - BBVA Next Technologies
+* Introduction to Bayesian data analysis - Youtube
   * [Part 1: What is Bayes?](https://www.youtube.com/watch?v=3OJEae7Qb_o)
   * [Part 2: Why use Bayes?](https://www.youtube.com/watch?v=mAUwjSo5TJE)
   * [Part 3: How to do Bayes?](https://www.youtube.com/watch?v=Ie-6H_r7I5A)
-* * Youtube, NIPS 2016 - [Is bayesian the most brilliant thing ever?](https://www.youtube.com/watch?v=HumFmLu3CJ8)
+* [Is bayesian the most brilliant thing ever?](https://www.youtube.com/watch?v=HumFmLu3CJ8) - Youtube, NIPS 2016
+* [Bayesian probability theory](http://users.ics.aalto.fi/harri/thesis/valpola_thesis/node12.html) - Polytechnica scandinavica
+
