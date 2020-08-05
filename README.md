@@ -58,7 +58,7 @@ En este sentido se han estudiado técnicas que permiten aproximar su resultado:
 
 
 ## Trabajo realizado
-* [Bayesian Deep Learning](bayesian_deep_learning) (TODO: [doc de drive](https://docs.google.com/document/d/10TrBLqnkROiWhTFf8V6cTIQBr30Wjjw8J2j4fZkMMAk/edit#heading=h.mpi76vkvje70) )
+* [Bayesian Deep Learning](bayesian_deep_learning)
   * [Uncertainty estimation](bayesian_deep_learning/uncertainty_estimation)
 * Bayesian networks
 * Gaussian processes
@@ -69,10 +69,12 @@ En este sentido se han estudiado técnicas que permiten aproximar su resultado:
 * Tools and libraries
   * [Pyro](https://github.com/next-samuelmunoz/bayprob) (Pytorch library)
   * [Bayesian Decision Trees](https://github.com/beeva/TEC_LAB-bayesian_decision_trees)
+* Communication
+  * [Bayesianos, viendo la inteligencia artificial desde otro prisma](https://www.bbvanexttechnologies.com/bayesianos-viendo-la-inteligencia-artificial-desde-otro-prisma/) - BBVA Next Technologies Blog
+  
   
   
 ## Referencias
-* [Bayesianos, viendo la inteligencia artificial desde otro prisma](https://www.bbvanexttechnologies.com/bayesianos-viendo-la-inteligencia-artificial-desde-otro-prisma/) - BBVA Next Technologies
 * Introduction to Bayesian data analysis - Youtube
   * [Part 1: What is Bayes?](https://www.youtube.com/watch?v=3OJEae7Qb_o)
   * [Part 2: Why use Bayes?](https://www.youtube.com/watch?v=mAUwjSo5TJE)
