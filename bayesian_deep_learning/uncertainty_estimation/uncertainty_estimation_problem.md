@@ -1,10 +1,6 @@
 
-## La inferencia bayesiana y la estimación de la incertidumbre
 
-La estimación de la incertidumbre y la inferencia bayesiana[METER ENLACE] son dos conceptos separados que, para los propósitos de este reto, de utilizan de forma conjunta, utilizando la inferencia bayesiana para realizar la estimación de la incertidumbre. 
-
-### El problema de la estimación de la incertidumbre
-<h3 id="conceptos_clave">Profundización en las problemáticas de estimación de la incertidumbre</h3>
+<h2 id="conceptos_clave">Profundización en las problemáticas de estimación de la incertidumbre</h2>
 
 La estimación de la incertidumbre presenta distintas dificultades asociadas que dependen principalmente de 2 factores clave:
 

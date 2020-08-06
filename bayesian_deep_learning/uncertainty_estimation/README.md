@@ -22,9 +22,9 @@ En esta línea se hará foco en **la estadística bayesiana** cómo una solució
 
 ## Indice de contenidos
 
-* [La inferencia bayesiana y la estimación de la incertidumbre](uncertainty_estimation_problem.md)
-* [La estimación de la incertidumbre y deep learning](bayesian_statistics_and_deep_learning.md) 
 * [Contexto del reto en la industria](industry_uncertainty_estimation.md)
+* [Profundización en la problemática de estimación de la incertidumbre](uncertainty_estimation_problem.md)
+* [Validación y métricas de estimación de la incertidumbre](uncertainty_validation_metrics.md)
 * [Listado de técnicas exploradas](#listado-tecnicas-exploradas)
 * [Proximos pasos](uncertainty_estimation_next_steps.md)
 
