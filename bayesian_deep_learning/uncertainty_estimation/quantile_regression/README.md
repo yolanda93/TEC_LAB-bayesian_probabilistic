@@ -24,7 +24,7 @@ En el siguiente gráfico vemos la aplicación de **regresión cuantílica en el 
 
 En el caso de la regresión lineal la estimación del precio se haría mediante **la media aproximada de las observaciones** de los precios de las viviendas. Sin embargo, en el caso de **regresión cuantílica podríamos responder con la mediana** que se ve menos afectada por valores atípicos (por ejemplo casas lujosas) o incluso el cuantil superior 90 e inferior 10 que nos podría dar una estimación de **cuánto podría costar este tipo de vivienda en el mejor y en el peor de los casos**. En este caso, estaríamos aproximando el valor de la vivienda sobre las partes superiores e inferiores de la distribución, lo que nos daría nuestra **estimación de la incertidumbre o intervalo de error de la predicción del precio**
 
- <p align="center"><img src="/img/quantile_regression_example.PNG" height="350" alt=“Ejemplo de regresión cuantílica” /></p>
+ <p align="center"><img src="./img/quantile_regression_example.PNG" height="350" alt=“Ejemplo de regresión cuantílica” /></p>
 <p align="center"><em>Ejemplo de regresión cuantílica</em><sup>[1]</sup></p>
 
 En este ejemplo concretamente se realiza **un ajuste de 5 regresiones cuantiles que se corresponden con los percentiles o cuantiles** de 10, 30, 50, 70 y 90. El que el cuantil 50 se corresponde con la mediana que deja justo a cada lado el 50% de las observaciones, llegando hasta los límites o cuantiles extremos en los que el intervalo [10,90] recoge el 80% de las observaciones
@@ -38,7 +38,7 @@ En problemas de forecasting se suele hacer forecasting sobre distintos horizonte
 
 El cálculo de esta varianza o intervalo de predicción en forecasting en el h-instante (h:horizonte) de la variable respuesta y con una desviación estándar σₕ, puede ser calculada como:
 
-<p align="center"><img src="/img/forecast_variance.png" height="50" alt=“Ejemplo de regresión cuantílica” /></p>
+<p align="center"><img src="./img/forecast_variance.png" height="50" alt=“Ejemplo de regresión cuantílica” /></p>
 <p align="center"><em>Estimación de la varianza de forecasting en el instante u horizonte h</em><sup>[2]</sup></p>
 
 La constante c depende de la cobertura de probabilidades. Estos valores se pueden encontrar [aqui](https://otexts.com/fpp2/prediction-intervals.html)
@@ -54,7 +54,7 @@ En concreto, se observa que los errores más positivos (sobre-predicciones) son 
 
 Esto ofrece la capacidad de poder estimar un cuantil concreto de la distribucción de la variable respuesta como se muestra en el siguiente cuadro:
 
-<p align="center"><img src="/img/loss_quantile_learn.PNG" height="270" alt=“Métodos de aproximación de la variable respuesta” /></p>
+<p align="center"><img src="./img/loss_quantile_learn.PNG" height="270" alt=“Métodos de aproximación de la variable respuesta” /></p>
 <p align="center"><em>Métodos de aproximación de la variable respuesta</em><sup></sup></p>
 
 

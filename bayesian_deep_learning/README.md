@@ -3,7 +3,7 @@
 El aprendizaje profundo bayesiano es una rama del [aprendizaje profundo](https://es.wikipedia.org/wiki/Aprendizaje_profundo) resultante de combinar [redes neuronales](https://es.wikipedia.org/wiki/Red_neuronal_artificial) con [estadística bayesiana](https://es.wikipedia.org/wiki/Estad%C3%ADstica_bayesiana).
 
 
-## Qué es
+## ¿Qué es?
 
 El enfoque tradicional frecuentista asigna un valor (determinista) a los pesos de la red. En contraposición, el enfoque bayesiano los modela con una [distribución de probabilidad](https://es.wikipedia.org/wiki/Distribuci%C3%B3n_de_probabilidad).
 
