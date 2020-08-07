@@ -26,6 +26,7 @@ En esta línea se hará foco en **la estadística bayesiana** cómo una solució
 * [Listado de técnicas exploradas](#listado-tecnicas-exploradas)
 * [Proximos pasos](uncertainty_estimation_next_steps.md)
 
+---
 
 ## Características de la incertidumbre de la predicción
 Manejamos esta taxonomía para caraterizar los elementos que afectan al reto:
@@ -38,13 +39,46 @@ Manejamos esta taxonomía para caraterizar los elementos que afectan al reto:
 	* _De datos_: aparece cuando los datos de entrenamiento no representan completamente el problema a modelar. Se da si el tamaño del dataset (_interpolación_) y la significancia (_experimentación_) de sus variables no es suficiente para representar la variable objetivo.
   * **Aleatórica**  
     Aparece como ruido, por elementos del entorno que "no podemos medir" pero que nos afectan. Es imposible reducirla, aunque es posible modelarla de forma probabilística.
-* **Variabilidad** del error de predicción
+* **Variabilidad** del error de predicción.
   * [Homocedástica](https://es.wikipedia.org/wiki/Homocedasticidad)  
     La varianza del error de predicción es constante en todas las observaciones.
   * [Heterocedástica](https://es.wikipedia.org/wiki/Heterocedasticidad)  
      El error de predicción esperable varía con cada ejemplo.
 
 
+## Técnicas y experimentos
+
+### 1 - [Al vuelo](on-the-fly/README.md)
+La técnica de estimación del error al vuelo es nuestro punto de entrada al reto y consiste en añadir una salida más a nuestra red neuronal para que haga una estimación del error de predicción.
+
+* Pytorch
+
+* TensorFlow
+
+#### TF - 01-original-on_the_fly
+* FECHA: 07/07/2020
+* DESCRIPCIÓN: reimplementación del experimento original con la librería Tensorflow 2.0.
+* RECURSOS:
+  * [Notebook](on-the-fly/01-original-on_the_fly-tf.ipynb)
+
+
+### 2 - Dos pasos (TODO)
+
+### 3 - [Regresión cuantílica](quantile_regression/README.md)
+* Introducción
+* LSTM  y pronóstico
+
+### 4 - [Redes de densidad mixta](mixture_density_networks/README.md)
+
+### 5 - [UMAL - Uncountable Mixture Asymetric Laplacian](umal/README.md)
+* Introducción
+* Implementacíón
+* Caso real: Kaggle - M5 dataset
+
+
+_NOTA: completar con la [lista de experimentos](https://raw.githubusercontent.com/beeva/TEC_LAB-bayesian_probabilistic/f8b30546cc2d2e216336c864568813f9ed5fcfff/labs_experiments/README.md)_
+
+---
 
 
 ## Listado de técnicas exploradas
@@ -69,7 +103,9 @@ Para la estimación de la incertidumbre, tras un comienzo con técnicas más sen
 
 -   [Técnica: UMAL](umal/README.md)
     La técnica UMAL (Uncountable Mixture Asymetric Laplacian) permite hacer predicciones en series temporales multimodales, sin tener conocimiento previo sobre las distribuciones de los datos ni de sus errores
-
+	
+	
+---
 
 ## Referencias
 
