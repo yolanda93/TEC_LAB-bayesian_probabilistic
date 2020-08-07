@@ -59,17 +59,17 @@ En este sentido se han estudiado técnicas que permiten aproximar su resultado:
 
 ## Trabajo realizado
 * [Bayesian Deep Learning](bayesian_deep_learning)
-  * [Uncertainty estimation](bayesian_deep_learning/uncertainty_estimation)
-* Bayesian networks
-* Gaussian processes
-* Causality
-  * [Folder on Drive](https://drive.google.com/drive/folders/1uefX12ZtAieVE3SVsTqI94E8s5wXOs07)
-  * [Structural Equation Modelling](https://github.com/beeva/TEC_LAB-structural_equation_modeling)
-  * [Causality "vs" Machine Learning](https://github.com/beeva/TEC_LAB-causality_vs_machine_learning)
-* Tools and libraries
+  * [Estimación de la incertidumbre](bayesian_deep_learning/uncertainty_estimation)
+* Redes Bayesianas
+* Procesos Gausianos
+* Causalidad
+  * [Recursos en Google Drive](https://drive.google.com/drive/folders/1uefX12ZtAieVE3SVsTqI94E8s5wXOs07)
+  * [Modelos de Ecuaciones Estructurales](https://github.com/beeva/TEC_LAB-structural_equation_modeling)
+  * [Causalidad "vs" Machine Learning](https://github.com/beeva/TEC_LAB-causality_vs_machine_learning)
+* Herramientas y librerías
   * [Pyro](https://github.com/next-samuelmunoz/bayprob) (Pytorch library)
-  * [Bayesian Decision Trees](https://github.com/beeva/TEC_LAB-bayesian_decision_trees)
-* Communication
+  * [Árboles de decisión bayesianos](https://github.com/beeva/TEC_LAB-bayesian_decision_trees)
+* Comunicación
   * [Bayesianos, viendo la inteligencia artificial desde otro prisma](https://www.bbvanexttechnologies.com/bayesianos-viendo-la-inteligencia-artificial-desde-otro-prisma/) - BBVA Next Technologies Blog
   
   
