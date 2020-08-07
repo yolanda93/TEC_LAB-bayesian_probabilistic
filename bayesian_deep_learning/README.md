@@ -15,11 +15,11 @@ _NOTA: esta distribucción de parámetros inicial junto con la selección de la 
 ## Aplicaciones
 
 ### Estimación de la fiabilidad del modelo
-Podemos inspeccionar los parámetros (probabilísticos) para determinar la confianza en los mismos, por ejemplo si convergen en un valor porque la varianza de la distribución es pequeña. Esto no quita que usemos métricas frecuentistas para determinar el rendimiento del modelo.
+Si inspeccionamos los parámetros (probabilísticos), podemos determinar la confianza en los mismos. Por ejemplo, si convergen en un valor porque la varianza de la distribución es pequeña. Esto no quita que usemos métricas frecuentistas para determinar el rendimiento del modelo.
 
 
 ### [Estimación de la incertidumbre en las predicciones](uncertainty_estimation/README.md)
-Podemos obtener una medida de la **incertidumbre** por cada predicción al ser dicha predicción una distribución de probabilidad sobre los posibles valores.
+Se puede obtener una medida de la **incertidumbre** por cada predicción al ser dicha predicción una distribución de probabilidad sobre los posibles valores.
 
 ### Ejemplo
 Tenemos un modelo que predice la temperatura en grados centígrados ºC:
