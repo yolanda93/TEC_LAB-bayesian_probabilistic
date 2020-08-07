@@ -1,8 +1,6 @@
 # Estimación de la Incertidumbre 
 
-Dentro del aporte de valor que pueden realizar las técnicas bayesianas, está la estimacion de la incertidumbre.
-
-El reto de la estimación de la incertidumbre tiene como objetivo ofrecer una **medida de fiabilidad** sobre las predicciones de un modelo de Machine Learning o Deep Learning.
+El reto de la estimación de la incertidumbre tiene como objetivo ofrecer una **medida de fiabilidad** sobre las predicciones de un modelo de "deep learning".
 
 Esto es importante para poder **cuantificar el margen de error cometido en las predicciones** de un modelo en escenarios con **alta incertidumbre**. 
 
@@ -29,6 +27,26 @@ En esta línea se hará foco en **la estadística bayesiana** cómo una solució
 * [Proximos pasos](uncertainty_estimation_next_steps.md)
 
 
+## Características de la incertidumbre de la predicción
+Manejamos esta taxonomía para caraterizar los elementos que afectan al reto:
+
+* [**Aleatoriedad**](https://en.wikipedia.org/wiki/Uncertainty_quantification#Aleatoric_and_epistemic_uncertainty) del problema.
+  * **Epistémica**  
+    Es la incertidumbre sobre algo que teóricamente podríamos conocer pero que en la práctica no es así. Tiene solución.  
+	Ejemplos de cómo se presenta:
+    * _De aproximación_: surge si el modelo de ML es demasiado simple para aproximar la complejidad de los datos. Habrá que optar por un modelo más potente o complejo.
+	* _De datos_: aparece cuando los datos de entrenamiento no representan completamente el problema a modelar. Se da si el tamaño del dataset (_interpolación_) y la significancia (_experimentación_) de sus variables no es suficiente para representar la variable objetivo.
+  * **Aleatórica**  
+    Aparece como ruido, por elementos del entorno que "no podemos medir" pero que nos afectan. Es imposible reducirla, aunque es posible modelarla de forma probabilística.
+* **Variabilidad** del error de predicción
+  * [Homocedástica](https://es.wikipedia.org/wiki/Homocedasticidad)  
+    La varianza del error de predicción es constante en todas las observaciones.
+  * [Heterocedástica](https://es.wikipedia.org/wiki/Heterocedasticidad)  
+     El error de predicción esperable varía con cada ejemplo.
+
+
+
+
 ## Listado de técnicas exploradas
 
 Para la estimación de la incertidumbre, tras un comienzo con técnicas más sencillas, se ha orientado el trabajo hacia la técnica de [UMAL](https://arxiv.org/abs/1910.12288), profundizando en las técnicas en las que se basa.
@@ -52,5 +70,8 @@ Para la estimación de la incertidumbre, tras un comienzo con técnicas más sen
 -   [Técnica: UMAL](umal/README.md)
     La técnica UMAL (Uncountable Mixture Asymetric Laplacian) permite hacer predicciones en series temporales multimodales, sin tener conocimiento previo sobre las distribuciones de los datos ni de sus errores
 
+
 ## Referencias
+
+* [Uncertainty quantification](https://en.wikipedia.org/wiki/Uncertainty_quantification) - Wikipedia
 
