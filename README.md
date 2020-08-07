@@ -58,11 +58,11 @@ En este sentido se han estudiado técnicas que permiten aproximar su resultado:
 
 
 ## Trabajo realizado
-* [Aprendizaje profundo bayesiano](bayesian_deep_learning)
-  * [Estimación de la incertidumbre](bayesian_deep_learning/uncertainty_estimation)
-* Redes Bayesianas
+* 🧠 [Aprendizaje profundo bayesiano](bayesian_deep_learning)
+  * ⯑ [Estimación de la incertidumbre](bayesian_deep_learning/uncertainty_estimation)
+* 🕸 Redes Bayesianas
 * Procesos Gausianos
-* Causalidad
+* ⇒ Causalidad
   * [Recursos en Google Drive](https://drive.google.com/drive/folders/1uefX12ZtAieVE3SVsTqI94E8s5wXOs07)
   * [Modelos de Ecuaciones Estructurales](https://github.com/beeva/TEC_LAB-structural_equation_modeling)
   * [Causalidad "vs" Machine Learning](https://github.com/beeva/TEC_LAB-causality_vs_machine_learning)
