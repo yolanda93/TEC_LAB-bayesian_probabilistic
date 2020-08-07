@@ -52,10 +52,11 @@ Para la estimación de la incertidumbre, tras un comienzo con técnicas más sen
 -   [Técnica: UMAL](umal/README.md)
     La técnica UMAL (Uncountable Mixture Asymetric Laplacian) permite hacer predicciones en series temporales multimodales, sin tener conocimiento previo sobre las distribuciones de los datos ni de sus errores
 
-
-
 ## Referencias
 
-* PPT Ejecutiva - [Estimación de la incertidumbre](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc)
+* PPT Resume técnica - [Estimación de la incertidumbre](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc)
+
+* PPT Ejecutiva - [Avances y próximos pasos](https://docs.google.com/presentation/d/158Wi28rWwBFuqM1bmjjy03PLX83ssA8p3vq_Op9HL7M/edit#slide=id.g6eabc1dae1_0_34)
+
 
 

@@ -70,7 +70,7 @@ Para comprender la aplicación de UMAL respecto a otras técnicas bayesianas, es
     
     
 ----
-Esta comparativa de soluciones se puede encontrar en el notebook [synthetic_regression_umal_vs_exp_1.ipynb](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/poc_forecasting_uncertainty/techniques/umal/synthetic_regression_umal_vs_exp_1.ipynb) que utiliza el dataset sintético explicado anteriormente para responder a la pregunta:
+Esta comparativa de soluciones se puede encontrar en el notebook [synthetic_regression_umal_vs_exp_1.ipynb](/experiments/synthetic_regression_umal_vs_exp_1.ipynb) que utiliza el dataset sintético explicado anteriormente para responder a la pregunta:
 > H1: Can we use techniques with restrictive priors to model aleatoric uncertainty with zero-knowledge about this uncertainty? How does this restrictive prior affect model performance?
 ----
 
