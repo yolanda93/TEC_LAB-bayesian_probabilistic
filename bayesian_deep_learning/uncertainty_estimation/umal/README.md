@@ -27,7 +27,7 @@ En está página se explica UMAL como **solución técnica para estimar la incer
 
 Las técnicas convencionales de BDL para la modelización de la incertidumbre o generación de inferencias probabilísitcas **utilizan una fuerte suposición de asunciones** (e.g. Y∼N(μ,σ) ) que **no permite modelar distribuciones más complejas de la variable Y, P(Y|X=x)** cómo las distintas distribuciones que modelan el dataset de la fig.1. y cuyas estimaciones se aproximan a la esperanza condicional E[Y|X = x] para un x dado
 
-<p align="center"><img src="/docs/assets/umal/heterogeneous_dataset_umal2.PNG" alt=“Dataset sintético generado con 4 distribuciones distintas” /></p>
+<p align="center"><img src="/img/heterogeneous_dataset_umal2.PNG" alt=“Dataset sintético generado con 4 distribuciones distintas” /></p>
 <p align="center"><em>Dataset sintético generado con 4 distribuciones distintas</em></p>
 
 Este tipo asunciones hace que sea **dificil modelizar la inceridumbre aleatórica heterocedástica** de la cual es imposible adquirir conocimiento previo para la definición de estos priors o asunciones. Además, la modelización de la incertidumbre sin necesidad de conocimiento previo de cómo es esta incertidumbre **nos podría permitir realizar posteriormente un análisis más detallado y orientado a tarea** para poder entender las causas por las que se está dando esas variaciones en las estimaciones y aportarnos conocimiento o insights relevantes. 
@@ -59,7 +59,7 @@ La técnica de UMAL se basa en las siguientes técnicas, por lo que es interesan
 
 Para comprender la aplicación de UMAL respecto a otras técnicas bayesianas, es necesario compararlo con las aunciones iniciales que realizan otras técnicas. Para esto es necesario ponernos en 2 casos o soluciones hipóteticas
 
-<p align="center"><img src="/docs/assets/umal/technique1_vs_umal.png" height="400" alt=“Fig.2  Comparación de soluciones - estimación de la incertidumbre” /></p>
+<p align="center"><img src="/img/technique1_vs_umal.png" height="400" alt=“Fig.2  Comparación de soluciones - estimación de la incertidumbre” /></p>
 <p align="center"><em>Fig.2  Comparación de soluciones - estimación de la incertidumbre </em></p>
 
 * **Solución 1 : Asunción restrictiva de prior - Utilizada por técnicas convencionales Bayesian Deep Learning**: Este es el caso en el que estimamos Y como *una esperanza condicional E[Y|X = x] asumiendo una distribucción normal de Y*, como sucede en la mayoría de las técnicas BDL. El resultado que obtendriamos utilizando este tipo de soluciones es que para la zona en la que la distribucción es simétrica; no nos alejaríamos mucho de la distribucción real de Y puesto que este tipo de distribucción está centrada en la media. Sin embargo, si nos vamos a otras regiones en el eje X, como por ejemplo, la que se muestra en el gráfico x=0.6, vemos que no vale con tomar una distribucción centrada en la media de Y (solución 1 gráfico) puesto que la varianza de la misma varía según el valor que esta tome, es decir, el tipo de distribucción es multimodal o *heterogénea*
@@ -99,7 +99,7 @@ Para ilustrar mejor la aplicabilidad de esta técnica se ha desarrollado el [Not
 
 **Aplicación de UMAL en la problemática de Forecasting**
 
-<p align="center"><img src="/docs/assets/umal/forecasting_uncertainty.png" alt=“Fig.3 Forecasting - estimación de la incertidumbre - UMAL” /></p>
+<p align="center"><img src="/img/forecasting_uncertainty.png" alt=“Fig.3 Forecasting - estimación de la incertidumbre - UMAL” /></p>
 <p align="center"><em>Fig.3 Forecasting - estimación de la incertidumbre - UMAL </em></p>
 
 En la Fig.3 se puede observar un dataset sintético o serie temporal representativa de problemas de forecasting. Este tipo de problemática a diferencia de la regresión convencional **encuentra relaciones temporales en datos ordenados cronológicamente en el tiempo para infererir predicciones a futuro**. Estas relaciones pueden ser muy simples como estacionalidades, ciclos, etc. o más complejas que tengan en cuenta la autocorrelación de otras variables asociadas o contexto.
@@ -119,7 +119,7 @@ Este modelo se caracteriza por lo siguiente:
   * **entrada**: vector de entrada X ∈ Rn y una lista de quantiles τ  =  { 0.1, 0.2, … ,0.9}  (selección de ALDs)
   * **salida**: los parámetros de la ALDs condicionadas seleccionadas, y el cuantil τi :  {μ,  τ , σ }
   
-<p align="center"><img src="/docs/assets/umal/umal_model.PNG" height="200" alt=“UMAL modelo” /></p>
+<p align="center"><img src="/img/umal_model.PNG" height="200" alt=“UMAL modelo” /></p>
 <p align="center"><em>UMAL modelo</em></p>
 
 Es importante destacar que UMAL *es agnóstico del modelo de Deep Learning que se utilice*, es decir, podría ser válido tanto para CNN; LSTM, etc.

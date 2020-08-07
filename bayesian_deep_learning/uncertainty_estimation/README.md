@@ -6,7 +6,7 @@ El reto de la estimación de la incertidumbre tiene como objetivo ofrecer una **
 
 Esto es importante para poder **cuantificar el margen de error cometido en las predicciones** de un modelo en escenarios con **alta incertidumbre**. 
 
-Un ejemplo de este escenario lo podemos ver en [problemas de predicción de ventas de producto](poc_forecasting_uncertainty) en los que se plantean cuestiones con alta incertidumbre como ¿Cuántos equipamentos de acampada vamos a vender el mes que viene? Ser capaces de dar una estimación de por ejemplo 50 equipamentos con un margen de error bajo (e.g. +-4) o alto (e.g. +-30) nos podría ayudar a optimizar mejor las campañas de ventas y evitar costes innecesarios
+Un ejemplo de este escenario lo podemos ver en [problemas de predicción de ventas de producto](/umal/poc_forecasting_uncertainty) en los que se plantean cuestiones con alta incertidumbre como ¿Cuántos equipamentos de acampada vamos a vender el mes que viene? Ser capaces de dar una estimación de por ejemplo 50 equipamentos con un margen de error bajo (e.g. +-4) o alto (e.g. +-30) nos podría ayudar a optimizar mejor las campañas de ventas y evitar costes innecesarios
 
 ## Contexto y alcance del reto
 
@@ -34,13 +34,13 @@ En esta línea se hará foco en **la estadística bayesiana** cómo una solució
 Para la estimación de la incertidumbre, tras un comienzo con técnicas más sencillas, se ha orientado el trabajo hacia la técnica de [UMAL](https://arxiv.org/abs/1910.12288), profundizando en las técnicas en las que se basa.
 
 
--   [Técnica: Exp.I - Estimacion de la varianza al vuelo](experiment_On_the_fly/README.md)
+-   [Técnica: Exp.I - Estimacion de la varianza al vuelo](on-the-fly/README.md)
     Esta técnica es muy simple de implementar y, aunque a servido para profundizar en el conocimiento, adolece de muchas delibidades que no la hace apta para su uso en producción
 
  
 -   [Técnica: Regresión Cuantílica](quantile_regression/README.md) 
     La técnica de regresión cuantílica permite obtener diferentes estimaciones para diferentes escenarios (cuantiles) dentro del mismo dataset 
--   [Técnica: LSTM](LSTM/README.md) [TODO]
+-   [Técnica: LSTM](lstm/README.md) 
     Las redes LSTM son una técnica de deep learning que permiten la predicción en series temporales
 
 -   [Técnica: DeepQuantile LSTM](deepquantile_lstm/README.md)

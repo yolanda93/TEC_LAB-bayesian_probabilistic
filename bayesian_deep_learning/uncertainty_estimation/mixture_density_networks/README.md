@@ -19,12 +19,12 @@ Un **modelo de mixturas** es un modelo probabilístico que nos permite represent
 
 Las **redes de densidad mixta** (Bishop, 1994) es un tipo de red que combina las redes convencionales con el concepto de modelo de mixturas. En este modelo, la sálida de la DNN hace la estimación de parámetros para la familia de distribuciones o componentes seleccionadas las cuales se suman teniendo en cuenta el coeficiente de mezcla ⍺ para obtener finalmente una distribucción condicional hetérogena de y respecto a la entrada: 
 
-<p align="center"><img src="/docs/assets/mdn/MDN.png" height="160" alt="Mixture Density Network" /></p>
+<p align="center"><img src="/img/MDN.png" height="160" alt="Mixture Density Network" /></p>
 <p align="center">Mixture Density Network</p>
 
 Formalmente la probabilidad condicionada de una red de mixturas tiene la siguiente forma:
 
-<p align="center"><img src="/docs/assets/mdn/mdn_formula.png" height="70" alt="Formula MDN" /></p>
+<p align="center"><img src="/img/mdn_formula.png" height="70" alt="Formula MDN" /></p>
 <p align="center">Mixture Density Network</p>
 
 En esta fórmula los parámetros tiene la siguiente semántica:
