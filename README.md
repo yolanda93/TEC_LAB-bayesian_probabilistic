@@ -9,11 +9,11 @@ Por otro lado, la **programación probabilística** nos ofrece el marco de traba
 
 * **¿Por qué es interesante?**
 
-Los métodos bayesianos nos proporcionan un nuevo enfoque para la resolución de problemas complejos que presentan un alto grado de incertidumbre y de los cuales no es posible ofrecer de manera conluyente una única solución válida.
+Los métodos bayesianos nos proporcionan un nuevo enfoque para **la resolución de problemas complejos** que presentan un alto grado de incertidumbre y de los cuales no es posible ofrecer de manera conluyente una única solución válida.
 
-Un ejemplo de esto lo podemos encontrar en el campo de Machine Learning en el que se modela una realidad compleja mediante la información extraída de unos datos límitados que nos llevan, en muchos casos, a aceptar en términos absolutos soluciones incorrectas. Este tipo de comportamiento genera desconfianza y dificulta la toma de decisiones. 
+Un ejemplo de esto lo podemos encontrar en el campo de **Machine Learning** en el que se modela una realidad compleja mediante la información extraída de unos datos límitados que nos llevan, en muchos casos, a aceptar en términos absolutos soluciones incorrectas. Este tipo de comportamiento **genera desconfianza y dificulta la toma de decisiones**. 
 
-Así, la inferencia bayesiana abre los límites de las aproximaciones actuales basadas en estadística frecuentista y propociona un marco de trabajo más amplio y cercano al humano. Este nuevo enfoque permite ofrecer capacidades complementarias como la [estimación de la incertidumbre de las predicciones](bayesian_deep_learning/uncertainty_estimation) o el [descubrimiento de relaciones de causa-efecto](https://github.com/beeva/TEC_LAB-causality_vs_machine_learning) que nos permite mejorar el grado de comprensión y generalización de estos modelos.
+Así, la inferencia bayesiana abre los límites de las aproximaciones actuales basadas en estadística frecuentista y propociona un marco de trabajo más amplio y cercano al humano. Estas técnicas permiten ofrecer capacidades complementarias como la [estimación de la incertidumbre de las predicciones](bayesian_deep_learning/uncertainty_estimation) o el [descubrimiento de relaciones de causa-efecto](https://github.com/beeva/TEC_LAB-causality_vs_machine_learning) que permiten mejorar el grado de comprensión y generalización de estos modelos.
 
 ## Trabajo realizado
 * 🧠 [Aprendizaje profundo bayesiano](bayesian_deep_learning)
