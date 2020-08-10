@@ -1,4 +1,4 @@
-# Bayesian Deep Learning
+# Aprendizaje profundo bayesiano
 
 El aprendizaje profundo bayesiano es una rama del [aprendizaje profundo](https://es.wikipedia.org/wiki/Aprendizaje_profundo) resultante de combinar [redes neuronales](https://es.wikipedia.org/wiki/Red_neuronal_artificial) con [estadística bayesiana](https://es.wikipedia.org/wiki/Estad%C3%ADstica_bayesiana).
 
@@ -15,11 +15,11 @@ _NOTA: esta distribucción de parámetros inicial junto con la selección de la 
 ## Aplicaciones
 
 ### Estimación de la fiabilidad del modelo
-Podemos inspeccionar los parámetros (probabilísticos) para determinar la confianza en los mismos, por ejemplo si convergen en un valor porque la varianza de la distribución es pequeña. Esto no quita que usemos métricas frecuentistas para determinar el rendimiento del modelo.
+Si inspeccionamos los parámetros (probabilísticos), podemos determinar la confianza en los mismos. Por ejemplo, si convergen en un valor porque la varianza de la distribución es pequeña. Esto no quita que usemos métricas frecuentistas para determinar el rendimiento del modelo.
 
 
 ### [Estimación de la incertidumbre en las predicciones](uncertainty_estimation/README.md)
-Podemos obtener una medida de la **incertidumbre** por cada predicción al ser dicha predicción una distribución de probabilidad sobre los posibles valores.
+Se puede obtener una medida de la **incertidumbre** por cada predicción al ser dicha predicción una distribución de probabilidad sobre los posibles valores.
 
 ### Ejemplo
 Tenemos un modelo que predice la temperatura en grados centígrados ºC:
@@ -37,7 +37,7 @@ El modelo predice una distribución normal con media 5ºC y desviación típica 
 * [Deep learning](https://en.wikipedia.org/wiki/Deep_learning) - Wikipedia
 * [Bayesian Deep Learning: Introduction](https://taeoh-kim.github.io/blog/bayesian1/) - Taeoh Kim
 * [[Bayesian DL] 3. Introduction to Bayesian Deep Learning](https://medium.com/jun-devpblog/bayesian-dl-3-introduction-to-bayesian-deep-learning-af877845dde1) - Medium
-* Alex Kendall - Deep Learning Is Not Good Enough, We Need Bayesian Deep Learning for Safe AI
+* Deep Learning Is Not Good Enough, We Need Bayesian Deep Learning for Safe AI - Alex Kendal
   * [HTML](https://alexgkendall.com/computer_vision/bayesian_deep_learning_for_safe_ai/)
   * [PDF - Paper NIPS](https://papers.nips.cc/paper/7141-what-uncertainties-do-we-need-in-bayesian-deep-learning-for-computer-vision.pdf)
 * [The Case for Bayesian Deep Learning](https://arxiv.org/abs/2001.10995) - arXiv

@@ -58,19 +58,21 @@ En este sentido se han estudiado técnicas que permiten aproximar su resultado:
 
 
 ## Trabajo realizado
-* [Bayesian Deep Learning](bayesian_deep_learning)
-  * [Estimación de la incertidumbre](bayesian_deep_learning/uncertainty_estimation)
-* Redes Bayesianas
+* 🧠 [Aprendizaje profundo bayesiano](bayesian_deep_learning)
+  * ⯑ [Estimación de la incertidumbre](bayesian_deep_learning/uncertainty_estimation)
+* 🕸 Redes Bayesianas
 * Procesos Gausianos
-* Causalidad
+* ⇒ Causalidad
   * [Recursos en Google Drive](https://drive.google.com/drive/folders/1uefX12ZtAieVE3SVsTqI94E8s5wXOs07)
   * [Modelos de Ecuaciones Estructurales](https://github.com/beeva/TEC_LAB-structural_equation_modeling)
   * [Causalidad "vs" Machine Learning](https://github.com/beeva/TEC_LAB-causality_vs_machine_learning)
-* Herramientas y librerías
+* 🔧  Herramientas y librerías
   * [Pyro](https://github.com/next-samuelmunoz/bayprob) (Pytorch library)
   * [Árboles de decisión bayesianos](https://github.com/beeva/TEC_LAB-bayesian_decision_trees)
-* Comunicación
-  * [Bayesianos, viendo la inteligencia artificial desde otro prisma](https://www.bbvanexttechnologies.com/bayesianos-viendo-la-inteligencia-artificial-desde-otro-prisma/) - BBVA Next Technologies Blog
+* 🗣️ Comunicación
+  * PPT - [Estimación de la incertidumbre](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc)
+  * PPT - [AI desde un nuevo punto de vista: Bayesianos](https://docs.google.com/presentation/d/158Wi28rWwBFuqM1bmjjy03PLX83ssA8p3vq_Op9HL7M)
+  * BBVA Next Technologies Blog (15/01/2020) - [Bayesianos, viendo la inteligencia artificial desde otro prisma](https://www.bbvanexttechnologies.com/bayesianos-viendo-la-inteligencia-artificial-desde-otro-prisma/)
   
   
   
