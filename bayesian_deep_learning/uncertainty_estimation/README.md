@@ -54,7 +54,7 @@ Para la estimación de la incertidumbre, tras un comienzo con técnicas más sen
 
 ## Referencias
 
-* PPT Resume técnica - [Estimación de la incertidumbre](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc)
+* PPT Resumen técnica - [Estimación de la incertidumbre](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc)
 
 * PPT Ejecutiva - [Avances y próximos pasos](https://docs.google.com/presentation/d/158Wi28rWwBFuqM1bmjjy03PLX83ssA8p3vq_Op9HL7M/edit#slide=id.g6eabc1dae1_0_34)
 
