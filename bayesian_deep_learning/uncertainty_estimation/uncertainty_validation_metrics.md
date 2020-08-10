@@ -30,8 +30,7 @@ En los siguientes puntos se resume el conjunto de prácticas aplicadas para la c
         * [Brier Score](https://statisticaloddsandends.wordpress.com/2019/12/29/what-is-a-brier-score/)
 
 
-
-* **Utilizar un juego de datasets reales**: Además de los métodos expuestos anteriormente es importante tener un juego de datasets reales de distinta índole que permita evaluar y comparar  su utilidad en distintos escenarios. En este sentido se ha seleccionado el [dataset de precios de casas de Boston](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html)  íncluido en la librería de scikit-learn y el dataset de [Kaggle M5 Forecasting Uncertainty](https://www.kaggle.com/c/m5-forecasting-uncertainty) de precios de producto propuesto por los supermercados Wallmart
+* **Validación con un juego de datasets reales**: Además de los métodos expuestos anteriormente es importante tener un juego de datasets reales de distinta índole que permita evaluar y comparar  su utilidad en distintos escenarios. En este sentido se ha seleccionado el [dataset de precios de casas de Boston](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html)  íncluido en la librería de scikit-learn y el dataset de [Kaggle M5 Forecasting Uncertainty](https://www.kaggle.com/c/m5-forecasting-uncertainty) de precios de producto propuesto por los supermercados Wallmart
 
 * **Comparación con baselines o modelos de referencia**: En este punto destacan los siguientes modelos y benchmarks de referencia:
 
