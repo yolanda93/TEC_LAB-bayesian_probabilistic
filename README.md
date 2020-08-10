@@ -5,19 +5,17 @@
 
 La **estadística bayesiana** es un subconjunto del campo de la estadística en la que la evidencia sobre el verdadero estado del mundo se expresa **en términos de grados de creencia, es decir, trata la modelización de la incertidumbre**
 
-La **programación probabilística** nos ofrece un marco de trabajo que nos permite evaluar las distribuciones condicionales por las que un conjunto de entradas u observaciones pueden dar lugar a una determinada sálida. 
+Por otro lado, la **programación probabilística** nos ofrece el marco de trabajo que nos permite evaluar las distribuciones condicionales por las que un conjunto de entradas u observaciones pueden dar lugar a una determinada sálida. 
 
 * **¿Por qué es interesante?**
 
-La modelización de la incertidumbre de la solución o respuesta **nos permite modelar problemas complejos** de los cuales no se sabe con certeza si se cuenta con la suficiente información para ofrecer de manera conluyente una única solución válida.
+Los métodos bayesianos nos proporcionan un nuevo enfoque para la **resolución de problemas complejos** que presentan un alto grado de incertidumbre y de los cuales no es posible ofrecer de manera conluyente una única solución válida.
 
-Un ejemplo de este tipo de problemática es el que se presenta en el campo de **Machine Learning** en el que se pretende modelar una realidad compleja mediante la información extraída de unos datos límitados que nos podrían llevar a aceptar en términos absolutos soluciones potencialmente incorrectas.
+Un ejemplo de este tipo de problemáticas es el que se presenta en el campo de **Machine Learning** en el que se pretende modelar una realidad compleja mediante la información extraída de unos datos límitados que nos podrían llevar a aceptar en términos absolutos soluciones potencialmente incorrectas.
 
-Así, la inferencia bayesiana abre los límites de las aproximaciones actuales basadas en estadística frecuentista y propociona un marco de trabajo más amplio, que nos permite evaluar un modelo ML como el conjunto de asunciones o hipótesis que realiza y la probabilidad de que esas asunciones se acerquen a la realidad.
+Así, la inferencia bayesiana abre los límites de las aproximaciones actuales basadas en estadística frecuentista y propociona un marco de trabajo más amplio y cercano al mundo real, que nos permite la evaluación de modelos matemáticos como el conjunto de asunciones estos realizan y la probabilidad de que estas asunciones se acerquen a la realidad.
 
-Con esta idea en mente, se han realizado una serie de trabajos orientados a obtener predicciones y la incertidumbre asociada a estas predicciones. De este modo, quienes interpreten los resultados no sólo obtendrán un valor, si no también una métrica que informe acerca de lo preciso, válido o importante que sea este valor, dependiendo de cómo se haya aplicado la métrica.
-
-Estos trabajos parten de la determinación del grado de confianza en un resultado mediante técnicas más comunes y específicas hasta la utilización de técnicas avanzandas más generalistas que utilizan redes neuronales.
+Con esta idea en mente, se han realizado **una serie de trabajos orientados a obtener predicciones y la incertidumbre asociada a estas predicciones**. Estos trabajos parten de la determinación del grado de confianza en un resultado mediante técnicas más comunes y específicas hasta la utilización de técnicas avanzandas más generalistas que utilizan redes neuronales.
 
 
 ## Trabajo realizado
