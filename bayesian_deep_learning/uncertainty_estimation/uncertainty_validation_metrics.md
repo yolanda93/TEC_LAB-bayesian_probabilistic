@@ -36,21 +36,17 @@ En los siguientes puntos se resume el conjunto de prácticas aplicadas para la c
 * **Comparación con baselines o modelos de referencia**: En este punto destacan los siguientes modelos y benchmarks de referencia:
 
     * **Modelos de referencia**:
-        * MonteCarlo Dropout
-        * Variational Inference
-        * (DeepEnsembles)[https://arxiv.org/abs/1912.02757]
+        * [MonteCarlo Dropout](https://medium.com/@ahmdtaha/dropout-as-a-bayesian-approximation-representing-model-uncertainty-in-deep-learning-7a2e49e64a15)
+        * [Variational Inference](https://medium.com/@jonathan_hui/machine-learning-variational-inference-273d8e6480bb)
+        * [DeepEnsembles](https://arxiv.org/abs/1912.02757)
 
-    * **Benchmarks de referencia**:
+    * **Benchmarks de referencia**: 
 
-***Referencia**: On the Importance of Strong Baselines in Bayesian Deep Learning*
-![](img/image9.png)
+        * [Mukhoti, J., Stenetorp, P., & Gal, Y. (2018). On the Importance of Strong Baselines in Bayesian Deep Learning. (Vi), 1–4](http://arxiv.org/abs/1811.09385)
 
-***Referencia**: Lakshminarayanan, B., Pritzel, A., & Blundell, C. (2017). Simple and scalable predictive uncertainty estimation using deep ensembles. Advances in Neural Information Processing Systems, 2017-Decem(Nips), 6403–6414*
-![](img/image10.png)
+        * *Lakshminarayanan, B., Pritzel, A., & Blundell, C. (2017). Simple and scalable predictive uncertainty estimation using deep ensembles. Advances in Neural Information Processing Systems, 2017-Decem(Nips), 6403–6414*
 
-***Referencia**: Filos, A., Farquhar, S., Gomez, A. N., Rudner, T. G. J., Kenton, Z., Smith, L., … Gal, Y. (2019). A Systematic Comparison of Bayesian Deep Learning Robustness in Diabetic Retinopathy Tasks. (NeurIPS), 1–12. Retrieved from http://arxiv.org/abs/1912.10481*
-![](img/image1.png)
-
+        * [Filos, A., Farquhar, S., Gomez, A. N., Rudner, T. G. J., Kenton, Z., Smith, L., … Gal, Y. (2019). A Systematic Comparison of Bayesian Deep Learning Robustness in Diabetic Retinopathy Tasks. (NeurIPS), 1–12](http://arxiv.org/abs/1912.10481)
 
 
 
